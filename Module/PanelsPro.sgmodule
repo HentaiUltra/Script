@@ -6,14 +6,13 @@
 策略面板 = script-name=开启时长,title="开启时长",content="请刷新面板",style=info,update-interval=10
 策略面板 = script-name=假日提醒,title="假日提醒",content="请刷新面板",style=info,update-interval=3600
 策略面板 = script-name=网络状态,title="网络状态",content="请刷新面板",style=info,update-interval=10
+策略面板 = script-name=流量统计,title="流量信息",content="请刷新面板",style=info,update-interval=10
 策略面板 = script-name=代理选择,title="代理选择",content="请刷新面板",style=info,update-interval=10
 策略面板 = script-name=节点检测,title="节点信息",content="请刷新面板",style=info,update-interval=10
-策略面板 = script-name=流量统计,title="流量信息",content="请刷新面板",style=info,update-interval=10
 策略面板 = script-name=电信详情,title="电信详情",content="请刷新面板",style=info,update-interval=3600
 策略面板 = script-name=奈飞查询,title="𝗡𝗲𝘁𝗳𝗹𝗶𝘅",content="请刷新面板",style=alert,update-interval=1800
 策略面板 = script-name=迪士尼查询,title="𝗗𝗶𝘀𝗻𝗲𝘆+",content="请刷新面板",style=alert,update-interval=1800
 策略面板 = script-name=油管查询,title="𝗬𝗼𝘂𝗧𝘂𝗯𝗲",content="请刷新面板",style=alert,update-interval=1800
-
 
 [Script]
 # > 策略面板
