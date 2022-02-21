@@ -44,7 +44,7 @@ DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 
 //https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Surge/Redirect/Redirect.sgmodule
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 //贴吧去除广告 from app2smile
 //https://raw.githubusercontent.com/app2smile/rules/master/module/tieba.sgmodule
@@ -52,7 +52,7 @@ DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 //spotify解锁
 //https://raw.githubusercontent.com/app2smile/rules/master/module/spotify.module
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 //Siri与搜索 from iRingo
 //https://raw.githubusercontent.com/VirgilClyne/iRingo/main/sgmodule/Siri_Suggestions.sgmodule
@@ -61,7 +61,7 @@ DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 //定位服务
 //https://github.com/VirgilClyne/iRingo/blob/main/sgmodule/Geo_Services.sgmodule?raw=true
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 //京东助手(注入式需key）from githubdulong
 //https://raw.githubusercontent.com/githubdulong/Script/master/jdHelper.sgmodule
@@ -78,7 +78,7 @@ DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 //京东淘宝比价
 //https://raw.githubusercontent.com/githubdulong/Script/master/jd_price2.sgmodule
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 //迪士尼字幕 from Neurogram
 // https://raw.githubusercontent.com/Neurogram-R/Surge/master/module/DisneyPlus-Dualsub.sgmodule
@@ -89,4 +89,4 @@ DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 
 //模块自动更新捷径 https://www.icloud.com/shortcuts/62b452191b0c436b9ed5f2a38870c756
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————

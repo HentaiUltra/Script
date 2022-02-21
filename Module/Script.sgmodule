@@ -7,7 +7,7 @@
 # > 机场信息
 机场信息 = type=http-request,pattern=http://sub\.info,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/sub_info.js
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 # > 奈飞评分
 奈飞评分 = type=http-request,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
@@ -16,14 +16,14 @@
 
 单集评分 = type=http-response,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/warmer/.+type=show-ath,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating_season.js
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 # > 新浪微博 去广告
 微博广告 = requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_launch.js,type=http-response,pattern=^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua)
 
 微博广告 = type=http-response,requires-body=1,max-size=-1,pattern=^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/photos/pic_recommend_status|video/tiny_stream_video_list),script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_ad.js
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 # > 人人视频 去广告
 人人视频 = type=http-response,requires-body=true,pattern=^https?:\/\/api\.rr\.tv\/v\dplus\/index\/channel,script-path=https://Choler.github.io/Surge/Script/rrsp.js
@@ -32,123 +32,123 @@
 人人视频 = requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/rrtv.js,type=http-response,pattern=^https:\/\/api\.rr\.tv\/ad\/getAll
 人人视频 = requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/rrtv.js,type=http-response,pattern=^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 # > 金山WPS vip
 办公解锁 = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js,type=http-response,pattern=^https://account.wps.*/api/users/
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 # > 滴答清单 vip
 滴答清单 = type=http-response,pattern=^https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status,requires-body=1,max-size=0,,timeout=5,script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/DiDaQingDan.js,script-update-interval=0
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 # > 酷我 vip (半残品)
 酷我音乐 = type=http-request,pattern=^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?newver.+$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/kwyyxz.js,script-update-interval=0
 
 酷我音乐 = type=http-response,pattern=^http://(.+).kuwo.cn(/v2/api/user/info|/a.p|/vip/v2/user/vip),requires-body=1,max-size=0,timeout=5,script-path=https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/kwyy.js,script-update-interval=0
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 
 # > 扫描全能王 pro
 扫描全能 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/camscanner.js,type=http-response,pattern=https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?,script-update-interval=0
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 # > Day one vip
 日记解锁 = type=http-response,pattern=^https:\/\/dayone\.(me|app)\/api\/(users|v2\/users\/(account-status|receipt))$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/dayone.js,script-update-interval=0
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 # > Boxjs（稳定版+测试版）
 会话数据 = type=http-request,pattern=^https?://boxjs.com,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/chavy.box.js, requires-body=true, timeout=120
 会话数据 = type=http-request,pattern=^https?://boxjs.net,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 # > 彩云天气_SVIP
 彩云天气 = type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path=https://raw.githubusercontent.com/githubdulong/Script/master/cytq.js
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 # > TFDOWN
 测试商店 = type=http-request,pattern=^https?:\/\/testflight\.apple\.com\/v2\/accounts\/.*\/apps\/\d*/builds/\d*/install,requires-body=1,max-size=0,script-path=https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 # > bilbii换区、评分
 哔哩换区 = type=http-response,pattern=^https:\/\/ap(p|i)\.bili(bili|api)\.(com|net)\/(pgc\/view\/v\d\/app\/season|x\/v\d\/search\/defaultwords)\?access_key,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
 哔哩搜索 = type=http-request,pattern=^https:\/\/ap(p|i)\.bili(bili|api)\.(com|net)\/x\/v\d\/search(\/type)?\?.+?%20(%E6%B8%AF|%E5%8F%B0|%E4%B8%AD)&,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 # > bilbii日常任务
 哔哩cookie = type=http-request,pattern=https://api.bilibili.com/x/web-interface/nav,debug=true,script-path=https://raw.githubusercontent.com/HentaiUltra/Surge/main/JavaScript/bilibili.js
 哔哩任务 = type=cron,cronexp=0 7-21/7 * * *,wake-system=1,debug=true,script-path=https://raw.githubusercontent.com/HentaiUltra/Surge/main/JavaScript/bilibili.js
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 # > YouTube去广告
 油管视频 = type=http-request,pattern=^https?:\/\/.+?\.googlevideo\.com\/.+&(oad|ctier)=(?!A),script-path=https://choler.github.io/Surge/Script/YouTube.js
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 # > Endel解锁 https://raw.githubusercontent.com/cpphut/surge_module/main/endel.sgmodule
 白噪解锁 = requires-body=1,script-path=https://raw.githubusercontent.com/cpphut/scripts/main/js/endel.js,type=http-response,pattern=^https?:\/\/api-production.endel.io\/v3\/call
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 # > 百度云盘 解锁
 百度云盘 = type=http-response,pattern=https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/bdcloud.js,script-update-interval=0
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 # > MIX解锁
 滤镜解锁 = requires-body=1,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/mix.js,type=http-response,pattern= ^https:\/\/bmall\.camera360\.com\/api\/mix\/recovery$
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 # > vsco解锁
 滤镜破解 = type=http-response,pattern=^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/vsco.js,script-update-interval=0
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 # > Grow解锁
 运动解锁 = type=http-response,pattern=https:\/\/api\.revenuecat\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/revenuecat.js,script-update-interval=-1
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 # > 百度跳转
 百度跳转 = type=http-response,pattern=^https:\/\/boxer\.baidu\.com\/scheme\?scheme,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/baidu-no-redirect.js
 
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 # > 泼辣修图
 泼辣修图 = type=http-response,pattern=^https:\/\/api\.polaxiong\.com\/v1\/payments\/appleiap\/receipts\/confirmation,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Polarr.js
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 # > 空气质量
 空气质量 = type=http-response,pattern=https://weather-data.apple.com/v2/weather/[\w-]+/-?[0-9]+\.[0-9]+/-?[0-9]+\.[0-9]+\?,requires-body=true,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/iOS15_Weather_AQI_US.js
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 # > 订阅管理
 订阅管理 = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.min.js,requires-body=true,timeout=120,max-size=131072
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 # > 豆瓣电影
 豆瓣电影 = type=http-response,pattern=^https?:\/\/m\.douban\.com\/movie\/subject\/\d+\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/DouBan.js
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 # > 私有仓库
 //私有仓库 = type=http-request,requires-body=0,pattern=^https?:\/\/(raw|gist)\.githubusercontent.com,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/GithubPrivate/github-private-repo.js
 
-# ——————————————————————————分割线——————————————————————————
+# 分割线——————————————————————————
 
 [MITM]
 hostname = %INSERT% -*.amemv.com, -*.snssdk.com, *.googlevideo.com, api.rr.tv, account.wps.cn, ap*.intsig.net, dayone.*, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.lagoapps.com, api.meiyan.com, biz.caiyunapp.com, raw.githubusercontent.com, spclient.wg.spotify.com, testflight.apple.com, ap?.bilibili.com, ap?.biliapi.net, api-production.endel.io, pan.baidu.com, btrace.qq.com, bmall.camera360.com, api.revenuecat.com, *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com, vsco.co, api.revenuecat.com, img.zuoyebang.cc, security.wechat.com, boxer.baidu.com, api.polaxiong.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, weather-data.apple.com, raw.githubusercontent.com, gist.githubusercontent.com, sub.store, e.189.cn:443, m.douban.com, dida365.com, ticktick.com, %APPEND% *.bilibili.com,  *.kuwo.cn, music.163.com,*.music.163.com
