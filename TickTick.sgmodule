@@ -2,7 +2,7 @@
 #!desc=滴答清单解锁
 
 [Script]
-滴答清单解锁 = type=http-response,requires-body=true,script-path=https://raw.githubusercontent.com/HentaiUltra/Surge/main/TickTick.js,type=http-response,pattern=^https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status
+滴答清单解锁 = type=http-response,requires-body=true,script-path=https://raw.githubusercontent.com/HentaiUltra/Surge/main/TickTickUnlock.js,type=http-response,pattern=^https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status
 
 [MITM]
 hostname = dida365.com, ticktick.com
