@@ -1,9 +1,0 @@
-#!name=滴答清单
-#!desc=滴答清单解锁
-
-[Script]
-
-滴答清单 = type=http-response,pattern=https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status,requires-body=1,max-size=2097152,script-path=https://raw.githubusercontent.com/HentaiUltra/Surge/main/TickTickUnlock.js,script-update-interval=0
-
-[MITM]
-hostname = dida365.com, ticktick.com
