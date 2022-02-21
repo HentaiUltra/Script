@@ -10,7 +10,6 @@
 策略面板 = script-name=节点检测,title="节点信息",content="请刷新面板",style=info,update-interval=10
 策略面板 = script-name=流量统计,title="流量信息",content="请刷新面板",style=info,update-interval=10
 策略面板 = script-name=电信详情,title="电信详情",content="请刷新面板",style=info,update-interval=3600
-策略面板 = script-name=机场详情,title="𝗔𝗹𝗶𝗻𝗸",content="请刷新面板",style=alert,update-interval=600
 策略面板 = script-name=奈飞查询,title="𝗡𝗲𝘁𝗳𝗹𝗶𝘅",content="请刷新面板",style=alert,update-interval=1800
 策略面板 = script-name=迪士尼查询,title="𝗗𝗶𝘀𝗻𝗲𝘆+",content="请刷新面板",style=alert,update-interval=1800
 策略面板 = script-name=油管查询,title="𝗬𝗼𝘂𝗧𝘂𝗯𝗲",content="请刷新面板",style=alert,update-interval=1800
@@ -31,8 +30,6 @@
 节点检测 = type=generic, timeout=10, script-path=https://raw.githubusercontent.com/LucaLin233/Luca_Conf/main/Surge/JS/ipcheck.js
 
 电信详情 = type=http-request,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/telecom.js,pattern=https://e.189.cn/store/user/package_detail.do,requires-body=1,max-size=0,timeout=10
-
-机场详情 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=[转码后的订阅地址]&reset_day=28&title=𝗔𝗹𝗶𝗻𝗸&icon=icloud&color=#5AC8FA
 
 奈飞查询 = type=generic,timeout=30,script-path=https://gist.githubusercontent.com/Hyseen/b06e911a41036ebc36acf04ddebe7b9a/raw/nf_check.js?version=1633090677159, argument=title=𝗡𝗲𝘁𝗳𝗹𝗶𝘅 解锁检测
 
