@@ -93,11 +93,20 @@ DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 // 京东淘宝比价
 // https://raw.githubusercontent.com/githubdulong/Script/master/jd_price2.sgmodule
 
+// 京粉转链
+// https://raw.githubusercontent.com/githubdulong/Script/master/jfConvert.sgmodule
+
 // 定时脚本
 // https://raw.githubusercontent.com/githubdulong/Script/master/Surge/Task.sgmodule
 
 // Cookie脚本
 // https://raw.githubusercontent.com/githubdulong/Script/master/Surge/Cookie.sgmodule
+
+// 兼容模式
+// https://raw.githubusercontent.com/githubdulong/Script/master/Surge/TunOnly.sgmodule
+
+// WARP++ 刷邀请推荐奖励
+// https://raw.githubusercontent.com/githubdulong/Script/master/Surge/Warp%2B%2B.sgmodule
 
 # 分割线——————————————————————————
 
