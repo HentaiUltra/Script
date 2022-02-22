@@ -37,32 +37,32 @@ DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 [Script]
 
 # > 模块订阅(单独添加)
-//爬虫复写去广告 from blackmatrix7
-//https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Surge/Advertising/Advertising.sgmodule
+// 爬虫复写去广告 from blackmatrix7
+// https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Surge/Advertising/Advertising.sgmodule
 
-//https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Surge/AllInOne/AllInOne.sgmodule
+// https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Surge/AllInOne/AllInOne.sgmodule
 
-//https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Surge/Redirect/Redirect.sgmodule
+// https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Surge/Redirect/Redirect.sgmodule
 
 # 分割线——————————————————————————
 
-//贴吧去除广告 from app2smile
-//https://raw.githubusercontent.com/app2smile/rules/master/module/tieba.sgmodule
+// 贴吧去除广告 from app2smile
+// https://raw.githubusercontent.com/app2smile/rules/master/module/tieba.sgmodule
 
-//spotify解锁
-//https://raw.githubusercontent.com/app2smile/rules/master/module/spotify.module
+// spotify解锁
+// https://raw.githubusercontent.com/app2smile/rules/master/module/spotify.module
 
 // 哔哩哔哩去广告
 // https://raw.githubusercontent.com/app2smile/rules/master/module/bilibili.sgmodule
 
 # 分割线——————————————————————————
 
-//Siri与搜索 from iRingo
-//https://raw.githubusercontent.com/VirgilClyne/iRingo/main/sgmodule/Siri_Suggestions.sgmodule
-//苹果天气
-//https://github.com/VirgilClyne/iRingo/blob/main/sgmodule/Apple_Weather.sgmodule?raw=true
-//定位服务
-//https://github.com/VirgilClyne/iRingo/blob/main/sgmodule/Geo_Services.sgmodule?raw=true
+// Siri与搜索 from iRingo
+// https://raw.githubusercontent.com/VirgilClyne/iRingo/main/sgmodule/Siri_Suggestions.sgmodule
+// 苹果天气
+// https://github.com/VirgilClyne/iRingo/blob/main/sgmodule/Apple_Weather.sgmodule?raw=true
+// 定位服务
+// https://github.com/VirgilClyne/iRingo/blob/main/sgmodule/Geo_Services.sgmodule?raw=true
 
 # 分割线——————————————————————————
 
@@ -71,27 +71,27 @@ DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 
 # 分割线——————————————————————————
 
-//网络防火墙 from NobyDa
-//https://gist.githubusercontent.com/NobyDa/fb026a6d01fec146bd451d01b0c973d5/raw/NetworkFirewall.sgmodule
+// 网络防火墙 from NobyDa
+// https://gist.githubusercontent.com/NobyDa/fb026a6d01fec146bd451d01b0c973d5/raw/NetworkFirewall.sgmodule
 
 # 分割线——————————————————————————
 
-//浏览器搜索 from TributePaulWalker
-//https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/Surge/Module/Surge_All_In_One_Search.sgmodule
+// 浏览器搜索 from TributePaulWalker
+// https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/Surge/Module/Surge_All_In_One_Search.sgmodule
 
 # 分割线——————————————————————————
 
-//京东助手(注入式需key）from githubdulong
-//https://raw.githubusercontent.com/githubdulong/Script/master/jdHelper.sgmodule
+// 京东助手(注入式需key）from githubdulong
+// https://raw.githubusercontent.com/githubdulong/Script/master/jdHelper.sgmodule
 
-//京东联盟转链（联盟、助手二选一）
-//https://raw.githubusercontent.com/githubdulong/Script/master/Surge/jdapp_to_union.sgmodule
+// 京东联盟转链（联盟、助手二选一）
+// https://raw.githubusercontent.com/githubdulong/Script/master/Surge/jdapp_to_union.sgmodule
 
-//京东半自动销卡
-//https://raw.githubusercontent.com/githubdulong/Script/master/Jd_unbindCard.sgmodule
+// 京东半自动销卡
+// https://raw.githubusercontent.com/githubdulong/Script/master/Jd_unbindCard.sgmodule
 
-//京东淘宝比价
-//https://raw.githubusercontent.com/githubdulong/Script/master/jd_price2.sgmodule
+// 京东淘宝比价
+// https://raw.githubusercontent.com/githubdulong/Script/master/jd_price2.sgmodule
 
 // 定时脚本
 // https://raw.githubusercontent.com/githubdulong/Script/master/Surge/Task.sgmodule
@@ -101,12 +101,12 @@ DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 
 # 分割线——————————————————————————
 
-//迪士尼字幕 from Neurogram
+// 迪士尼字幕 from Neurogram
 // https://raw.githubusercontent.com/Neurogram-R/Surge/master/module/DisneyPlus-Dualsub.sgmodule
-//指令https://www.icloud.com/shortcuts/aa6056ad31c14f25aedbee6cd1d7a799
+// 指令https://www.icloud.com/shortcuts/aa6056ad31c14f25aedbee6cd1d7a799
 
-//油管字幕
- https://raw.githubusercontent.com/Neurogram-R/Surge/master/module/YouTube-Subtrans.sgmodule
+// 油管字幕
+// https://raw.githubusercontent.com/Neurogram-R/Surge/master/module/YouTube-Subtrans.sgmodule
 // 指令https://www.icloud.com/shortcuts/a0c3f95778ef4c18970da66fda40b29b
 
 //模块自动更新捷径 https://www.icloud.com/shortcuts/62b452191b0c436b9ed5f2a38870c756
