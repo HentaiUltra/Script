@@ -76,20 +76,28 @@ DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 
 # 分割线——————————————————————————
 
+//浏览器搜索 from TributePaulWalker
+//https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/Surge/Module/Surge_All_In_One_Search.sgmodule
+
+# 分割线——————————————————————————
+
 //京东助手(注入式需key）from githubdulong
 //https://raw.githubusercontent.com/githubdulong/Script/master/jdHelper.sgmodule
 
 //京东联盟转链（联盟、助手二选一）
 //https://raw.githubusercontent.com/githubdulong/Script/master/Surge/jdapp_to_union.sgmodule
 
-//浏览器搜索
-//https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/Surge/Module/Surge_All_In_One_Search.sgmodule
-
 //京东半自动销卡
 //https://raw.githubusercontent.com/githubdulong/Script/master/Jd_unbindCard.sgmodule
 
 //京东淘宝比价
 //https://raw.githubusercontent.com/githubdulong/Script/master/jd_price2.sgmodule
+
+// 定时脚本
+// https://raw.githubusercontent.com/githubdulong/Script/master/Surge/Task.sgmodule
+
+// Cookie脚本
+// https://raw.githubusercontent.com/githubdulong/Script/master/Surge/Cookie.sgmodule
 
 # 分割线——————————————————————————
 

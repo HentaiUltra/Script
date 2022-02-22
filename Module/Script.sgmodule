@@ -5,7 +5,7 @@
 [Script]
 
 # > 机场信息
-机场信息 = type=http-request,pattern=http://sub\.info,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/sub_info.js
+机场信息 = type=http-request,pattern=http://sub\.info,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info.js
 
 # 分割线——————————————————————————
 
@@ -38,6 +38,7 @@
 办公解锁 = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js,type=http-response,pattern=^https://account.wps.*/api/users/
 
 # 分割线——————————————————————————
+
 # > 滴答清单 vip
 滴答清单 = type=http-response,pattern=^https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status,requires-body=1,max-size=0,,timeout=5,script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/DiDaQingDan.js,script-update-interval=0
 
@@ -49,7 +50,6 @@
 酷我音乐 = type=http-response,pattern=^http://(.+).kuwo.cn(/v2/api/user/info|/a.p|/vip/v2/user/vip),requires-body=1,max-size=0,timeout=5,script-path=https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/kwyy.js,script-update-interval=0
 
 # 分割线——————————————————————————
-
 
 # > 扫描全能王 pro
 扫描全能 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/camscanner.js,type=http-response,pattern=https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?,script-update-interval=0
@@ -83,12 +83,6 @@
 
 # 分割线——————————————————————————
 
-# > bilbii日常任务
-哔哩cookie = type=http-request,pattern=https://api.bilibili.com/x/web-interface/nav,debug=true,script-path=https://raw.githubusercontent.com/HentaiUltra/Surge/main/JavaScript/bilibili.js
-哔哩任务 = type=cron,cronexp=0 7-21/7 * * *,wake-system=1,debug=true,script-path=https://raw.githubusercontent.com/HentaiUltra/Surge/main/JavaScript/bilibili.js
-
-# 分割线——————————————————————————
-
 # > YouTube去广告
 油管视频 = type=http-request,pattern=^https?:\/\/.+?\.googlevideo\.com\/.+&(oad|ctier)=(?!A),script-path=https://choler.github.io/Surge/Script/YouTube.js
 
@@ -109,7 +103,6 @@
 
 # 分割线——————————————————————————
 
-# > vsco解锁
 滤镜破解 = type=http-response,pattern=^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/vsco.js,script-update-interval=0
 
 # 分割线——————————————————————————
@@ -146,11 +139,11 @@
 # 分割线——————————————————————————
 
 # > 私有仓库
-//私有仓库 = type=http-request,requires-body=0,pattern=^https?:\/\/(raw|gist)\.githubusercontent.com,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/GithubPrivate/github-private-repo.js
+私有仓库 = type=http-request,requires-body=0,pattern=^https?:\/\/(raw|gist)\.githubusercontent.com,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/GithubPrivate/github-private-repo.js
 
 # 分割线——————————————————————————
 
 [MITM]
-hostname = %INSERT% -*.amemv.com, -*.snssdk.com, *.googlevideo.com, api.rr.tv, account.wps.cn, ap*.intsig.net, dayone.*, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.lagoapps.com, api.meiyan.com, biz.caiyunapp.com, raw.githubusercontent.com, spclient.wg.spotify.com, testflight.apple.com, ap?.bilibili.com, ap?.biliapi.net, api-production.endel.io, pan.baidu.com, btrace.qq.com, bmall.camera360.com, api.revenuecat.com, *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com, vsco.co, api.revenuecat.com, img.zuoyebang.cc, security.wechat.com, boxer.baidu.com, api.polaxiong.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, weather-data.apple.com, raw.githubusercontent.com, gist.githubusercontent.com, sub.store, e.189.cn:443, m.douban.com, dida365.com, ticktick.com, %APPEND% *.bilibili.com,  *.kuwo.cn, music.163.com,*.music.163.com
+hostname = %INSERT% -*.amemv.com, -*.snssdk.com, *.googlevideo.com, api.rr.tv, account.wps.cn, ap*.intsig.net, dayone.*, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.lagoapps.com, api.meiyan.com, biz.caiyunapp.com, raw.githubusercontent.com, spclient.wg.spotify.com, testflight.apple.com, ap?.bilibili.com, ap?.biliapi.net, api-production.endel.io, pan.baidu.com, btrace.qq.com, bmall.camera360.com, api.revenuecat.com, *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com, vsco.co, api.revenuecat.com, img.zuoyebang.cc, security.wechat.com, boxer.baidu.com, api.polaxiong.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, weather-data.apple.com, raw.githubusercontent.com, gist.githubusercontent.com, sub.store, m.douban.com, dida365.com, ticktick.com, %APPEND% *.bilibili.com,  *.kuwo.cn
 
 
