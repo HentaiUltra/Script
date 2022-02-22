@@ -52,6 +52,9 @@ DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 //spotify解锁
 //https://raw.githubusercontent.com/app2smile/rules/master/module/spotify.module
 
+// 哔哩哔哩去广告
+// https://raw.githubusercontent.com/app2smile/rules/master/module/bilibili.sgmodule
+
 # 分割线——————————————————————————
 
 //Siri与搜索 from iRingo
@@ -60,6 +63,16 @@ DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 //https://github.com/VirgilClyne/iRingo/blob/main/sgmodule/Apple_Weather.sgmodule?raw=true
 //定位服务
 //https://github.com/VirgilClyne/iRingo/blob/main/sgmodule/Geo_Services.sgmodule?raw=true
+
+# 分割线——————————————————————————
+
+// 屏蔽HTTP3/QUIC协议 from TributePaulWalker
+// https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/Surge/Module/Surge_BlockQUIC.sgmodule
+
+# 分割线——————————————————————————
+
+//网络防火墙 from NobyDa
+//https://gist.githubusercontent.com/NobyDa/fb026a6d01fec146bd451d01b0c973d5/raw/NetworkFirewall.sgmodule
 
 # 分割线——————————————————————————
 

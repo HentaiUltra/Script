@@ -1,5 +1,6 @@
 #!name=策略面板
-#!desc=最后更新时间 2022 - 02 - 21
+#!desc=最后更新时间 2022 - 02 - 22
+#!desc=先网页打开e.189.cn登陆一下再访问https://e.189.cn/store/user/package_detail.do
 #!system=ios
 
 [Panel]
@@ -36,3 +37,5 @@
 
 油管查询 = type=generic,timeout=30,,script-path=https://gist.githubusercontent.com/Hyseen/5ae36a6a5cb5690b1f2bff4aa19c766f/raw/youtube_premium_check.js, argument=title=𝗬𝗼𝘂𝗧𝘂𝗯𝗲 解锁检测
 
+[MITM]
+hostname = %APPEND% e.189.cn:443
