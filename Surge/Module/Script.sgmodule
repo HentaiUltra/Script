@@ -56,9 +56,11 @@ keep会员 = type=http-response,pattern=^https://(.+).gotokeep.com(/athena/v5/pe
 # 分割线——————————————————————————
 
 # > 酷我 vip (半残品)
-酷我音乐 = type=http-request,pattern=^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?newver.+$,requires-body=true,max-size=131072,timeout=5,script-path=https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/kwyyxz.js,script-update-interval=0
+酷我音乐下载 = type=http-request,pattern=^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?newver.+$,requires-body=true,max-size=131072,timeout=5,script-path=https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/kwyyxz.js,script-update-interval=0
 
-酷我音乐 = type=http-response,pattern=^http://(.+).kuwo.cn(/v2/api/user/info|/a.p|/vip/v2/user/vip),requires-body=true,max-size=131072,timeout=5,script-path=https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/kwyy.js,script-update-interval=0
+酷我音乐听歌 = type=http-response,pattern=^http://(.+).kuwo.cn(/v2/api/user/info|/a.p|/vip/v2/user/vip),requires-body=true,max-size=131072,timeout=5,script-path=https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/kwyy.js,script-update-interval=0
+
+酷我皮肤 = type=http-response,pattern=^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/theme),requires-body=true,max-size=131072,timeout=5,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/theme.js,script-update-interval=0
 
 # 分割线——————————————————————————
 
