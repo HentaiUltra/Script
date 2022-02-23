@@ -8,8 +8,8 @@ obj.level = JSON.stringify({
     "recognizeTranslate": -100,
     "name": "黄金会员",
     "recognizeNormal": -100
-}),
-    obj.value.defaultRecognize.defaultBatch = -100;
+});
+obj.value.defaultRecognize.defaultBatch = -100;
 obj.value.defaultRecognize.defaultTranslate = -100;
 obj.value.defaultRecognize.recognizeTranslateAll = 1;
 $done({ body: JSON.stringify(obj) });
