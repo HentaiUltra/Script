@@ -1,6 +1,6 @@
 let obj = JSON.parse($response.body);
+console.log(obj);
 obj.value.vip = true;
-obj.level.id = 2;
 obj.level.recognizeTranslateAll = 1;
 obj.level.recognizeBatch = -100;
 obj.level.seq = 2;
