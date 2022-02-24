@@ -1,5 +1,5 @@
 #!name=重写获取
-#!desc= junjie 最后更新时间 2022-02-24 14:00
+#!desc=最后更新时间 2022-02-24 14:00
 #!system=ios
 
 [Script]
@@ -8,11 +8,6 @@
 # > 京东商城
 # 京东登录 https://home.m.jd.com/myJd/newhome.action
 京东商城 = type=http-request,requires-body=1,pattern=^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?|gw\/generic\/hy\/h5\/m\/appSign\?),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
-
-# 分割线——————————————————————————
-
-# > 喜马拉雅 app获取
-喜马拉雅 = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.cookie.js,type=http-request,pattern=^https?:\/\/.*\/mobile\-user\/(v1\/)?homePage\/.*
 
 # 分割线——————————————————————————
 
