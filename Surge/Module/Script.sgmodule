@@ -58,6 +58,7 @@
 
 # > 白描 pro
 白描 = requires-body=1,max-size=131072,script-path=https://raw.githubusercontent.com/HentaiUltra/Script/main/JavaSrcipt/BaiMiaoZhengJianZhao.js,type=http-response,pattern=^https:\/\/zjz\.uzero\.cn\/api\/v2\.user\/(appLaunchWithUser|loginByWeixin),script-update-interval=0
+白描 = requires-body=1,max-size=131072,script-path=https://raw.githubusercontent.com/HentaiUltra/Script/main/JavaSrcipt/BaiMiaoZhengJianZhao.js,type=http-response,pattern=^https:\/\/zjz\.uzero\.cn\/api\/recognize\.recognizeInfo,script-update-interval=0
 
 # 分割线——————————————————————————
 
