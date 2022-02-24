@@ -3,7 +3,7 @@
 #!system=ios
 
 [Script]
-# 分割线—————————————————以下是自己根据网络QX资源转换
+# 分割线—————————————————
 
 # > 滴答清单 vip
 滴答清单 = type=http-response,pattern=^https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status,requires-body=true,max-size=131072,timeout=5,script-path=https://raw.githubusercontent.com/HentaiUltra/Script/main/JavaSrcipt/DiDaQingDan.js,script-update-interval=0
@@ -23,8 +23,30 @@
 # > 酷我 vip (半残品)
 酷我音乐下载 = type=http-request,pattern=^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?newver.+$,requires-body=true,max-size=131072,timeout=5,script-path=https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/kwyyxz.js,script-update-interval=0
 酷我音乐听歌 = type=http-response,pattern=^http://(.+).kuwo.cn(/v2/api/user/info|/a.p|/vip/v2/user/vip),requires-body=true,max-size=131072,timeout=5,script-path=https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/kwyy.js,script-update-interval=0
+## 酷我换肤(已经有的皮肤需要先从本地皮肤删除再换 By@ s y)
+酷我换肤  = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/themekuwo.js,pattern=^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/theme)
 
-# 分割线——————————————————————————以上是自己根据网络QX资源转换
+# 分割线——————————————————————————
+
+#Termius
+Termius = type=http-response,requires-body=1,max-size=0,pattern=https:\/\/api\.termius\.com\/api\/v3\/bulk\/account\/,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/Terminus.js
+
+# 分割线——————————————————————————
+
+# > 轻颜相机 & ulike & 蒸汽波相机(vaporcam)三合一 解锁VIP
+轻颜相机 = type=http-response,pattern=^https:\/\/commerce-.*api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/qyxj.js
+
+# 分割线——————————————————————————
+
+# > 美颜相机一次性解锁内购（by黑黑酱）
+美颜相机一次性解锁内购 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.meiyan\.com\/iap\/verify\.json,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/myxj.js
+
+# 分割线——————————————————————————
+
+# > 洪恩双语绘本 (By 军哥哥)
+洪恩双语绘本 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/bookapi\.ihuman\.com\/(v1\/get\_user\_info|v1\/get\_purchase\_list),script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/hnsyhb.js
+
+# 分割线——————————————————————————
 
 # > 机场信息
 机场信息 = type=http-request,pattern=http://sub\.info,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info.js
@@ -37,6 +59,11 @@
 奈飞评分 = type=http-response,requires-body=1,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
 
 单集评分 = type=http-response,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/warmer/.+type=show-ath,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating_season.js
+
+# 分割线——————————————————————————
+
+# >  公众号去广告
+公众号去广告 = type=http-response,http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
 
 # 分割线——————————————————————————
 
@@ -149,7 +176,7 @@
 # 分割线——————————————————————————
 
 [MITM]
-hostname = %INSERT% -*.amemv.com, -*.snssdk.com, *.googlevideo.com, api.rr.tv, account.wps.cn, ap*.intsig.net, dayone.*, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.lagoapps.com, api.meiyan.com, biz.caiyunapp.com, %APPEND% raw.githubusercontent.com, gist.githubusercontent.com, spclient.wg.spotify.com, testflight.apple.com, ap?.bilibili.com, ap?.biliapi.net, api-production.endel.io, pan.baidu.com, btrace.qq.com, bmall.camera360.com, api.revenuecat.com, *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com, vsco.co, api.revenuecat.com, img.zuoyebang.cc, security.wechat.com, boxer.baidu.com, api.polaxiong.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, weather-data.apple.com, sub.store, m.douban.com, dida365.com, ticktick.com, %APPEND% *.bilibili.com,  *.kuwo.cn, %INSERT% api.m.jd.com, *.gotokeep.com, yoyiapp.com, tagit.hyhuo.com,  claritywallpaper.com
+hostname = %INSERT% -*.amemv.com, -*.snssdk.com, *.googlevideo.com, api.rr.tv, account.wps.cn, ap*.intsig.net, dayone.*, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.lagoapps.com, api.meiyan.com, biz.caiyunapp.com, %APPEND% raw.githubusercontent.com, gist.githubusercontent.com, spclient.wg.spotify.com, testflight.apple.com, ap?.bilibili.com, ap?.biliapi.net, api-production.endel.io, pan.baidu.com, btrace.qq.com, bmall.camera360.com, api.revenuecat.com, *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com, vsco.co, api.revenuecat.com, img.zuoyebang.cc, security.wechat.com, boxer.baidu.com, api.polaxiong.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, weather-data.apple.com, sub.store, m.douban.com, dida365.com, ticktick.com, %APPEND% *.bilibili.com,  *.kuwo.cn, %INSERT% api.m.jd.com, *.gotokeep.com, yoyiapp.com, tagit.hyhuo.com,  claritywallpaper.com, api.termius.com, commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, api.meiyan.com, bookapi.ihuman.com,
 
 
 
