@@ -1,5 +1,5 @@
 #!name=其他设置
-#!desc=最后更新时间 2022-02-24 14:00
+#!desc=junjie 最后更新时间 2022-02-24 15:00
 #!system=ios
 
 [Rule]
@@ -109,6 +109,10 @@ DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 
 // WARP++ 刷邀请推荐奖励
 // https://raw.githubusercontent.com/githubdulong/Script/master/Surge/Warp%2B%2B.sgmodule
+
+# 分割线——————————————————————————
+// 私有仓库 from Peng-YM
+// https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/GithubPrivate/github-private-repo.sgmodule
 
 # 分割线——————————————————————————
 
