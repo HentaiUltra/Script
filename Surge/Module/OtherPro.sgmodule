@@ -35,7 +35,6 @@ DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 ^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) $1$3 302
 
 [Script]
-
 # > 模块订阅(单独添加)
 // 爬虫复写去广告 from blackmatrix7
 // https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Surge/Advertising/Advertising.sgmodule
@@ -85,7 +84,7 @@ DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 // https://raw.githubusercontent.com/HentaiUltra/Script/main/Surge/Module/Task.sgmodule
 
 // Cookie脚本
-// https://raw.githubusercontent.com/HentaiUltra/Script/main/Surge/Module/Cookie.surge_module
+// https://raw.githubusercontent.com/HentaiUltra/Script/main/Surge/Module/Cookie.sgmodule
 
 # 分割线——————————————————————————
 
@@ -111,6 +110,7 @@ DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 // https://raw.githubusercontent.com/githubdulong/Script/master/Surge/Warp%2B%2B.sgmodule
 
 # 分割线——————————————————————————
+
 // 私有仓库 from Peng-YM
 // https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/GithubPrivate/github-private-repo.sgmodule
 
@@ -118,7 +118,5 @@ DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 
 // 字幕翻译 https://raw.githubusercontent.com/Neurogram-R/Surge/master/module/Dualsub.sgmodule
 // 指令 https://www.icloud.com/shortcuts/136b52e6452b4a10b3ea647f925cddd0
-
-//模块自动更新捷径 https://www.icloud.com/shortcuts/62b452191b0c436b9ed5f2a38870c756
 
 # 分割线——————————————————————————
