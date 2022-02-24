@@ -1,13 +1,8 @@
 #!name=定时脚本
-#!desc=最后更新时间 2022-02-24 13:14
+#!desc= junjie 最后更新时间 2022-02-24 14:00
 #!system=ios
 
 [Script]
-# 分割线——————————————————————————
-
-# > 京东商城
-//京东商城 = type=cron,cronexp=0 0 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js,script-update-interval=0
-
 # 分割线——————————————————————————
 
 # > 拦截100
@@ -74,6 +69,7 @@
 
 # > Gist备份+恢复
 数据备份 = type=cron,cronexp=50 23 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js,script-update-interval=0
+
 //数据恢复 = type=cron,cronexp=55 23 * 1 *,wake-system=1,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/restore.js,script-update-interval=0
 
 # 分割线——————————————————————————
@@ -84,8 +80,3 @@
 # 分割线——————————————————————————
 
 帐户检测 = type=cron,cronexp="0 5 6,14,23 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/dompling/Script/master/jd/jd_cookie_search.js,script-update-interval=0
-
-# 分割线——————————————————————————
-
-# > Boxjs会话
-// 切换会话 = type=cron,cronexp="0 10,20 0 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js,script-update-interval=0

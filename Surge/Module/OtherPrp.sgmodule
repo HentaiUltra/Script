@@ -1,5 +1,5 @@
 #!name=其他设置
-#!desc=最后更新时间 2022 - 02 - 21
+#!desc= junjie 最后更新时间 2022-02-24 14:00
 #!system=ios
 
 [Rule]
@@ -81,6 +81,14 @@ DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 
 # 分割线——————————————————————————
 
+// 定时脚本from HentaiUltra
+// https://raw.githubusercontent.com/HentaiUltra/Script/main/Surge/Module/Task.sgmodule
+
+// Cookie脚本
+// https://raw.githubusercontent.com/HentaiUltra/Script/main/Surge/Module/Cookie.surge_module
+
+# 分割线——————————————————————————
+
 // 京东助手(注入式需key）from githubdulong
 // https://raw.githubusercontent.com/githubdulong/Script/master/jdHelper.sgmodule
 
@@ -95,12 +103,6 @@ DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 
 // 京粉转链
 // https://raw.githubusercontent.com/githubdulong/Script/master/jfConvert.sgmodule
-
-// 定时脚本
-// https://raw.githubusercontent.com/githubdulong/Script/master/Surge/Task.sgmodule
-
-// Cookie脚本
-// https://raw.githubusercontent.com/githubdulong/Script/master/Surge/Cookie.sgmodule
 
 // 兼容模式
 // https://raw.githubusercontent.com/githubdulong/Script/master/Surge/TunOnly.sgmodule
