@@ -1,8 +1,31 @@
 #!name=脚本解锁
-#!desc=最后更新时间 2022 - 02 - 24 12:06
+#!desc=最后更新时间 2022-02-24 13:14
 #!system=ios
 
 [Script]
+
+# 分割线—————————————————以下是自己根据网络QX资源转换
+
+# > 滴答清单 vip
+滴答清单 = type=http-response,pattern=^https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status,requires-body=true,max-size=131072,timeout=5,script-path=https://raw.githubusercontent.com/HentaiUltra/Script/main/JavaSrcipt/DiDaQingDan.js,script-update-interval=0
+
+# 分割线——————————————————————————
+
+# > 克拉壁纸
+克拉壁纸 = type=http-response,pattern=^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll),requires-body=true,max-size=131072,timeout=5,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/clarity.js
+
+# 分割线——————————————————————————
+
+# > 拦截100
+克拉壁纸 = type=http-response,pattern=https://tagit.hyhuo.com/cypt/block100/gain_vip,requires-body=true,max-size=131072,timeout=15,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/block100.js
+
+# 分割线——————————————————————————
+
+# > 酷我 vip (半残品)
+酷我音乐下载 = type=http-request,pattern=^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?newver.+$,requires-body=true,max-size=131072,timeout=5,script-path=https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/kwyyxz.js,script-update-interval=0
+酷我音乐听歌 = type=http-response,pattern=^http://(.+).kuwo.cn(/v2/api/user/info|/a.p|/vip/v2/user/vip),requires-body=true,max-size=131072,timeout=5,script-path=https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/kwyy.js,script-update-interval=0
+
+# 分割线——————————————————————————以上是自己根据网络QX资源转换
 
 # > 机场信息
 机场信息 = type=http-request,pattern=http://sub\.info,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info.js
@@ -41,34 +64,6 @@
 
 # > 金山WPS vip
 办公解锁 = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js,type=http-response,pattern=^https://account.wps.*/api/users/
-
-# 分割线—————————————————以下是自己根据网络QX资源转换
-
-# > 滴答清单 vip
-# 滴答清单 = type=http-response,pattern=^https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status,requires-body=true,max-size=131072,timeout=5,script-path=https://raw.githubusercontent.com/HentaiUltra/Script/main/JavaSrcipt/DiDaQingDan.js,script-update-interval=0
-http-response ^https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/ddqd.js,tag=滴答
-
-# 分割线——————————————————————————
-
-# > 酷我 vip (半残品)
-酷我音乐下载 = type=http-request,pattern=^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?newver.+$,requires-body=true,max-size=131072,timeout=5,script-path=https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/kwyyxz.js,script-update-interval=0
-酷我音乐听歌 = type=http-response,pattern=^http://(.+).kuwo.cn(/v2/api/user/info|/a.p|/vip/v2/user/vip),requires-body=true,max-size=131072,timeout=5,script-path=https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/kwyy.js,script-update-interval=0
-
-# 分割线——————————————————————————
- url script-response-body https://raw.githubusercontent.com/id77/QuantumultX/master/Script/baimiao.js
-
-# > 白描 pro
-白描 = requires-body=1,max-size=131072,script-path=https://raw.githubusercontent.com/HentaiUltra/Script/main/JavaSrcipt/BaiMiaoZhengJianZhao.js,type=http-response,pattern=^https:\/\/zjz\.uzero\.cn\/api\/v2\.user\/(appLaunchWithUser|loginByWeixin),script-update-interval=0
-白描 = requires-body=1,max-size=131072,script-path=https://raw.githubusercontent.com/HentaiUltra/Script/main/JavaSrcipt/BaiMiaoZhengJianZhaoInfo.js,type=http-response,pattern=^https:\/\/zjz\.uzero\.cn\/api\/recognize\/recognizeInfo,script-update-interval=0
-
-# 分割线——————————————————————————
-
-# > FIMO解锁
-FIMO解锁 = type=http-response,pattern=^https?:\/\/server\.yoyiapp\.com\/fimo-user\/apple\/certificate$,requires-body=true,max-size=131072,timeout=5,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/FiMoCameraProCrack.js,script-update-interval=0
-
-FIMO解锁 = type=http-response,pattern=^https?:\/\/server\.yoyiapp\.com\/fimo-user\/apple\/certificate$,requires-body=true,max-size=131072,timeout=5,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/FiMoCameraFVIPCrack.js,script-update-interval=0
-
-# 分割线——————————————————————————以上是自己根据网络QX资源转换
 
 # > 扫描全能王 pro
 扫描全能 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/camscanner.js,type=http-response,pattern=https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?,script-update-interval=0
@@ -150,17 +145,17 @@ FIMO解锁 = type=http-response,pattern=^https?:\/\/server\.yoyiapp\.com\/fimo-u
 # 分割线——————————————————————————
 
 # > 订阅管理
-订阅管理 = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.min.js,requires-body=true,timeout=120,max-size=131072
+订阅管理 = type=http-request,requires-body=true,timeout=120,max-size=131072,pattern=^https?:\/\/sub\.store,script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.min.js
 
 # 分割线——————————————————————————
 
 # > 私有仓库
-私有仓库 = type=http-request,requires-body=0,pattern=^https?:\/\/(raw|gist)\.githubusercontent.com,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/GithubPrivate/github-private-repo.js
+私有仓库 = type=http-request, requires-body=0, pattern=^https?:\/\/(raw|gist)\.githubusercontent.com, script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/GithubPrivate/github-private-repo.js
 
 # 分割线——————————————————————————
 
 [MITM]
-hostname = %INSERT% -*.amemv.com, -*.snssdk.com, *.googlevideo.com, api.rr.tv, account.wps.cn, ap*.intsig.net, dayone.*, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.lagoapps.com, api.meiyan.com, biz.caiyunapp.com, raw.githubusercontent.com, spclient.wg.spotify.com, testflight.apple.com, ap?.bilibili.com, ap?.biliapi.net, api-production.endel.io, pan.baidu.com, btrace.qq.com, bmall.camera360.com, api.revenuecat.com, *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com, vsco.co, api.revenuecat.com, img.zuoyebang.cc, security.wechat.com, boxer.baidu.com, api.polaxiong.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, weather-data.apple.com, gist.githubusercontent.com, sub.store, m.douban.com, dida365.com, ticktick.com, %APPEND% *.bilibili.com,  *.kuwo.cn, %INSERT% api.m.jd.com, *.gotokeep.com, yoyiapp.com, zjz.uzero.cn
+hostname = %INSERT% -*.amemv.com, -*.snssdk.com, *.googlevideo.com, api.rr.tv, account.wps.cn, ap*.intsig.net, dayone.*, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.lagoapps.com, api.meiyan.com, biz.caiyunapp.com, %APPEND% raw.githubusercontent.com, gist.githubusercontent.com, spclient.wg.spotify.com, testflight.apple.com, ap?.bilibili.com, ap?.biliapi.net, api-production.endel.io, pan.baidu.com, btrace.qq.com, bmall.camera360.com, api.revenuecat.com, *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com, vsco.co, api.revenuecat.com, img.zuoyebang.cc, security.wechat.com, boxer.baidu.com, api.polaxiong.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, weather-data.apple.com, gist.githubusercontent.com, sub.store, m.douban.com, dida365.com, ticktick.com, %APPEND% *.bilibili.com,  *.kuwo.cn, %INSERT% api.m.jd.com, *.gotokeep.com, yoyiapp.com, tagit.hyhuo.com,  claritywallpaper.com
 
 
 

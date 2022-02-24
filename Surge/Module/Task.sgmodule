@@ -1,0 +1,91 @@
+#!name=定时脚本
+#!desc=最后更新时间 2022-02-24 13:14
+#!system=ios
+
+[Script]
+# 分割线——————————————————————————
+
+# > 京东商城
+//京东商城 = type=cron,cronexp=0 0 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js,script-update-interval=0
+
+# 分割线——————————————————————————
+
+# > 拦截100
+拦截100自动领取会员 = type=cron,cronexp=15 7 * * *,timeout=60,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/block100.js,,script-update-interval=0
+
+# 分割线——————————————————————————
+
+# > 百度贴吧
+百度贴吧 = type=cron,cronexp=30 3 0 * * *,timeout=60,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_checkin.js,script-update-interval=0
+
+# 分割线——————————————————————————
+
+# > 什么值得买(签到+任务)
+值买签到 = type=cron,cronexp=0 4 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_signin.js,script-update-interval=0
+值买任务 = type=cron,cronexp=30 4 0 1 * *,wake-system=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_mission.js,script-update-interval=0
+
+# 分割线——————————————————————————
+
+# > 电信签到
+电信签到 = type=cron,cronexp=0 5 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.js,script-update-interval=0
+
+# 分割线——————————————————————————
+
+# > 顺丰速运
+顺丰速运 = type=cron,cronexp=30 5 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js,script-update-interval=0
+
+# 分割线——————————————————————————
+
+# > 哔哩哔哩
+哔哩哔哩 = type=cron,cronexp=30 6 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js,script-update-interval=0
+
+# 分割线——————————————————————————
+
+# > 伊利乳品
+伊利乳品 = type=cron,cronexp=0 7 0 * * *,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.js,wake-system=true
+
+# 分割线——————————————————————————
+
+# 爱奇艺
+奇艺签到 = type=cron,cronexp=30 7 0 * * *,timeout=120,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js,wake-system=1,script-update-interval=0
+会员天数 = type=cron,cronexp="0 8 0 1-5 * *",timeout=120,script-path=https://raw.githubusercontent.com/limoruirui/misaka/master/iqiyiRed.js,wake-system=1,script-update-interval=0
+
+# 分割线——————————————————————————
+
+# > 每日一句
+每日一句 = type=cron,cronexp=8 8 8 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/One.js,script-update-interval=0
+
+# 分割线——————————————————————————
+
+# > 墨迹天气
+墨迹天气 = type=cron,cronexp=0 2 17 * * *,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/moji.js,script-update-interval=0,wake-system=1
+
+# 分割线——————————————————————————
+
+# > 中国联通
+中国联通 = type=cron,cronexp=0 55 9 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.js,script-update-interval=0
+
+# 分割线——————————————————————————
+
+# > 中国电信
+中国电信 = type=cron,cronexp=30 55 9 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/telecomSky.js,script-update-interval=0
+
+# 分割线——————————————————————————
+
+# > Gist备份+恢复
+数据备份 = type=cron,cronexp=50 23 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js,script-update-interval=0
+//数据恢复 = type=cron,cronexp=55 23 * 1 *,wake-system=1,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/restore.js,script-update-interval=0
+
+# 分割线——————————————————————————
+
+# > 同步检测
+账号同步 = type=cron,cronexp="0 3 6,14,23 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/dompling/Script/master/jd/ql_sync_box.js,script-update-interval=0
+
+# 分割线——————————————————————————
+
+帐户检测 = type=cron,cronexp="0 5 6,14,23 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/dompling/Script/master/jd/jd_cookie_search.js,script-update-interval=0
+
+# 分割线——————————————————————————
+
+# > Boxjs会话
+// 切换会话 = type=cron,cronexp="0 10,20 0 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js,script-update-interval=0
