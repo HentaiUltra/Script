@@ -1,6 +1,5 @@
 let obj = JSON.parse($response.body);
 obj.value.vip = true;
-obj.value.recognize;
 obj.value.recognize.remainBatch = -100;
 obj.value.recognize.translateCount = 3;
 obj.value.recognize.remainTranslate = -100;
