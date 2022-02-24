@@ -56,7 +56,7 @@
 
 # 分割线——————————————————————————
 
-油管查询 = type=generic,timeout=30,,script-path=https://gist.githubusercontent.com/Hyseen/5ae36a6a5cb5690b1f2bff4aa19c766f/raw/youtube_premium_check.js, argument=title=𝗬𝗼𝘂𝗧𝘂𝗯𝗲 解锁检测&group=𝗬𝗼𝘂𝗧𝘂𝗯𝗲
+油管查询 = type=generic,timeout=30,,script-path=https://gist.githubusercontent.com/Hyseen/5ae36a6a5cb5690b1f2bff4aa19c766f/raw/youtube_premium_check.js, argument=title=𝗬𝗼𝘂𝗧𝘂𝗯𝗲 解锁检测&group=𝗡𝗲𝘁𝗳𝗹𝗶𝘅⁺
 
 # 分割线——————————————————————————
 
