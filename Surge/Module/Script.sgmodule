@@ -1,5 +1,5 @@
 #!name=脚本解锁
-#!desc=最后更新时间 2022 - 02 - 24 11:32
+#!desc=最后更新时间 2022 - 02 - 24 12:06
 #!system=ios
 
 [Script]
@@ -45,7 +45,8 @@
 # 分割线—————————————————以下是自己根据网络QX资源转换
 
 # > 滴答清单 vip
-滴答清单 = type=http-response,pattern=^https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status,requires-body=true,max-size=131072,timeout=5,script-path=https://raw.githubusercontent.com/HentaiUltra/Script/main/JavaSrcipt/DiDaQingDan.js,script-update-interval=0
+# 滴答清单 = type=http-response,pattern=^https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status,requires-body=true,max-size=131072,timeout=5,script-path=https://raw.githubusercontent.com/HentaiUltra/Script/main/JavaSrcipt/DiDaQingDan.js,script-update-interval=0
+http-response ^https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/ddqd.js,tag=滴答
 
 # 分割线——————————————————————————
 
