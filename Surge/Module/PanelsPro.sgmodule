@@ -1,5 +1,5 @@
 #!name=策略面板
-#!desc=junjie 最后更新时间 2022-02-24 15:00
+#!desc=最后更新时间 2022-02-24 15:30
 #!system=ios
 
 [Panel]
@@ -7,13 +7,13 @@
 策略面板 = script-name=假日提醒,title="假日提醒",content="请刷新面板",style=info,update-interval=3600
 策略面板 = script-name=网络状态,title="网络状态",content="请刷新面板",style=info,update-interval=10
 策略面板 = script-name=流量统计,title="流量统计",content="请刷新面板",style=info,update-interval=10
-策略面板 = script-name=机场信息,title="机场信息",content="请刷新面板",style=info,update-interval=3600
+策略面板 = script-name=机场信息,title="𝗔𝗹𝗶𝗻𝗸",content="请刷新面板",style=info,update-interval=600
 策略面板 = script-name=代理选择,title="代理选择",content="请刷新面板",style=info,update-interval=10
 策略面板 = script-name=节点检测,title="节点信息",content="请刷新面板",style=info,update-interval=10
 策略面板 = script-name=电信详情,title="电信详情",content="请刷新面板",style=info,update-interval=3600
-策略面板 = script-name=奈飞查询,title="𝗡𝗲𝘁𝗳𝗹𝗶𝘅",content="请刷新面板",style=alert,update-interval=1800
-策略面板 = script-name=迪士尼查询,title="𝗗𝗶𝘀𝗻𝗲𝘆+",content="请刷新面板",style=alert,update-interval=1800
-策略面板 = script-name=油管查询,title="𝗬𝗼𝘂𝗧𝘂𝗯𝗲",content="请刷新面板",style=alert,update-interval=1800
+策略面板 = script-name=奈飞查询,title="𝗡𝗲𝘁𝗳𝗹𝗶𝘅",content="请刷新面板",style=info,update-interval=1800
+策略面板 = script-name=迪士尼查询,title="𝗗𝗶𝘀𝗻𝗲𝘆+",content="请刷新面板",style=info,update-interval=1800
+策略面板 = script-name=油管查询,title="𝗬𝗼𝘂𝗧𝘂𝗯𝗲",content="请刷新面板",style=info,update-interval=1800
 
 [Script]
 # > 策略面板
@@ -33,7 +33,10 @@
 
 # 分割线——————————————————————————
 
-机场信息 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=https%3A%2F%2Falink123.com%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D4652ae0c35553039f6117ef4828a457e&reset_day=1&title=𝗔𝗹𝗶𝗻𝗸&icon=icloud&color=#5AC8FA
+机场信息 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=https%3A%2F%2Falink123.com%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D4652ae0c35553039f6117ef4828a457e&reset_day=13&title=𝗔𝗹𝗶𝗻𝗸&icon=icloud&color=#5AC8FA
+
+
+Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=[URL encode 后的机场节点链接]&reset_day=1&title=AmyInfo&icon=bonjour&color=#007aff
 
 # 分割线——————————————————————————
 

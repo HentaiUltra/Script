@@ -1,5 +1,5 @@
 #!name=其他设置
-#!desc=junjie 最后更新时间 2022-02-24 15:00
+#!desc=最后更新时间 2022-02-24 15:30
 #!system=ios
 
 [Rule]
@@ -116,13 +116,8 @@ DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 
 # 分割线——————————————————————————
 
-// 迪士尼字幕 from Neurogram
-// https://raw.githubusercontent.com/Neurogram-R/Surge/master/module/DisneyPlus-Dualsub.sgmodule
-// 指令https://www.icloud.com/shortcuts/aa6056ad31c14f25aedbee6cd1d7a799
-
-// 油管字幕
-// https://raw.githubusercontent.com/Neurogram-R/Surge/master/module/YouTube-Subtrans.sgmodule
-// 指令https://www.icloud.com/shortcuts/a0c3f95778ef4c18970da66fda40b29b
+// 字幕翻译 https://raw.githubusercontent.com/Neurogram-R/Surge/master/module/Dualsub.sgmodule
+// 指令 https://www.icloud.com/shortcuts/136b52e6452b4a10b3ea647f925cddd0
 
 //模块自动更新捷径 https://www.icloud.com/shortcuts/62b452191b0c436b9ed5f2a38870c756
 
