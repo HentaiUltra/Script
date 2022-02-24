@@ -33,7 +33,7 @@
 
 # 分割线——————————————————————————
 
-机场信息 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=https%3A%2F%2Falink123.com%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D4652ae0c35553039f6117ef4828a457e&reset_day=13&title=𝗔𝗹𝗶𝗻𝗸&icon=icloud&color=#5AC8FA
+机场信息 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=https%3A%2F%2Falink123.com%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D4652ae0c35553039f6117ef4828a457e&reset_day=13&title=Alink&icon=icloud&color=#5AC8FA
 
 
 Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=[URL encode 后的机场节点链接]&reset_day=1&title=AmyInfo&icon=bonjour&color=#007aff
