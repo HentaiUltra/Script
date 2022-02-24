@@ -1,5 +1,5 @@
 #!name=策略面板
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-02-24 16:15
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-02-24 16:30
 #!system=ios
 
 [Panel]
@@ -36,7 +36,7 @@
 
 # 分割线——————————————————————————
 
-节点检测 = type=generic, timeout=10, script-path=https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/JavaScript/Surge/ipcheck.js
+节点检测 = type=generic, timeout=10, script-path=https://raw.githubusercontent.com/LucaLin233/Luca_Conf/main/Surge/JS/ipcheck.js
 
 # 分割线——————————————————————————
 
