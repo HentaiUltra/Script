@@ -20,6 +20,12 @@
 
 # 分割线——————————————————————————
 
+# > 什么值得买
+// https://zhiyou.smzdm.com/
+什么值得买 = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_signin.js,type=http-request,requires-body=true,pattern=^https?:\/\/zhiyou\.smzdm\.com\/user$
+
+# 分割线——————————————————————————
+
 # > 联通签到 app签到
 中国联通 = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js,type=http-request,pattern=^https?:\/\/act.10010.com\/SigninApp\/signin\/querySigninActivity.htm,requires-body=0,script-update-interval=0
 中国联通 = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js,type=http-request,pattern=^https?:\/\/act.10010.com\/SigninApp(.*?)\/signin\/daySign,requires-body=0,script-update-interval=0

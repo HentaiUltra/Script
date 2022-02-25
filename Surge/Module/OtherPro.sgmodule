@@ -44,16 +44,26 @@ DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 
 # 分割线——————————————————————————
 
-// 爬虫复写去广告 from blackmatrix7
+# > blackmatrix7
+// 复写去广告
 // https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Surge/Advertising/Advertising.sgmodule
 
+// AllInOne
 // https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Surge/AllInOne/AllInOne.sgmodule
 
+// 重定向
 // https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Surge/Redirect/Redirect.sgmodule
+
+// 脚本去广告
+// https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Surge/AdvertisingScript/AdvertisingScript.sgmodule
+
+// 屏蔽APP更新检查
+// https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Surge/Upgrade/Upgrade.sgmodule
 
 # 分割线——————————————————————————
 
-// 贴吧去除广告 from app2smile
+# > app2smile
+// 贴吧去除广告
 // https://raw.githubusercontent.com/app2smile/rules/master/module/tieba.sgmodule
 
 // spotify解锁
@@ -64,7 +74,8 @@ DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 
 # 分割线——————————————————————————
 
-// Siri与搜索 from iRingo
+# > iRingo
+// Siri与搜索
 // https://raw.githubusercontent.com/VirgilClyne/iRingo/main/sgmodule/Siri_Suggestions.sgmodule
 // 苹果天气
 // https://github.com/VirgilClyne/iRingo/blob/main/sgmodule/Apple_Weather.sgmodule?raw=true
@@ -73,12 +84,14 @@ DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 
 # 分割线——————————————————————————
 
-// 屏蔽HTTP3/QUIC协议 from TributePaulWalker
+# > TributePaulWalker
+// 屏蔽HTTP3/QUIC协议
 // https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/Surge/Module/Surge_BlockQUIC.sgmodule
 
 # 分割线——————————————————————————
 
-// 网络防火墙 from NobyDa
+# > NobyDa
+// 网络防火墙
 // https://gist.githubusercontent.com/NobyDa/fb026a6d01fec146bd451d01b0c973d5/raw/NetworkFirewall.sgmodule
 
 # 分割线——————————————————————————
@@ -88,7 +101,8 @@ DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 
 # 分割线——————————————————————————
 
-// 定时脚本from HentaiUltra
+# > HentaiUltra
+// 定时脚本
 // https://raw.githubusercontent.com/HentaiUltra/Script/main/Surge/Module/Task.sgmodule
 
 // Cookie脚本
@@ -99,8 +113,12 @@ DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 
 # 分割线——————————————————————————
 
-// 京东助手(注入式需key）from githubdulong
+# > githubdulong
+// 京东助手(注入式需key）
 // https://raw.githubusercontent.com/githubdulong/Script/master/jdHelper.sgmodule
+
+// 京东wskey上传
+// https://raw.githubusercontent.com/githubdulong/Script/master/Surge/JDWSKey.sgmodule
 
 // 京东联盟转链（联盟、助手二选一）
 // https://raw.githubusercontent.com/githubdulong/Script/master/Surge/jdapp_to_union.sgmodule
@@ -122,7 +140,8 @@ DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 
 # 分割线——————————————————————————
 
-// 私有仓库 from Peng-YM
+# > Peng-YM
+// 私有仓库
 // https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/GithubPrivate/github-private-repo.sgmodule
 
 # 分割线——————————————————————————
