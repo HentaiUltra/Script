@@ -1,5 +1,5 @@
 #!name=Cookie获取
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-02-25 10:50
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-02-25 11:15
 #!system=ios
 
 # 分割线——————————————————————————
@@ -52,7 +52,7 @@
 # 分割线——————————————————————————
 
 # >  NGA
-NGA挂墙 = type=http-request,requires-body=true,pattern=^https:\/\/ngabbs.com\/nuke.php\??,script-path==https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/nga/nga.cookie.js
+NGA挂墙 = type=http-request,pattern=^https:\/\/ngabbs.com\/nuke.php\??,script-path==https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/nga/nga.cookie.js
 
 # 分割线——————————————————————————
 
