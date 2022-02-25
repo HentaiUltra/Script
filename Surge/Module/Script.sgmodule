@@ -1,5 +1,5 @@
 #!name=脚本解锁
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-02-25 13:10
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-02-25 14:25
 #!system=ios
 
 [Script]
@@ -16,7 +16,7 @@
 # 分割线——————————————————————————
 
 # > 拦截100
-克拉壁纸 = type=http-response,pattern=https://tagit.hyhuo.com/cypt/block100/gain_vip,requires-body=true,max-size=131072,timeout=15,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/block100.js
+拦截100 = type=http-response,pattern=https://tagit.hyhuo.com/cypt/block100/gain_vip,requires-body=true,max-size=131072,timeout=15,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/block100.js
 
 # 分割线——————————————————————————
 
@@ -45,6 +45,16 @@ Termius = type=http-response,requires-body=1,max-size=0,pattern=https:\/\/api\.t
 
 # > 洪恩双语绘本
 洪恩双语绘本 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/bookapi\.ihuman\.com\/(v1\/get\_user\_info|v1\/get\_purchase\_list),script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/hnsyhb.js
+
+# 分割线——————————————————————————
+
+# > drops
+drops解锁 = type=http-response,requires-body=1,max-size=0,pattern=^https\:\/\/api-prod\.languagedrops\.com\/syncPurchasesV\d,script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/drops.js
+
+# 分割线——————————————————————————
+
+# > document
+document解锁 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/license\.pdfexpert\.com\/api\/.*\/documents\/subscription\/(refresh$|check$),script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/documents.js
 
 # 分割线——————————————————————————
 
@@ -165,7 +175,7 @@ Termius = type=http-response,requires-body=1,max-size=0,pattern=https:\/\/api\.t
 # 分割线——————————————————————————
 
 # > 通用解锁（试用取消）
-通用解锁 = type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/verify_receipt.js,script-update-interval=-1
+通用解锁 = type=http-response,requires-body=true,max-size=131072,timeout=15,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/verify_receipt.js
 
 # 分割线——————————————————————————
 
@@ -181,7 +191,7 @@ Termius = type=http-response,requires-body=1,max-size=0,pattern=https:\/\/api\.t
 # 分割线——————————————————————————
 
 [MITM]
-hostname = %INSERT% -*.amemv.com, -*.snssdk.com, *.googlevideo.com, api.rr.tv, account.wps.cn, ap*.intsig.net, dayone.*, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.lagoapps.com, api.meiyan.com, biz.caiyunapp.com, %APPEND% raw.githubusercontent.com, gist.githubusercontent.com, spclient.wg.spotify.com, testflight.apple.com, ap?.bilibili.com, ap?.biliapi.net, api-production.endel.io, pan.baidu.com, btrace.qq.com, bmall.camera360.com, api.revenuecat.com, *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com, vsco.co, api.revenuecat.com, img.zuoyebang.cc, security.wechat.com, boxer.baidu.com, api.polaxiong.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, weather-data.apple.com, sub.store, m.douban.com, dida365.com, ticktick.com, %APPEND% *.bilibili.com,  *.kuwo.cn, %INSERT% api.m.jd.com, *.gotokeep.com, yoyiapp.com, tagit.hyhuo.com,  claritywallpaper.com, api.termius.com, commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, api.meiyan.com, bookapi.ihuman.com, %APPEND% buy.itunes.apple.com
+hostname = %INSERT% -*.amemv.com, -*.snssdk.com, *.googlevideo.com, api.rr.tv, account.wps.cn, ap*.intsig.net, dayone.*, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.lagoapps.com, api.meiyan.com, biz.caiyunapp.com, %APPEND% raw.githubusercontent.com, gist.githubusercontent.com, spclient.wg.spotify.com, testflight.apple.com, ap?.bilibili.com, ap?.biliapi.net, api-production.endel.io, pan.baidu.com, btrace.qq.com, bmall.camera360.com, api.revenuecat.com, *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com, vsco.co, api.revenuecat.com, img.zuoyebang.cc, security.wechat.com, boxer.baidu.com, api.polaxiong.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, weather-data.apple.com, sub.store, m.douban.com, dida365.com, ticktick.com, %APPEND% *.bilibili.com,  *.kuwo.cn, %INSERT% api.m.jd.com, *.gotokeep.com, yoyiapp.com, tagit.hyhuo.com,  claritywallpaper.com, api.termius.com, commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, api.meiyan.com, bookapi.ihuman.com, buy.itunes.apple.com, license.pdfexpert.com,
 
 
 
