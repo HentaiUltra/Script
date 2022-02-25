@@ -1,5 +1,5 @@
 #!name=定时任务脚本
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-02-24 20:45
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-02-25 10:50
 #!system=ios
 
 [Script]
@@ -15,19 +15,8 @@
 
 # 分割线——————————————————————————
 
-# > 什么值得买(签到+任务)
-值买签到 = type=cron,cronexp=0 4 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_signin.js,script-update-interval=0
-值买任务 = type=cron,cronexp=30 4 0 1 * *,wake-system=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_mission.js,script-update-interval=0
-
-# 分割线——————————————————————————
-
 # > 电信签到
 电信签到 = type=cron,cronexp=0 5 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.js,script-update-interval=0
-
-# 分割线——————————————————————————
-
-# > 顺丰速运
-顺丰速运 = type=cron,cronexp=30 5 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js,script-update-interval=0
 
 # 分割线——————————————————————————
 
@@ -68,7 +57,7 @@
 # 分割线——————————————————————————
 
 # > NGA刮墙
-NGA刮墙= type=cron,cronexp=10 0 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/nga/nga.js,script-update-interval=0
+NGA刮墙 = type=cron,cronexp=10 0 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/nga/nga.js,script-update-interval=0
 
 # 分割线——————————————————————————
 

@@ -1,5 +1,5 @@
 #!name=脚本解锁
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-02-24 20:45
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-02-25 10:50
 #!system=ios
 
 [Script]
@@ -28,8 +28,8 @@
 
 # 分割线——————————————————————————
 
-#Termius
-Termius = type=http-response,requires-body=1,max-size=0,pattern=https:\/\/api\.termius\.com\/api\/v3\/bulk\/account\/,script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/Terminus.js
+# > Termius
+Termius = type=http-response,requires-body=1,max-size=0,pattern=https:\/\/api\.termius\.com\/api\/v3\/bulk\/account\/,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/terminus.js
 
 # 分割线——————————————————————————
 

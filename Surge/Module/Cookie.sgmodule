@@ -1,5 +1,5 @@
 #!name=Cookie获取
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-02-24 20:45
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-02-25 10:50
 #!system=ios
 
 # 分割线——————————————————————————
@@ -9,7 +9,7 @@
 # 分割线——————————————————————————
 
 # > 京东商城
-# 京东登录 https://home.m.jd.com/myJd/newhome.action
+# https://home.m.jd.com/myJd/newhome.action
 京东商城 = type=http-request,requires-body=1,pattern=^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?|gw\/generic\/hy\/h5\/m\/appSign\?),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 
 # 分割线——————————————————————————
@@ -20,21 +20,12 @@
 
 # 分割线——————————————————————————
 
-什么值买 = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_signin.js,type=http-request,requires-body=true,pattern=^https?:\/\/zhiyou\.smzdm\.com\/user$
-
-# 分割线——————————————————————————
-
 # > 联通签到 app签到
 中国联通 = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js,type=http-request,pattern=^https?:\/\/act.10010.com\/SigninApp\/signin\/querySigninActivity.htm,requires-body=0,script-update-interval=0
 中国联通 = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js,type=http-request,pattern=^https?:\/\/act.10010.com\/SigninApp(.*?)\/signin\/daySign,requires-body=0,script-update-interval=0
 中国联通 = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js,type=http-request,pattern=^https?:\/\/m.client.10010.com\/dailylottery\/static\/(textdl\/userLogin|active\/findActivityInfo),requires-body=0,script-update-interval=0
 # > 联通组件ck app点流量
 联通组件 = type=http-request,pattern=^https:\/\/m\.client\.10010\.com\/serviceimportantbusiness\/smart\/smartwisdomCommon,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/dompling/Script/master/10010/index.js,script-update-interval=0
-
-# 分割线——————————————————————————
-
-# > 顺丰速运 app获取
-顺丰速运 = type=http-request, pattern=^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/user\/universalSign,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js,requires-body=true
 
 # 分割线——————————————————————————
 
@@ -48,22 +39,24 @@
 
 # 分割线——————————————————————————
 
-# > 哔哩哔哩 登陆https://www.bilibili.com/
+# > 哔哩哔哩
+# >https://www.bilibili.com/
 哔哩哔哩 = type=http-request,pattern=^https:\/\/(www|live)\.bilibili\.com\/?.?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.cookie.js,script-update-interval=0
 
 # 分割线——————————————————————————
 
 # > 爱奇艺
-// https://m.iqiyi.com/user.html
+# > https://m.iqiyi.com/user.html
 奇艺获取 = type=http-request,pattern=^https:\/\/passport\.iqiyi\.com\/apis\/user\/info\.action,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
 
 # 分割线——————————————————————————
 
 # >  NGA
-NGA挂墙= type=http-request,requires-body=true,pattern=^https:\/\/ngabbs.com\/nuke.php\??,script-path==https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/nga/nga.cookie.js
+NGA挂墙 = type=http-request,requires-body=true,pattern=^https:\/\/ngabbs.com\/nuke.php\??,script-path==https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/nga/nga.cookie.js
 
 # 分割线——————————————————————————
 
 
 [MITM]
-hostname = %INSERT% me-api.jd.com, e.189.cn, mkt.21cn.com, c.tieba.baidu.com, zhiyou.smzdm.com, m.client.10010.com, act.10010.com, ccsp-egmas.sf-express.com, wapside.189.cn:9001, club.yili.com, *.bilibili.com, passport.iqiyi.com
+hostname = %INSERT% me-api.jd.com, e.189.cn, mkt.21cn.com, c.tieba.baidu.com, m.client.10010.com, act.10010.com, wapside.189.cn:9001, club.yili.com, *.bilibili.com, passport.iqiyi.com, ngabbs.com
+

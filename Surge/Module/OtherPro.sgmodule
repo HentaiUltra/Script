@@ -1,5 +1,5 @@
 #!name=其他设置
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-02-24 20:45
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-02-25 10:50
 #!system=ios
 
 # 分割线——————————————————————————
@@ -19,6 +19,7 @@ URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$,REJECT-
 DOMAIN,boxjs.net,𝗣𝗥𝗢𝗫𝗬
 # >  强制订阅域名直连
 DOMAIN,my.pbap.cc,DIRECT
+DOMAIN,alink123.com,DIRECT
 # > 京东库代理
 DOMAIN-SUFFIX,jdsharedresourcescdn.azureedge.net,𝗣𝗥𝗢𝗫𝗬
 # > DayOne
