@@ -16,13 +16,12 @@
 
 # > 百度贴吧 app获取
 百度贴吧 = type=http-request,pattern=^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/login,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_checkin.js
-# > 什么值得买 浏览器https://zhiyou.smzdm.com/
 
 # 分割线——————————————————————————
 
 # > 什么值得买
 // https://zhiyou.smzdm.com/
-什么值得买 = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_signin.js,type=http-request,requires-body=true,pattern=^https?:\/\/zhiyou\.smzdm\.com\/user$
+什么值得买 = type=http-request,requires-body=true,pattern=^https?:\/\/zhiyou\.smzdm\.com\/user$,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_signin.js
 
 # 分割线——————————————————————————
 
@@ -58,7 +57,7 @@
 # 分割线——————————————————————————
 
 # >  NGA
-NGA挂墙 = type=http-request,requires-body=1,max-size=0,pattern=^https:\/\/ngabbs.com\/nuke.php\??,script-path==https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/nga/nga.cookie.js
+NGA挂墙 = type=http-request,requires-body=1,max-size=0,pattern=^https:\/\/ngabbs.com\/nuke.php\??,script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/nga/nga.cookie.js
 
 # 分割线——————————————————————————
 
