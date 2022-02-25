@@ -1,5 +1,5 @@
 #!name=其他设置
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-02-25 10:50
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-02-25 13:10
 #!system=ios
 
 # 分割线——————————————————————————
@@ -93,6 +93,9 @@ DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 
 // Cookie脚本
 // https://raw.githubusercontent.com/HentaiUltra/Script/main/Surge/Module/Cookie.sgmodule
+
+// debugging脚本
+// https://raw.githubusercontent.com/HentaiUltra/Script/main/Surge/Module/debugging.sgmodule
 
 # 分割线——————————————————————————
 

@@ -1,5 +1,5 @@
 #!name=脚本解锁
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-02-25 11:45
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-02-25 13:10
 #!system=ios
 
 [Script]
@@ -164,6 +164,11 @@ Termius = type=http-response,requires-body=1,max-size=0,pattern=https:\/\/api\.t
 
 # 分割线——————————————————————————
 
+# > 通用解锁（试用取消）
+通用解锁 = type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/verify_receipt.js,script-update-interval=-1
+
+# 分割线——————————————————————————
+
 # > Boxjs（稳定版+测试版）
 会话数据 = type=http-request,pattern=^https?://boxjs.com,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/chavy.box.js, requires-body=true, timeout=120
 会话数据 = type=http-request,pattern=^https?://boxjs.net,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120
@@ -176,7 +181,7 @@ Termius = type=http-response,requires-body=1,max-size=0,pattern=https:\/\/api\.t
 # 分割线——————————————————————————
 
 [MITM]
-hostname = %INSERT% -*.amemv.com, -*.snssdk.com, *.googlevideo.com, api.rr.tv, account.wps.cn, ap*.intsig.net, dayone.*, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.lagoapps.com, api.meiyan.com, biz.caiyunapp.com, %APPEND% raw.githubusercontent.com, gist.githubusercontent.com, spclient.wg.spotify.com, testflight.apple.com, ap?.bilibili.com, ap?.biliapi.net, api-production.endel.io, pan.baidu.com, btrace.qq.com, bmall.camera360.com, api.revenuecat.com, *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com, vsco.co, api.revenuecat.com, img.zuoyebang.cc, security.wechat.com, boxer.baidu.com, api.polaxiong.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, weather-data.apple.com, sub.store, m.douban.com, dida365.com, ticktick.com, %APPEND% *.bilibili.com,  *.kuwo.cn, %INSERT% api.m.jd.com, *.gotokeep.com, yoyiapp.com, tagit.hyhuo.com,  claritywallpaper.com, api.termius.com, commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, api.meiyan.com, bookapi.ihuman.com
+hostname = %INSERT% -*.amemv.com, -*.snssdk.com, *.googlevideo.com, api.rr.tv, account.wps.cn, ap*.intsig.net, dayone.*, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.lagoapps.com, api.meiyan.com, biz.caiyunapp.com, %APPEND% raw.githubusercontent.com, gist.githubusercontent.com, spclient.wg.spotify.com, testflight.apple.com, ap?.bilibili.com, ap?.biliapi.net, api-production.endel.io, pan.baidu.com, btrace.qq.com, bmall.camera360.com, api.revenuecat.com, *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com, vsco.co, api.revenuecat.com, img.zuoyebang.cc, security.wechat.com, boxer.baidu.com, api.polaxiong.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, weather-data.apple.com, sub.store, m.douban.com, dida365.com, ticktick.com, %APPEND% *.bilibili.com,  *.kuwo.cn, %INSERT% api.m.jd.com, *.gotokeep.com, yoyiapp.com, tagit.hyhuo.com,  claritywallpaper.com, api.termius.com, commerce-.*api.faceu.mobi, commerce-api.faceu.mobi, api.meiyan.com, bookapi.ihuman.com, %APPEND% buy.itunes.apple.com
 
 
 
