@@ -1,0 +1,374 @@
+# 【JavaScript】合集
+
+http-response ^https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/ddqd.js,tag=滴答
+
+
+# 分割线——————————————————————————
+
+# > Youtube 简体字幕
+https:\/\/www.youtube.com\/api\/timedtext\?.+&lang=(?!zh)((?!&tlang=zh\-Hans).)*$ url request-header \sHTTP/1\.1(\r\n) request-header &tlang=zh-Hans HTTP/1.1$1
+
+# 分割线——————————————————————————
+
+# > 滴滴出行 去广告
+//01安全提示横幅
+^https:\/\/guard\.sec\.xiaojukeji\.com\/api\/guard\/psg\/v2\/getShieldStatus url reject
+//02底部打车&代价推荐
+^https:\/\/conf\.diditaxi\.com\.cn\/one url reject
+//03福利专区-金融服务-公交-骑车-滴滴乐园
+^https:\/\/conf\.diditaxi\.com\.cn\/nav\/widget url reject
+//04接送机-优惠商城
+^https:\/\/api\.udache\.com\/gulfstream url reject
+//05 主页领任务
+^https:\/\/conf\.diditaxi\.com\.cn\/api\/(component|fusion|dynamicmodule|usercenter) url reject
+^https:\/\/conf\.diditaxi\.com\.cn\/dynamic url reject
+//主页 非主流式悬浮挂件
+^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget url reject
+//07商城
+^https:\/\/shop-gw\.chengxinyouxuan\.com\/(route|indexConfig|apolloConfig|getShopTuanInfos) url reject
+//08开屏广告
+^https:\/\/img-ys011\.didistatic\.com\/static url reject
+//09骑行
+^https:\/\/pt-starimg\.didistatic\.com\/static url reject
+
+# 分割线——————————————————————————
+
+# > IT之家 去广告
+^https:\/\/m\.ithome\.com\/api\/news\/newslistpageget url script-response-body https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/ithome/ithome.ad.js
+^https:\/\/api\.ithome\.com\/json\/(listpage|newslist)\/news url script-response-body https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/ithome/ithome.ad.js
+^https:\/\/api\.ithome\.com\/json\/slide\/index url script-response-body https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/ithome/ithome.ad.js
+^https:\/\/api\.zuihuimai\.com url reject
+
+# 分割线——————————————————————————
+
+# > 云闪付 去广告
+^https:\/\/wallet\.95516\.com\/s\/wl\/icon\/long url reject
+
+# 分割线——————————————————————————
+
+# > 腾讯视频 去广告（主机名见脚本模块）
+^https?:\/\/btrace\.qq\.com url reject-dict
+^https?:\/\/pgdt\.gtimg\.cn url reject
+^https?:\/\/c\.l\.qq\/.com url reject
+
+# 分割线——————————————————————————
+
+# > 人人视频 去广告（主机名见脚本模块）
+^https?:\/\/api\.rr\.tv\/(?:ad\/getAll$|storage/business/rootName/app/homePage) url reject
+
+# 分割线——————————————————————————
+
+# > 交管12123去开屏广告（主机名见脚本模块）
+^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ url reject
+
+# 分割线——————————————————————————
+
+# > 拼多多 去广告
+^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash url reject
+
+# 分割线——————————————————————————
+
+# > 小米运动 去广告
+^https:\/\/api-mifit-cn2\.huami\.com\/discovery\/mi\/cards\/startpage_ad url reject
+
+# 分割线——————————————————————————
+
+# > 京东 去广告
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$ url reject-200
+
+# > 京东极速版 去广告
+https://api.m.jd.com/client.action\?functionId=lite_advertising url reject
+
+# 分割线——————————————————————————
+
+
+
+
+
+#  —————————————————————————— video ——————————————————————————
+
+# > Dualsub
+# Disney+, Star+, HBO Max, Netflix, Paramount+, YouTube subtitles add-ons
+https:\/\/.*(media.(dss|star)ott|manifests.v2.api.hbo|hbomaxcdn|nflxvideo|cbs(aa|i)video).(com|net)\/((.+(\.vtt(\?m=\d+)*|-all-.+.m3u8.*))|hls.m3u8.+|\?o=\d+&v=\d+&e=.+) url script-response-body https://raw.githubusercontent.com/Neurogram-R/Quantumult-X/main/Dualsub.js
+https:\/\/setting.(media.dssott|hbomaxcdn|nflxvideo|youtube|cbsivideo).(com|net)\/\?action=(g|s)et url script-analyze-echo-response https://raw.githubusercontent.com/Neurogram-R/Quantumult-X/main/Dualsub.js
+https:\/\/www.youtube.com\/api\/timedtext.+ url script-request-header https://raw.githubusercontent.com/Neurogram-R/Quantumult-X/main/Dualsub.js
+
+# 分割线——————————————————————————
+
+# > bilbii换区、评分
+^https:\/\/ap(p|i)\.bili(bili|api)\.(com|net)\/(pgc\/view\/v\d\/app\/season|x\/v\d\/search\/defaultwords)\?access_key url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
+^https:\/\/ap(p|i)\.bili(bili|api)\.(com|net)\/x\/v\d\/search(\/type)?\?.+?%20(%E6%B8%AF|%E5%8F%B0|%E4%B8%AD)& url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
+
+# > bilbii 大会员画质
+https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) url script-response-body https://github.com/Sunert/Script/raw/master/Script/Bilibili/BiliHD.js
+
+# > bilbii启动时开启直连模式
+^https?:\/\/api\.bilibili\.com\/x\/offline\/version url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/bilibili_startup_direct.js
+
+# 分割线——————————————————————————
+
+# > 人人视频 去广告
+^https?:\/\/api\.rr\.tv\/v\dplus\/index\/channel url script-response-body https://Choler.github.io/Surge/Script/rrsp.js
+
+# > 人人视频 解锁
+^https:\/\/api\.rr\.tv\/user\/privilege\/list url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/rrtv.js
+^https:\/\/api\.rr\.tv\/ad\/getAll url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/rrtv.js
+^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/rrtv.js
+
+# 分割线——————————————————————————
+
+# > Netflix评分
+^https?://ios(-.*)?\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D url script-request-header https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
+^https?://ios(-.*)?\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
+
+# 分割线——————————————————————————
+
+# > 豆瓣电影和电视剧添加便捷播放按钮
+^https?:\/\/m\.douban\.com\/movie\/subject\/\d+\/ url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/DouBan.js
+
+# 分割线——————————————————————————
+
+
+
+
+
+# —————————————————————————— camera ——————————————————————————
+
+# > FIMO解锁全部胶卷
+^https?:\/\/server\.yoyiapp\.com\/fimo-user\/apple\/certificate$ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/FiMoCameraProCrack.js
+
+# 分割线——————————————————————————
+
+# FIMO解锁终身会员
+^https?:\/\/server\.yoyiapp\.com\/fimo-user\/apple\/certificate$ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/FiMoCameraFVIPCrack.js
+
+# 分割线——————————————————————————
+
+# > ulike
+^https:\/\/commerce-i18n-api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info$ url script-response-body https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/ulike.js
+
+# 分割线——————————————————————————
+
+
+# >  醒图&Ulike&轻颜相机&vaporcam 须登录
+https://(commerce-.*api|pay).(faceu|wecut).(com|mobi)/(commerce|apple)/(iosAppVerifyReceipt.php|v1/subscription/user_info) url script-response-body https://github.com/ddgksf2013/Cuttlefish/raw/master/Crack/commerce.js
+
+
+# 分割线——————————————————————————
+
+# > 美图秀秀(2022.04.21)
+^https?://(api|h5).xiuxiu.meitu.com/(v1/user/show.json|v1/vip/vip_show.json|v1/vip/prompt/query.json|v1/h5/vip/sub_detail.json|v1/h5/user/self_show.json|v1/h5/vip/user_detail.json|v1/vip/prompt/query.json|v1/vip/prompt/query.json) url script-response-body https://raw.githubusercontent.com/githubdulong/Script/master/Mtxx.js
+
+# 分割线——————————————————————————
+
+# > 泼辣修图 解锁
+^https:\/\/api\.polaxiong\.com\/v1\/payments\/appleiap\/receipts\/confirmation url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Polarr.js
+
+# 分割线——————————————————————————
+
+# > MIX解锁
+^https:\/\/bmall\.camera360\.com\/api\/mix\/recovery$ url script-response-body https://raw.githubusercontent.com/githubdulong/Script/master/mix.js
+
+# 分割线——————————————————————————
+
+# > phothop&PSexpress
+^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile url script-response-body https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/photoshop.js
+
+# 分割线——————————————————————————
+
+# > lightroom
+^https:\/\/photos\.adobe\.io\/v2\/accounts* url script-response-body https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/lightroom.js
+
+# 分割线——————————————————————————
+
+
+
+
+
+# ——————————————————————————Tools——————————————————————————
+
+# > Boxjs（稳定版+测试版）
+https?:\/\/boxjs\.(com|net) url script-analyze-echo-response https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js
+
+# 分割线——————————————————————————
+
+# > TF国区下载修正
+^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ url script-request-body https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js
+
+# 分割线——————————————————————————
+
+# > 滴答清单vip
+^https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/ddqd.js
+
+# 分割线——————————————————————————
+
+# > 彩云天气_SVIP
+https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response-body https://raw.githubusercontent.com/githubdulong/Script/master/cytq.js
+
+
+# 分割线——————————————————————————
+
+# > 金山WPS
+^https://account.wps.*/api/users/ url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js
+
+# 分割线——————————————————————————
+
+# > 扫描全能王 pro
+^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/githubdulong/Script/master/CamScanner.js
+
+# 分割线——————————————————————————
+
+# > DayOne解锁
+^https:\/\/dayone\.(me|app)\/api\/(users|v2\/users\/(account-status|receipt))$ url script-request-body https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/dayone.js
+
+# 分割线——————————————————————————
+
+# > 百度云盘 解锁
+https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/bdcloud.js
+
+# 分割线——————————————————————————
+
+# > xmind思维导图 解锁
+https:\/\/www\.xmind\.cn\/\_res\/devices url script-response-body https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/XMind.js
+
+# 分割线——————————————————————————
+
+# Notability解锁订阅
+^https?:\/\/notability\.com\/subscriptions url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/NotabilityProCrack.js
+
+# 分割线——————————————————————————
+
+# > SaveFile下载限制
+^https?:\/\/raw\.githubusercontent\.com\/koanapple\/lock_checker\/main\/ConfigSaveFrom\.json$ url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/SaveFile.js
+
+# 分割线——————————————————————————
+
+# > Document
+
+^https?:\/\/license\.pdfexpert\.com\/api\/\d\.\d\/\w{9}\/\w{12}\/(state$|refresh$|check$) url script-request-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/documents.js
+
+# 分割线——————————————————————————
+
+# > 计算器HD解锁会员
+^https?:\/\/www\.40sishi\.com\/(list|currency|calculator)\/user\/profile$ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/CalculatorHDProCrack.js
+
+# 分割线——————————————————————————
+
+# > 傲软抠图解锁会员
+^https?:\/\/gw\.aoscdn\.com\/base\/vip\/client\/authorizations$ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/BackgroundEraserProCrack.js
+
+# 分割线——————————————————————————
+
+# > Endel解锁
+^https?:\/\/api-production.endel.io\/v3\/call url script-response-body https://raw.githubusercontent.com/cpphut/scripts/main/js/endel.js
+
+# 分割线——————————————————————————
+
+# > Grow解锁
+^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/(\$RCAnonymousID\%)?(\w)+$ url script-echo-response https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/Grow.js
+^https?:\/\/api\.revenuecat\.com\/v\d\/receipts$ url script-echo-response https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/Grow.js
+
+# 分割线——————————————————————————
+
+# > Drops
+^https\:\/\/api-prod\.languagedrops\.com\/syncPurchasesV\d url script-response-body https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/drops.js
+
+# 分割线——————————————————————————
+
+# > TextEditor
+^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/TextEditor.js
+
+# 分割线——————————————————————————
+
+# > 策略切换
+^http:\/\/nobyda\.policy url script-analyze-echo-response https://raw.githubusercontent.com/NobyDa/Script/master/Shortcuts/PolicySwitch.js
+
+# 分割线——————————————————————————
+
+# 联通数据接口
+^https?:\/\/10010\.json url script-response-body https://raw.githubusercontent.com/xream/scripts/main/surge/modules/10010v3/10010.js
+
+# 分割线——————————————————————————
+
+
+
+# ——————————————————————————Music——————————————————————————
+
+# > 酷我听书去广告
+https?:\/\/audiobookpay\.kuwo\.cn/a\.p\?op=get_advertright url reject-dict
+
+# > 酷我听书
+^https?:\/\/audiobookpay\.kuwo\.cn/a\.p url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/kwyy.js
+https://tingshu.kuwo.cn/v2/api/user/info url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/kwyy.js
+https?:\/\/audiobooks\.kuwo\.cn\/v2\/api\/user\/info url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/kwyy.js
+https?:\/\/tingshu\.kuwo\.cn\/v2\/api\/pay\/vip\/extraVipStatus url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/kwyy.js
+
+# > 酷我音乐皮肤
+^https?:\/\/vip1\.kuwo\.cn\/vip\/v2\/theme  url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/kwyy.js
+
+# > 酷我音乐无损
+^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?newver=\d url script-request-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/kwyy.js
+
+# > 酷我音乐会员
+^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice) url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/kwyy.js
+
+# 分割线——————————————————————————
+
+# > AudioMack解锁永久订阅
+^https?:\/\/api\.revenuecat\.com\/v1\/subscribers\/(identify|\d+)$ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/AudioMackFProCrack.js
+
+# 分割线——————————————————————————
+
+
+
+
+
+# ——————————————————————————wallpaper——————————————————————————
+
+# > 克拉壁纸解锁订阅
+^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/clarity.js
+
+# 分割线——————————————————————————
+
+# > WallCraft解锁永久专业版
+^https?:\/\/billing-ios\.wallpaperscraft\.com\/verify_receipt\/remove_ads$ url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/WallCraftFProCrack.js
+
+# 分割线——————————————————————————
+
+# > Pixiv去除广告
+^https?:\/\/oauth\.secure\.pixiv\.net\/(auth\/token) url script-response-body https://github.com/ddgksf2013/Cuttlefish/raw/master/Crack/pixivpro.js
+
+# 分割线——————————————————————————
+
+
+
+# ——————————————————————————advertising——————————————————————————
+
+# > 微博广告
+^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/wb_launch.js
+^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/(photos/pic_recommend_status|live/media_homelist)|video/tiny_stream_video_list|photo/info|remind/unread_count) url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/wb_ad.js
+
+# 分割线——————————————————————————
+
+# > 微信公众号广告
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
+
+
+#分割线——————————————————————————
+
+# 小红书 去广告
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config url script-response-body https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/xiaohongshu/xiaohongshu.ad.js
+
+#分割线——————————————————————————
+
+#酷安去好物推荐
+^https:\/\/api\.coolapk\.com\/v6\/feed\/detail.* url script-response-body https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Script/KA.js
+
+#分割线——————————————————————————
+
+# > Hostname主机名
+hostname = -*.snssdk.com,  -*.amemv.com, *.googlevideo.com, account.wps.cn, *.media.dssott.com, *.media.starott.com, *.api.hbo.com, *.hbomaxcdn.com, *.nflxvideo.net, *.cbsaavideo.com, *.cbsivideo.com, *.youtube.com, m.ithome.com, api.ithome.com,  ap*.intsig.net, dayone.*,  ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, *.musical.ly, *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com, *.lagoapps.com, api.meiyan.com, api.rr.tv, biz.caiyunapp.com, spclient.wg.spotify.com, testflight.apple.com, api-production.endel.io, pan.baidu.com, *.xmind.*, weixin110.qq.com, ap?.bilibili.com, ap?.biliapi.net, btrace.qq.com, bmall.camera360.com, api.polaxiong.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, api.ithome.com, mp.weixin.qq.com, *.kuwo.cn, buy.itunes.apple.com, ticktick.com, dida365.com, *.adobe.*, musicpay.kuwo.cn, vip1.kuwo.cn, audiobookpay.kuwo.cn, tingshu.kuwo.cn, www.40sishi.com, gw.aoscdn.com, notability.com, *.wallpaperscraft.com, m.douban.com, server.yoyiapp.com, raw.githubusercontent.com, gist.githubusercontent.com, api.account.meitu.com, api.meiyan.com,api.xiuxiu.meitu.com,h5.xiuxiu.meitu.com, license.pdfexpert.com, api-prod.languagedrops.com, gab.122.gov.cn,  edith.xiaohongshu.com, api.coolapk.com, commerce-i18n-api.faceu.mobi,commerce-api.faceu.mobi, pay.wecut.com, 10010.json, oauth.secure.pixiv.net
+
+
+
+
