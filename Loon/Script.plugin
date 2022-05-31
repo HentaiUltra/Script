@@ -124,7 +124,7 @@ http-request ^https?:\/\/.+?\.googlevideo\.com\/.+&(oad|ctier)=(?!A) script-path
 # > 百度云盘 解锁
 http-response https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/bdcloud.js
 # > MIX 解锁
-http-response ^https:\/\/bmall\.camera360\.com\/api\/mix\/recovery$ requires-body=1,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/mix.js
+http-response ^https:\/\/bmall\.camera360\.com\/api\/mix\/recovery$,requires-body=1,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/mix.js
 # > vsco 解锁
 http-response ^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/vsco.js
 # > Grow 解锁 api.revenuecat.com
