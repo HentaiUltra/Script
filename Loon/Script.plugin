@@ -111,7 +111,7 @@ http-response ^https:\/\/dayone\.(me|app)\/api\/(users|v2\/users\/(account-statu
 # > Boxjs
 http-requese https?:\/\/boxjs\.(com|net) script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true
 # > 彩云天气 svip
-http-response https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/cytq.js
+http-response https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/cytq.js
 # > 京东App 历史价格
 http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) requires-body=1,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js
 # > bilbii 换区、评分
@@ -130,7 +130,7 @@ http-response ^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/
 # > Grow 解锁 api.revenuecat.com
 http-response https:\/\/api\.revenuecat\.com requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/revenuecat.js
 # > 泼辣修图 解锁
-http-response ^https:\/\/api\.polaxiong\.com\/v1\/payments\/appleiap\/receipts\/confirmation script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Polarr.js
+http-response ^https:\/\/api\.polaxiong\.com\/v1\/payments\/appleiap\/receipts\/confirmation,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Polarr.js
 # > 豆瓣电影 搜索
 http-response ^https://m.douban.com/movie/subject/.+ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/Douban.js
 # > IT之家 去广告
