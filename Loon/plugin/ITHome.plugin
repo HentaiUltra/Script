@@ -1,0 +1,16 @@
+#!name = IT之家
+#!desc = IT之家去广告
+#!author = junjie
+
+[URL Rewrite]
+^https:\/\/api\.zuihuimai\.com url - reject
+
+[Script]
+# > IT之家 去广告
+^https:\/\/m\.ithome\.com\/api\/news\/newslistpageget script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/ithome/ithome.ad.js, requires-body=true, tag=ithome_ad
+^https:\/\/api\.ithome\.com\/json\/(listpage|newslist)\/news script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/ithome/ithome.ad.js, requires-body=true, tag=ithome_ad
+^https:\/\/api\.ithome\.com\/json\/slide\/index script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/ithome/ithome.ad.js, requires-body=true, tag=ithome_ad
+http-response https:\/\/api\.ithome\.com\/json\/newslist\/news script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/ithome_ad/ithome_ad.js, requires-body=true, tag=ithome_ad
+
+[MITM]
+hostname = api.ithome.com

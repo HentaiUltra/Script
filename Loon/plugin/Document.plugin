@@ -1,0 +1,12 @@
+#!name = Document
+#!desc = Document解锁
+#!author = junjie
+
+[Script]
+# > Document
+http-response ^https?:\/\/license\.pdfexpert\.com\/api\/\d\.\d\/\w{9}\/\w{12}\/(state$|refresh$|check$) requires-body=1,max-size=0, script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/documents.js, tag=Document
+
+
+
+[MITM]
+hostname = license.pdfexpert.com

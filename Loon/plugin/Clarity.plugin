@@ -1,0 +1,10 @@
+#!name = 克拉壁纸
+#!desc = 克拉壁纸解锁订阅
+#!author = junjie
+
+[Script]
+# > 克拉壁纸解锁订阅
+http-response ^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll) requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/clarity.js, tag=克拉壁纸解锁订阅
+
+[MITM]
+hostname =  claritywallpaper.com

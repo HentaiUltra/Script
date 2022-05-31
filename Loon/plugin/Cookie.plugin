@@ -1,0 +1,52 @@
+#!name = Cookie获取
+#!desc = 获取Cookie
+#!author = junjie
+
+[Script]
+# > 京东
+# Safari浏览器打开登录 https://home.m.jd.com/myJd/newhome.action 点击"我的"页面，通知获得cookie成功
+# 或使用Safari浏览器打开登录 https://bean.m.jd.com/bean/signIndex.action ,点击签到并且出现签到日历后, 通知获得cookie成功.
+# 使用此脚本获取"账号1"Cookie成功后, 请勿点击退出账号(可能会导致Cookie失效), 需清除浏览器资料或更换浏览器登录"账号2"获取即可.
+http-request ^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?|gw\/generic\/hy\/h5\/m\/appSign\?) tag=获取京东Cookie, requires-body=true, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+
+# > 美团外卖
+http-request ^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/ script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js, , requires-body=true, tag=美团外卖
+
+# > 百度贴吧 app获取
+http-request https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js, tag=百度贴吧
+
+# > 什么值得买
+# https://zhiyou.smzdm.com/
+http-request ^https:\/\/www\.smzdm\.com\/?.? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.cookie.js, tag=什么值得买
+
+# > 中国联通 app签到
+http-request ^https?:\/\/act.10010.com\/SigninApp\/signin\/querySigninActivity.htm script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js, tag=中国联通
+http-request ^https?:\/\/act.10010.com\/SigninApp(.*?)\/signin\/daySign script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js, tag=中国联通
+http-request ^https?:\/\/m.client.10010.com\/dailylottery\/static\/(textdl\/userLogin|active\/findActivityInfo) script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js, tag=中国联通
+
+# > 电信签到
+http-request ^https:\/\/wapside.189.cn:9001\/api\/home\/homeInfo script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.cookie.js, requires-body=true, tag=中国电信
+
+# > 慢慢买
+http-request ^https?:\/\/apph5\.manmanbuy\.com\/taolijin\/(login.aspx|logserver.aspx) script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js, requires-body=true, tag=慢慢买
+
+# > 哔哩哔哩
+# https://www.bilibili.com/
+http-request https://api.bilibili.com/x/web-interface/nav script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/Bilibili.js, timeout=10, tag=哔哩哔哩
+
+# > 伊利乳品 小程序获取
+http-request https:\/\/club\.yili\.com\/MALLIFChe\/MCSWSIAPI\.asmx\/Call script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.cookie.js, requires-body=true,, tag=伊利乳品
+
+# > 爱奇艺
+# Safari浏览器打开 https://m.iqiyi.com/user.html
+http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/info\.action script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, tag=爱奇艺
+
+# > NGA
+http-request ^https:\/\/ngabbs.com\/nuke.php\?? script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/nga/nga.cookie.js, requires-body=true, tag=nga刮墙
+
+# IT之家 app获取
+http-request ^https:\/\/my\.ruanmei\.com\/api\/usersign\/getsigninfo? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.cookie.js, tag=IT之家
+
+[MITM]
+# > Hostname主机名
+hostname =  api.m.jd.com, ms.jr.jd.com, me-api.jd.com,i.meituan.com,tieba.baidu.com, c.tieba.baidu.com, zhiyou.smzdm.com, m.client.10010.com, act.10010.com, wapside.189.cn, e.189.cn, apph5.manmanbuy.com, *.bilibili.com, club.yili.com,, passport.iqiyi.com, ngabbs.com, my.ruanmei.com

@@ -1,0 +1,10 @@
+#!name = 百度云盘
+#!desc = 百度云盘解锁
+#!author = junjie
+
+[Script]
+# > 百度云盘解锁
+http-response  https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user  requires-body=1,max-size=0, script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/bdcloud.js, tag=百度云盘解锁
+
+[MITM]
+hostname =  pan.baidu.com

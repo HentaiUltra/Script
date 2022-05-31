@@ -1,0 +1,11 @@
+#!name = 人人影视
+#!desc = 人人影视去广告
+#!author = junjie
+
+[Script]
+# > 贴吧去广告
+http-response ^(http:\/\/c\.tieba\.baidu\.com\/(tiebaads\/commonbatch|c\/s\/sync)|https:\/\/afd\.baidu\.com\/afd\/entry), script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-json.js, requires-body=true, tag=贴吧去广告
+http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized), script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js, requires-body=true, tag=贴吧去广告
+
+[MITM]
+hostname = tiebac.baidu.com

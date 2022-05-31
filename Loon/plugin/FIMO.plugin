@@ -1,0 +1,14 @@
+#!name=Script合集
+#!desc=JavaScript脚本
+#!author=junjie
+
+[Script]
+
+# > FIMO解锁全部胶卷
+http-response ^https?:\/\/server\.yoyiapp\.com\/fimo-user\/apple\/certificate$  requires-body=1,max-size=0, script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/FiMoCameraProCrack.js, tag=FIMO解锁全部胶卷
+
+# FIMO解锁终身会员
+http-response ^https?:\/\/server\.yoyiapp\.com\/fimo-user\/apple\/certificate$  requires-body=1,max-size=0, script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/FiMoCameraFVIPCrack.js, tag=FIMO解锁终身会员
+
+[MITM]
+hostname = server.yoyiapp.com

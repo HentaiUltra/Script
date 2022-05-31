@@ -1,0 +1,10 @@
+#!name = Drops
+#!desc = Drops破解
+#!author = junjie
+
+[Script]
+# > Drops
+http-response ^https\:\/\/api-prod\.languagedrops\.com\/syncPurchasesV\d requires-body=1,max-size=0, script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/drops.js,tag=Drops破解
+
+[MITM]
+hostname = api-prod.languagedrops.com

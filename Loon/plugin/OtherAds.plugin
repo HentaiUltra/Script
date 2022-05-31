@@ -1,0 +1,27 @@
+#!name = 其他去广告
+#!desc = 其他去广告
+#!author = junjie
+
+[URL Rewrite]
+# > 云闪付 去广告
+^https:\/\/wallet\.95516\.com\/s\/wl\/icon\/long - reject
+
+# > 腾讯视频 去广告（主机名见脚本模块）
+^https?:\/\/btrace\.qq\.com - reject-dict
+^https?:\/\/pgdt\.gtimg\.cn - reject
+^https?:\/\/c\.l\.qq\/.com - reject
+
+# > 交管12123去开屏广告（主机名见脚本模块）
+^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ - reject
+
+# > 拼多多 去广告
+^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash - reject
+
+# > 小米运动 去广告
+^https:\/\/api-mifit-cn2\.huami\.com\/discovery\/mi\/cards\/startpage_ad - reject
+
+# > 京东 去广告
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$ - reject-200
+
+# > 京东极速版 去广告
+https://api.m.jd.com/client.action\?functionId=lite_advertising - reject

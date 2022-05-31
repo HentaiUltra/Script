@@ -1,0 +1,15 @@
+#!name = phothop
+#!desc = phothop 解锁
+#!author = junjie
+
+[Script]
+# > phothop&PSexpress
+http-response ^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/photoshop.js, requires-body=1, max-size=0, tag=phothop&PSexpress
+
+
+
+# > lightroom
+http-response ^https:\/\/photos\.adobe\.io\/v2\/accounts* script-path=https://raw.githubusercontent.com/langkhach270389/Quantumult-X-LK/master/Scripts/langkhach/lightroom.js, requires-body=1, max-size=0, tag=lightroom
+
+[MITM]
+hostname = *.adobe.*

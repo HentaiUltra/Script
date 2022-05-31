@@ -1,0 +1,27 @@
+#!name = 滴滴出行
+#!desc = 滴滴出行去广告
+#!author = junjie
+
+
+[URL Rewrite]
+
+# > 滴滴出行 去广告
+//01安全提示横幅
+^https:\/\/guard\.sec\.xiaojukeji\.com\/api\/guard\/psg\/v2\/getShieldStatus - reject
+//02底部打车&代价推荐
+^https:\/\/conf\.diditaxi\.com\.cn\/one - reject
+//03福利专区-金融服务-公交-骑车-滴滴乐园
+^https:\/\/conf\.diditaxi\.com\.cn\/nav\/widget - reject
+//04接送机-优惠商城
+^https:\/\/api\.udache\.com\/gulfstream - reject
+//05 主页领任务
+^https:\/\/conf\.diditaxi\.com\.cn\/api\/(component|fusion|dynamicmodule|usercenter) - reject
+^https:\/\/conf\.diditaxi\.com\.cn\/dynamic - reject
+//主页 非主流式悬浮挂件
+^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget - reject
+//07商城
+^https:\/\/shop-gw\.chengxinyouxuan\.com\/(route|indexConfig|apolloConfig|getShopTuanInfos) - reject
+//08开屏广告
+^https:\/\/img-ys011\.didistatic\.com\/static - reject
+//09骑行
+^https:\/\/pt-starimg\.didistatic\.com\/static - reject

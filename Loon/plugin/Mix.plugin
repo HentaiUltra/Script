@@ -1,0 +1,10 @@
+#!name = MIX
+#!desc = MIX解锁
+#!author=junjie
+
+[Script]
+# > MIX解锁
+http-response ^https:\/\/bmall\.camera360\.com\/api\/mix\/recovery$ requires-body=1,script-path= https://raw.githubusercontent.com/githubdulong/Script/master/mix.js,tag = MIX解锁
+
+[MITM]
+hostname = bmall.camera360.com
