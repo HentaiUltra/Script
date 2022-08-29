@@ -1,88 +1,45 @@
 #!name=定时任务脚本
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-02-25 11:10
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-08-29
 #!system=ios
 
 [Script]
-# 分割线——————————————————————————
-
-# > 拦截100
-拦截100自动领取会员 = type=cron,cronexp=15 7 * * *,timeout=60,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/block100.js,,script-update-interval=0
-
-# 分割线——————————————————————————
-
+# > IT之家
+ＩＴ之家 = type=cron,cronexp=30 0 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.js,script-update-interval=0
+# > 喜马拉雅
+喜马拉雅 = type=cron,cronexp=0 1 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.js,script-update-interval=0
 # > 百度贴吧
-百度贴吧 = type=cron,cronexp=30 3 0 * * *,timeout=60,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_checkin.js,script-update-interval=0
-
-# 分割线——————————————————————————
-
+百度贴吧 = type=cron,cronexp=30 2 0 * * *,timeout=60,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_checkin.js,script-update-interval=0
 # > 什么值得买(签到+任务)
-值买签到 = type=cron,cronexp=0 4 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_signin.js,script-update-interval=0
-值买任务 = type=cron,cronexp=30 4 0 1 * *,wake-system=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_mission.js,script-update-interval=0
-
-# 分割线——————————————————————————
-
+值买签到 = type=cron,cronexp=0 3 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_signin.js,script-update-interval=0
+值买任务 = type=cron,cronexp=30 3 0 1 * *,wake-system=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_mission.js,script-update-interval=0
+# > 慢慢买
+慢买签到 = type=cron,cronexp=0 4 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js,script-update-interval=0
 # > 电信签到
 电信签到 = type=cron,cronexp=0 5 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.js,script-update-interval=0
-
-# 分割线——————————————————————————
-
 # > 哔哩哔哩
-哔哩哔哩 = type=cron,cronexp=30 6 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js,script-update-interval=0
-
-# 分割线——————————————————————————
-
+哔哩哔哩 = type=cron,cronexp=30 4 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js,script-update-interval=0
 # > 伊利乳品
-伊利乳品 = type=cron,cronexp=0 7 0 * * *,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.js,wake-system=true
-
-# 分割线——————————————————————————
-
+伊利乳品 = type=cron,cronexp=0 5 0 * * *,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.js,wake-system=true
 # 爱奇艺
-奇艺签到 = type=cron,cronexp=30 7 0 * * *,timeout=120,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js,wake-system=1,script-update-interval=0
-会员天数 = type=cron,cronexp="0 8 0 1-5 * *",timeout=120,script-path=https://raw.githubusercontent.com/limoruirui/misaka/master/iqiyiRed.js,wake-system=1,script-update-interval=0
-
-# 分割线——————————————————————————
-
+iQIYI签到 = type=cron,cronexp=30 5 0 * * *,timeout=120,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js,wake-system=1,script-update-interval=0
+# > 吾爱破解
+吾爱签到 = type=cron,cronexp=0 6 0 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
 # > NGA刮墙
 NGA签到 = type=cron,cronexp=10 0 * * *,timeout=120,script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/nga/nga.js,wake-system=1,script-update-interval=0
-
-# 分割线——————————————————————————
-
 # > 每日一句
 每日一句 = type=cron,cronexp=8 8 8 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/One.js,script-update-interval=0
-
-# 分割线——————————————————————————
-
-# > 墨迹天气
-墨迹天气 = type=cron,cronexp=0 2 17 * * *,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/moji.js,script-update-interval=0,wake-system=1
-
-# 分割线——————————————————————————
-
-# > 京东物流
-京东物流 = type=cron,cronexp=30 0 12 * * *,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/jdWuLiu%20copy.js,script-update-interval=0,wake-system=1
-
-# 分割线——————————————————————————
-
 # > 中国联通
 中国联通 = type=cron,cronexp=0 55 9 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.js,script-update-interval=0
-
-# 分割线——————————————————————————
-
 # > 中国电信
 中国电信 = type=cron,cronexp=30 55 9 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/telecomSky.js,script-update-interval=0
-
-# 分割线——————————————————————————
-
+# > 京东物流
+京东物流 = type=cron,cronexp=30 0 12 * * *,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/jdWuLiu%20copy.js,script-update-interval=0,wake-system=1
 # > Gist备份+恢复
 数据备份 = type=cron,cronexp=50 23 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js,script-update-interval=0
-
 //数据恢复 = type=cron,cronexp=55 23 * 1 *,wake-system=1,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/restore.js,script-update-interval=0
-
-# 分割线——————————————————————————
-
 # > 同步检测
-账号同步 = type=cron,cronexp="0 3 6,14,23 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/dompling/Script/master/jd/ql_sync_box.js,script-update-interval=0
-
-# 分割线——————————————————————————
-
-帐户检测 = type=cron,cronexp="0 5 6,14,23 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/dompling/Script/master/jd/jd_cookie_search.js,script-update-interval=0
+账号同步 = type=cron,cronexp="0 35 6,14,23 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/dompling/Script/master/jd/ql_sync_box.js,script-update-interval=0
+帐户检测 = type=cron,cronexp="0 36 6,14,23 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/dompling/Script/master/jd/jd_cookie_search.js,script-update-interval=0
+# > SUB 订阅同步
+订阅同步 = type=cron,cronexp="15 0 8,20 * * *",script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js,script-update-interval=0,wake-system=1
 
