@@ -1,5 +1,5 @@
 #!name=策略面板
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-02-24 20:45
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-8-29
 #!system=ios
 
 [Panel]
@@ -9,56 +9,15 @@
 策略面板 = script-name=流量统计,title="流量统计",content="请刷新面板",style=info,update-interval=10
 策略面板 = script-name=代理选择,title="代理选择",content="请刷新面板",style=info,update-interval=10
 策略面板 = script-name=节点检测,title="节点信息",content="请刷新面板",style=info,update-interval=10
-策略面板 = script-name=电信详情,title="电信详情",content="请刷新面板",style=info,update-interval=3600
-策略面板 = script-name=奈飞查询,title="𝗡𝗲𝘁𝗳𝗹𝗶𝘅",content="请刷新面板",style=info,update-interval=1800
-策略面板 = script-name=迪士尼查询,title="𝗗𝗶𝘀𝗻𝗲𝘆+",content="请刷新面板",style=info,update-interval=1800
-策略面板 = script-name=油管查询,title="𝗬𝗼𝘂𝗧𝘂𝗯𝗲",content="请刷新面板",style=info,update-interval=1800
+策略面板 = script-name=媒体查询,title="媒体查询",content="请刷新面板",style=info,update-interval=3600
 
 [Script]
 # > 策略面板
-开启时长 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/surgepro_flushdns.js,argument=icon=power.circle&color=#FF2121&title=𝗦𝗨𝗥𝗚𝗘 ®｜2023-2-19
-
-# 分割线——————————————————————————
-
+开启时长 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/surgepro_flushdns.js,argument=icon=power.circle&color=#FF2121&title=𝗦𝗨𝗥𝗚𝗘 ®｜2023-08-29
 假日提醒 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/smartmimi/conf/master/surge/timecard.js
-
-# 分割线——————————————————————————
-
 网络状态= type=generic,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tools/Panels/NetInfo/net-info-panel.js,
-
-# 分割线——————————————————————————
-
 流量统计 = type=generic,timeout=10,script-path= https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/trafficstatistics.js ,argument=icon=arrow.up.arrow.down.circle&color=#5d84f8
-
-# 分割线——————————————————————————
-
 代理选择 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/fishingworld/something/main/groupPanel.js,argument=icon=bolt.circle&color=#157EFB&group=𝗣𝗥𝗢𝗫𝗬
-
-# 分割线——————————————————————————
-
 节点检测 = type=generic, timeout=10, script-path=https://raw.githubusercontent.com/LucaLin233/Luca_Conf/main/Surge/JS/ipcheck.js
+媒体查询 = type=generic, timeout=10, script-path=https://raw.githubusercontent.com/LucaLin233/Luca_Conf/main/Surge/JS/stream-all.js
 
-# 分割线——————————————————————————
-
-// 先网页打开
-// e.189.cn
-// 登陆一下再访问
-// https://e.189.cn/store/user/package_detail.do
-电信详情 = type=http-request,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/telecom.js,pattern=https://e.189.cn/store/user/package_detail.do,requires-body=1,max-size=0,timeout=10
-
-# 分割线——————————————————————————
-
-奈飞查询 = type=generic,timeout=30,script-path=https://gist.githubusercontent.com/Hyseen/b06e911a41036ebc36acf04ddebe7b9a/raw/nf_check.js?version=1633090677159, argument=title=𝗡𝗲𝘁𝗳𝗹𝗶𝘅 解锁检测
-
-# 分割线——————————————————————————
-
-迪士尼查询 = type=generic,script-path=https://gist.githubusercontent.com/Hyseen/729fc4c3ac28c3f2e7c4a832d81780f3/raw/disney_check.js, argument=title=𝗗𝗶𝘀𝗻𝗲𝘆+ 解锁检测
-
-# 分割线——————————————————————————
-
-油管查询 = type=generic,timeout=30,,script-path=https://gist.githubusercontent.com/Hyseen/5ae36a6a5cb5690b1f2bff4aa19c766f/raw/youtube_premium_check.js, argument=title=𝗬𝗼𝘂𝗧𝘂𝗯𝗲 解锁检测&
-
-# 分割线——————————————————————————
-
-[MITM]
-hostname = %APPEND% e.189.cn:443
