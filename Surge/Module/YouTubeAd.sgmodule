@@ -1,0 +1,27 @@
+#!name=Youtube 去广告自己修改版
+#!desc=Youtube版本：17.29.2验证可用；制作时间：2022-7-27
+
+
+[Rule]
+AND,((PROTOCOL,UDP),(DEST-PORT,443)),REJECT-NO-DROP
+
+[URL Rewrite]
+#初次修改（逗号的位置修正——原脚本正则似乎有误）
+(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier(,.+) $1$2$3 header
+
+#增加适用范围（适用于连接到电视时）
+(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)\/ctier\/L(\/.+?),ctier(,.+) $1$2$3 header
+
+
+#进一步增加适用范围（适用于连接到电视时,逗号被url编码）
+(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)\/ctier\/L(\/.+?)%2Cctier(%2C.+) $1$2$3 header
+
+^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad - reject
+
+^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v\d\/player\/ad_break - reject
+^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads - reject
+^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) - reject
+^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext - reject
+
+[MITM]
+hostname = %APPEND% -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com
