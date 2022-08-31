@@ -162,7 +162,7 @@ EmbyPro = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/r
 # > 滴答清单 解锁
 滴答清单 = type=http-response,pattern=^https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/ddqd.js
 # > 傲软抠图 解锁
-傲软抠图 = type=http-response,pattern=^https?:\/\/gw\.aoscdn\.com\/base\/vip\/client\/authorizations$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/BackgroundEraserProCrack.js
+傲软抠图 = type=http-response,pattern=^https?:\/\/gw\.aoscdn\.com\/base\/vip\/client\/authorizations$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/HentaiUltra/Script/main/JavaSrcipt/BackgroundEraserProCrack.js
 # > 计算器HD 解锁
 计算器HD = type=http-response,pattern=^https?:\/\/www\.40sishi\.com\/(list|currency|calculator)\/user\/profile$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/CalculatorHDProCrack.js
 # > Fimo 解锁
