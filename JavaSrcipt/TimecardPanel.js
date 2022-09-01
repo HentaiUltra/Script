@@ -301,16 +301,18 @@ function dateNotice(name, type) {
     $notification.post("假日祝福", "", "今天是" + name + "   🎉");
   }
 }
-//>图标依次切换乌龟、兔子、闹钟、礼品盒
+//>图标依次切换电池
 function icon_now(num) {
-  if (num <= 7 && num > 3) {
-    return ["hourglass", "#ee3f4d"];
+ if (num <= 7 && num > 5) {
+    return ["battery.25", "#f2ce2b"];
+  } else if (num <= 5 && num > 3) {
+    return ["battery.50", "#1f2623"];
   } else if (num <= 3 && num > 0) {
-    return ["timer", "#45b787"];
+    return ["battery.75", "#579572"];
   } else if (num == 0) {
-    return ["gift.fill", "#ffa60f"];
+    return ["battery.100.bolt", "#41b349"];
   } else {
-    return ["hourglass.bottomhalf.filled", "#eea08c"];
+    return ["battery.0", "#ee2746"];
   }
 }
 function title_random(num) {
