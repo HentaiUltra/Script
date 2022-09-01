@@ -256,7 +256,7 @@ var o = recently(V, T);
 function insertStr(source, start, newStr) {
   return source.slice(0, start) + newStr + source.slice(start);
 }
-function monthDayDiff(date) {
+function monthDayDiff(date, type) {
   var now = new Date();
   var year = now.getFullYear().toString(); //得到年份
   var month = now.getMonth() + 1 > 10 ? now.getMonth() + 1 : "0" + (now.getMonth() + 1); //得到月份
