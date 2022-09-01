@@ -274,7 +274,6 @@ function recently(V, T) {
 }
 var o = recently(V, T);
 //如果是0天，发送emoji;
-let nowList = now();
 function today(day, name, type) {
   if (day === 0) {
     dateNotice(name, type);
@@ -313,7 +312,7 @@ $done({
     o.gl.name +
     ":" +
     today(monthDayDiff(o.gl.date), o.gl.name, "公历") +
-    "," +
+    ~"," +
     o.nl.name +
     ":" +
     today(monthDayDiff(o.nl.date, o.nl.name, "农历")),
