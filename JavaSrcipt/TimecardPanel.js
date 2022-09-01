@@ -224,24 +224,6 @@ const solarToLunar = function (y, m, d) {
   };
 };
 
-function insertStr(source, start, newStr) {
-  return source.slice(0, start) + newStr + source.slice(start);
-}
-
-function monthDayDiff(date) {
-  var now = new Date();
-  var year = now.getFullYear().toString(); //得到年份
-  var month = now.getMonth() + 1 > 10 ? now.getMonth() + 1 : "0" + (now.getMonth() + 1); //得到月份
-  var day = now.getDate() > 10 ? now.getDate() : "0" + now.getDate(); //得到日期
-  var d1 = year + "/" + month + "/" + day;
-  var d2 = insertStr(year, 4, "/") + insertStr(date, 2, "/");
-  var s1 = new Date(d1);
-  var s2 = new Date(d2);
-  var time = s2.getTime() > s1.getTime() ? s2.getTime() - s1.getTime() : s1.getTime() - s2.getTime();
-  var days = parseInt(time / (1000 * 60 * 60 * 24));
-  return days;
-}
-
 function recently(V, T) {
   (V = V || []), (T = T || []), (result = {});
   V.sort(function (a, b) {
@@ -271,6 +253,34 @@ function recently(V, T) {
   return result;
 }
 var o = recently(V, T);
+function insertStr(source, start, newStr) {
+  return source.slice(0, start) + newStr + source.slice(start);
+}
+function monthDayDiff(date) {
+  var now = new Date();
+  var year = now.getFullYear().toString(); //得到年份
+  var month = now.getMonth() + 1 > 10 ? now.getMonth() + 1 : "0" + (now.getMonth() + 1); //得到月份
+  var day = now.getDate() > 10 ? now.getDate() : "0" + now.getDate(); //得到日期
+  if (type === "nl") {
+    var nl = solarToLunar(year, month, day);
+    n = ("0" + nl.lunarM).slice(-2) + ("0" + nl.lunarD).slice(-2);
+    var d1 = insertStr(year, 4, "/") + insertStr(n, 2, "/");
+    var d2 = insertStr(year, 4, "/") + insertStr(date, 2, "/");
+    var s1 = new Date(d1);
+    var s2 = new Date(d2);
+    var time = s2.getTime() - s1.getTime();
+    var days = parseInt(time / (1000 * 60 * 60 * 24));
+    return days;
+  } else {
+    var d1 = year + "/" + month + "/" + day;
+    var d2 = insertStr(year, 4, "/") + insertStr(date, 2, "/");
+    var s1 = new Date(d1);
+    var s2 = new Date(d2);
+    var time = s2.getTime() - s1.getTime();
+    var days = parseInt(time / (1000 * 60 * 60 * 24));
+    return days;
+  }
+}
 //如果是0天，发送emoji;
 function today(day, name, type) {
   if (day === 0) {
@@ -284,10 +294,10 @@ function today(day, name, type) {
 function dateNotice(name, type) {
   let now = new Date();
   if (
-    $persistentStore.read(type === "农历" ? "lunarCalendarPushed" : "gregorianCalendarPushed") !== name &&
+    $persistentStore.read(type === "nl" ? "lunarCalendarPushed" : "gregorianCalendarPushed") !== name &&
     now.getHours() >= 6
   ) {
-    $persistentStore.write(name, type === "农历" ? "lunarCalendarPushed" : "gregorianCalendarPushed");
+    $persistentStore.write(name, type === "nl" ? "lunarCalendarPushed" : "gregorianCalendarPushed");
     $notification.post("假日祝福", "", "今天是" + name + "   🎉");
   }
 }
@@ -303,18 +313,6 @@ function icon_now(num) {
     return "tortoise";
   }
 }
-$done({
-  title: title_random(monthDayDiff(o.nl.date) > 0 ? monthDayDiff(o.gl.date) : monthDayDiff(o.nl.date)),
-  icon: icon_now(monthDayDiff(o.nl.date) > 0 ? monthDayDiff(o.gl.date) : monthDayDiff(o.nl.date)),
-  content:
-    o.gl.name +
-    ":" +
-    today(monthDayDiff(o.gl.date), o.gl.name, "公历") +
-    "," +
-    o.nl.name +
-    ":" +
-    today(monthDayDiff(o.nl.date), o.nl.name, "农历"),
-});
 function title_random(num) {
   let r = Math.floor(Math.random() * 20 + 1);
   let dic = {
@@ -341,3 +339,16 @@ function title_random(num) {
   };
   return num == 0 ? "节日快乐，万事大吉" : dic[r];
 }
+
+$done({
+  title: title_random(monthDayDiff(o.nl.date) > 0 ? monthDayDiff(o.gl.date) : monthDayDiff(o.nl.date)),
+  icon: icon_now(monthDayDiff(o.nl.date) > 0 ? monthDayDiff(o.gl.date) : monthDayDiff(o.nl.date)),
+  content:
+    o.gl.name +
+    ":" +
+    today(monthDayDiff(o.gl.date, "gl"), o.gl.name, "gl") +
+    "," +
+    o.nl.name +
+    ":" +
+    today(monthDayDiff(o.nl.date, "nl"), o.nl.name, "nl"),
+});
