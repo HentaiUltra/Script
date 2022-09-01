@@ -13,5 +13,5 @@
 代理选择 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/fishingworld/something/main/groupPanel.js,argument=icon=bolt.circle&group=𝗣𝗥𝗢𝗫𝗬
 网络状态= type=generic,script-path=https://raw.githubusercontent.com/HentaiUltra/Script/main/JavaSrcipt/NetInfoPanel.js,
 流量统计 = type=generic,timeout=10,script-path= https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/trafficstatistics.js ,argument=icon=arrow.up.arrow.down.circle
-节点信息 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/HentaiUltra/Script/main/JavaSrcipt/IPCheckPanel.js
+节点信息 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/HentaiUltra/Script/main/JavaSrcipt/IPcheckPanel.js
 
