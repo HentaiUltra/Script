@@ -333,7 +333,7 @@ function title_random(num) {
 $done({
   title: title_random(monthDayDiff(o.nl.date) > 0 ? monthDayDiff(o.gl.date) : monthDayDiff(o.nl.date)),
   icon: icon_now(monthDayDiff(o.nl.date) > 0 ? monthDayDiff(o.gl.date) : monthDayDiff(o.nl.date))[0],
-  color: icon_now(monthDayDiff(o.nl.date) > 0 ? monthDayDiff(o.gl.date) : monthDayDiff(o.nl.date))[1],
+  "icon-color": icon_now(monthDayDiff(o.nl.date) > 0 ? monthDayDiff(o.gl.date) : monthDayDiff(o.nl.date))[1],
   content:
     o.gl.name +
     ":" +
