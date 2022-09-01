@@ -1,4 +1,4 @@
-let url = "http://ip-api.com/json/?lang=zh-CN";
+let url = "http://ip-api.com/json";
 
 $httpClient.get(url, function (error, response, data) {
   let jsonData = JSON.parse(data);
@@ -8,7 +8,7 @@ $httpClient.get(url, function (error, response, data) {
   let isp = jsonData.isp;
   let ip = jsonData.query;
   body = {
-    title: "节点详情",
+    title: "节点信息",
     content: `IP信息：${ip}\n运营商：${isp}\n所在地：${emoji}${country} - ${city}`,
     icon: "globe.asia.australia",
   };
@@ -16,6 +16,9 @@ $httpClient.get(url, function (error, response, data) {
 });
 
 function getFlagEmoji(countryCode) {
+  if (countryCode.toUpperCase() == "TW") {
+    countryCode = "CN";
+  }
   const codePoints = countryCode
     .toUpperCase()
     .split("")
