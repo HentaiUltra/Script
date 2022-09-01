@@ -231,12 +231,13 @@ function insertStr(source, start, newStr) {
 
 function monthDayDiff(date) {
   var now = new Date();
+  var year = now.getFullYear().toString(); //得到年份
   var month = now.getMonth() + 1 > 10 ? now.getMonth() + 1 : "0" + (now.getMonth() + 1); //得到月份
   var day = now.getDate() > 10 ? now.getDate() : "0" + now.getDate(); //得到日期
-  var d1 = month + "-" + day;
-  var d2 = insertStr(date, 2, "-");
-  s1 = new Date(d1.replace(/\-/g, "/"));
-  s2 = new Date(d2.replace(/\-/g, "/"));
+  var d1 = year + "/" + month + "/" + day;
+  var d2 = insertStr(year, 4, "/") + insertStr(date, 2, "/");
+  var s1 = new Date(d1);
+  var s2 = new Date(d2);
   var time = s2.getTime() - s1.getTime();
   var days = parseInt(time / (1000 * 60 * 60 * 24));
   return days;
@@ -265,8 +266,6 @@ function recently(V, T) {
   //获取最近的农历节日
   var nl = solarToLunar(y, m, d);
   (n = ("0" + nl.lunarM).slice(-2) + ("0" + nl.lunarD).slice(-2)), (k = 0);
-  console.log(n, "n");
-  console.log("[ T ] >", T);
   for (var i in T) n * 1 > T[i].date * 1 && k++;
   k = k >= V.length ? 0 : k;
   result.nl = T.slice(k).shift();
@@ -337,7 +336,7 @@ function title_random(num) {
     15: "量蓄满 开始打工 ̗̀ ˎˊ˗",
     16: "朝九晚九",
     17: ":)",
-    18: "你以为我打工就是为了挣几个臭钱吗？是",
+    18: "我打工是为了几个臭钱吗？是",
     19: "生活生活，生下来就要干活",
     20: "锄禾日当午，打工好辛苦",
   };
