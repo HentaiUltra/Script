@@ -10,7 +10,7 @@ const v4IP = v4.primaryAddress;
     $.done({
       title: "未连接网络",
       content: "请检查网络连接",
-      icon: "bolt.slash.circle",
+      icon: "bolt.slash.fill",
       "icon-color": "#cc163a",
     });
     return;
@@ -24,7 +24,7 @@ const v4IP = v4.primaryAddress;
   const body = {
     title: wifi.ssid || "蜂窝数据",
     content: `IP：${ip} \n` + (wifi.ssid ? `路由器地址：${router}\n` : "") + `外部 IP：${externalIP}`,
-    icon: wifi.ssid ? "wifi.circle" : "antenna.radiowaves.left.and.right.circle",
+    icon: wifi.ssid ? "wifi" : "antenna.radiowaves.left.and.right",
     "icon-color": wifi.ssid ? "#1ba784" : "#f9d770",
   };
   $.done(body);
