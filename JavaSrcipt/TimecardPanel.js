@@ -231,7 +231,7 @@ function insertStr(source, start, newStr) {
 
 function monthDayDiff(date) {
   var now = new Date();
-  var month = now.getMonth() + 1 > 10 ? now.getMonth() + 1 : "0" + now.getMonth() + 1; //得到月份
+  var month = now.getMonth() + 1 > 10 ? now.getMonth() + 1 : "0" + (now.getMonth() + 1); //得到月份
   var day = now.getDate() > 10 ? now.getDate() : "0" + now.getDate(); //得到日期
   var d1 = month + "-" + day;
   var d2 = insertStr(date, 2, "-");
@@ -312,10 +312,10 @@ $done({
     o.gl.name +
     ":" +
     today(monthDayDiff(o.gl.date), o.gl.name, "公历") +
-    ~"," +
+    "," +
     o.nl.name +
     ":" +
-    today(monthDayDiff(o.nl.date, o.nl.name, "农历")),
+    today(monthDayDiff(o.nl.date), o.nl.name, "农历"),
 });
 function title_random(num) {
   let r = Math.floor(Math.random() * 20 + 1);
