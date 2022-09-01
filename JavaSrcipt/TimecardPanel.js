@@ -2,17 +2,16 @@ var V = [
   //公历
   { date: "0101", name: "元旦节" },
   { date: "0214", name: "情人节" },
-  { date: "0305", name: "学雷锋纪念日" },
   { date: "0308", name: "妇女节" },
   { date: "0312", name: "植树节" },
-  { date: "0501", name: "劳动节" },
-  { date: "0701", name: "中国GD诞辰" },
   { date: "0401", name: "愚人节" },
+  { date: "0501", name: "劳动节" },
   { date: "0504", name: "青年节" },
-  { date: "0601", name: "国际儿童节" },
+  { date: "0601", name: "儿童节" },
+  { date: "0701", name: "建党节" },
   { date: "0801", name: "建军节" },
-  { date: "0910", name: "中国教师节" },
-  { date: "1010", name: "国庆节" },
+  { date: "0910", name: "教师节" },
+  { date: "1001", name: "国庆节" },
   { date: "1111", name: "光棍节" },
   { date: "1224", name: "平安夜" },
   { date: "1225", name: "圣诞节" },
@@ -238,7 +237,7 @@ function monthDayDiff(date) {
   var d2 = insertStr(year, 4, "/") + insertStr(date, 2, "/");
   var s1 = new Date(d1);
   var s2 = new Date(d2);
-  var time = s2.getTime() - s1.getTime();
+  var time = s2.getTime() > s1.getTime() ? s2.getTime() - s1.getTime() : s1.getTime() - s2.getTime();
   var days = parseInt(time / (1000 * 60 * 60 * 24));
   return days;
 }
