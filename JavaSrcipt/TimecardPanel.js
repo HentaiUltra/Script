@@ -263,7 +263,7 @@ function monthDayDiff(date, type) {
   var day = now.getDate() > 10 ? now.getDate() : "0" + now.getDate(); //得到日期
   if (type === "nl") {
     var nl = solarToLunar(year, month, day);
-    var n = ("0" + nl.lunarM).slice(-2) + ("0" + nl.lunarD).slice(-2);
+    n = ("0" + nl.lunarM).slice(-2) + ("0" + nl.lunarD).slice(-2);
     var d1 = insertStr(year, 4, "/") + insertStr(n, 2, "/");
     var d2 = insertStr(year, 4, "/") + insertStr(date, 2, "/");
     var s1 = new Date(d1);
@@ -304,45 +304,36 @@ function dateNotice(name, type) {
 //>图标依次切换乌龟、兔子、闹钟、礼品盒
 function icon_now(num) {
   if (num <= 7 && num > 3) {
-    return "hare";
+    return ["hourglass", "#ee3f4d"];
   } else if (num <= 3 && num > 0) {
-    return "timer";
+    return ["timer", "#45b787"];
   } else if (num == 0) {
-    return "gift";
+    return ["gift.fill", "#ffa60f"];
   } else {
-    return "tortoise";
+    return ["hourglass.bottomhalf.filled", "#eea08c"];
   }
 }
 function title_random(num) {
-  let r = Math.floor(Math.random() * 20 + 1);
+  let r = Math.floor(Math.random() * 10 + 1);
   let dic = {
-    1: "距离放假，还要摸鱼多少天？",
-    2: "坚持住，就快放假啦！",
-    3: "上班好累呀，下顿吃啥？",
-    4: "努力,我还能加班24小时!",
-    5: "今日宜：吃饭饭  忌：减肥",
-    6: "躺平中，等放假",
-    7: "只有摸鱼才是赚老板的钱",
-    8: "一起摸鱼吧",
-    9: "摸鱼中，期待下一个假日",
-    10: "小乌龟慢慢爬",
-    11: "只要选对了工作，每天都是周一",
-    12: "如果坐牢有平替，那一定是上班。",
-    13: "搬砖勿扰，小心砸脚",
-    14: "人之初性本善，不想上班怎么办",
-    15: "量蓄满 开始打工 ̗̀ ˎˊ˗",
-    16: "朝九晚九",
-    17: ":)",
-    18: "我打工是为了几个臭钱吗？是",
-    19: "生活生活，生下来就要干活",
-    20: "锄禾日当午，打工好辛苦",
+    1: "𝑯𝒂𝒑𝒑𝒚 𝑽𝒂𝒍𝒆𝒏𝒕𝒊𝒏𝒆'𝒔 𝑫𝒂𝒚",
+    2: "𝑨𝒏𝒅 𝒚𝒐𝒖 ︎",
+    3: "𝙝𝙖𝙫𝙚 𝙖 𝙣𝙞𝙘𝙚 𝙙𝙖𝙮 𖠚ᐝ",
+    4: "︎ ʜᴀ͟ᴘ͟ᴘ͟ʏ ᴇᴠᴇʀʏᴅᴀʏ̆̈ ᴛᴏ ᴍᴇ◟̆◞̆",
+    5: " ≀𝓼𝔀𝓮𝓮𝓽𝓼≀",
+    6: " ᴿᴬᴵᴺᴮᴼᵂ ᴬᴸᴸᴮᵁᴮᴮᴸᴱ ᴮᴬᴮᴱ",
+    7: "𐂂 ☾˚‧º· ʜᴀ͟ᴘ͟ᴘ͟ʏᴇᴠᴇʀʏᴅᴀʏ̆̈",
+    8: "𝙝𝙖𝙫𝙚 𝙖 𝙣𝙞𝙘𝙚 𝙙𝙖𝙮 𖠚ᐝ",
+    9: "(ノへ￣、)",
+    10: "(✪ω✪)",
   };
-  return num == 0 ? "节日快乐，万事大吉" : dic[r];
+  return num == 0 ? "𝗛𝗮𝗽𝗽𝘆 𝗵𝗼𝗹𝗶𝗱𝗮𝘆𝘀 𝗮𝗻𝗱 𝗮𝗹𝗹 𝘁𝗵𝗲 𝗯𝗲𝘀𝘁 𖠚ᐝ" : dic[r];
 }
 
 $done({
   title: title_random(monthDayDiff(o.nl.date) > 0 ? monthDayDiff(o.gl.date) : monthDayDiff(o.nl.date)),
-  icon: icon_now(monthDayDiff(o.nl.date) > 0 ? monthDayDiff(o.gl.date) : monthDayDiff(o.nl.date)),
+  icon: icon_now(monthDayDiff(o.nl.date) > 0 ? monthDayDiff(o.gl.date) : monthDayDiff(o.nl.date))[0],
+  color: icon_now(monthDayDiff(o.nl.date) > 0 ? monthDayDiff(o.gl.date) : monthDayDiff(o.nl.date))[1],
   content:
     o.gl.name +
     ":" +
