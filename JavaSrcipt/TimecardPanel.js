@@ -263,7 +263,6 @@ function monthDayDiff(date) {
   var day = now.getDate() > 10 ? now.getDate() : "0" + now.getDate(); //得到日期
   if (type === "nl") {
     var nl = solarToLunar(year, month, day);
-    n = ("0" + nl.lunarM).slice(-2) + ("0" + nl.lunarD).slice(-2);
     var d1 = insertStr(year, 4, "/") + insertStr(n, 2, "/");
     var d2 = insertStr(year, 4, "/") + insertStr(date, 2, "/");
     var s1 = new Date(d1);
