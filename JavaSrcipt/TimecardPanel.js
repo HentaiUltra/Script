@@ -298,12 +298,12 @@ function dateNotice(name, type) {
     now.getHours() >= 6
   ) {
     $persistentStore.write(name, type === "nl" ? "lunarCalendarPushed" : "gregorianCalendarPushed");
-    $notification.post("假日祝福", "", "今天是" + name + "   🎉");
+    $notification.post("假日祝福", "", "今天是" + type === "nl" ? "农历节日:" : "" + name + "   🎉🎉🎉!");
   }
 }
 //>图标依次切换电池
 function icon_now(num) {
- if (num <= 7 && num > 5) {
+  if (num <= 7 && num > 5) {
     return ["battery.25", "#f2ce2b"];
   } else if (num <= 5 && num > 3) {
     return ["battery.50", "#1f2623"];
@@ -340,7 +340,7 @@ $done({
     o.gl.name +
     ":" +
     today(monthDayDiff(o.gl.date, "gl"), o.gl.name, "gl") +
-    "," +
+    "|" +
     o.nl.name +
     ":" +
     today(monthDayDiff(o.nl.date, "nl"), o.nl.name, "nl"),

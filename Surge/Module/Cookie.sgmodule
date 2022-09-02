@@ -3,17 +3,10 @@
 #!system=ios
 
 [Script]
-# > 京东商城
-# https://home.m.jd.com/myJd/newhome.action
-京东商城 = type=http-request,requires-body=1,pattern=^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?|gw\/generic\/hy\/h5\/m\/appSign\?),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
-# > 喜马拉雅
+# > 喜马拉雅 app获取
 喜马拉雅 = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.cookie.js,type=http-request,pattern=^https?:\/\/.*\/mobile\-user\/v2\/homePage\/.*
 # > 美团 app获取
 美团获取 = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js,requires-body=true,type=http-request,pattern=^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/
-# > 百度贴吧 app获取
-百度贴吧 = type=http-request,pattern=^https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_checkin.js
-百度贴吧 = type=http-request,pattern=^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/channelIconConfig,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_checkin.js
-百度贴吧 = type=http-request,pattern=^https?:\/\/tiebac\.baidu\.com\/c\/u\/follow\/getFoldedMessageUserInfo,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_checkin.js
 # > 什么值得买
 # https://zhiyou.smzdm.com/
 什么值得买 = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_signin.js,type=http-request,requires-body=true,pattern=^https?:\/\/zhiyou\.smzdm\.com\/user$
@@ -40,5 +33,5 @@
 # 分割线——————————————————————————
 
 [MITM]
-hostname = ms.jr.jd.com, me-api.jd.com, api.m.jd.com, %APPEND% *.ximalaya.com, i.meituan.com, c.tieba.baidu.com, tiebac.baidu.com, *.xxjjappss.com,*.*.mob.com, *.huaerdadi.com, zhiyou.smzdm.com, account.huami.com, my.ruanmei.com, m.client.10010.com, act.10010.com, apph5.manmanbuy.com, wapside.189.cn:9001, club.yili.com, *.bilibili.com, passport.iqiyi.com, www.52pojie.cn
+hostname = i.meituan.com, APPEND% *.ximalaya.com, zhiyou.smzdm.com, m.client.10010.com, act.10010.com, apph5.manmanbuy.com, wapside.189.cn:9001, club.yili.com, *.bilibili.com, passport.iqiyi.com, www.52pojie.cn
 
