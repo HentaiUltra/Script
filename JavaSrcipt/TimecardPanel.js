@@ -333,9 +333,9 @@ function title_random(num) {
 }
 
 $done({
-  title: title_random(monthDayDiff(o.nl.date) > 0 ? monthDayDiff(o.gl.date) : monthDayDiff(o.nl.date)),
-  icon: icon_now(monthDayDiff(o.nl.date) > 0 ? monthDayDiff(o.gl.date) : monthDayDiff(o.nl.date))[0],
-  "icon-color": icon_now(monthDayDiff(o.nl.date) > 0 ? monthDayDiff(o.gl.date) : monthDayDiff(o.nl.date))[1],
+  title: title_random(monthDayDiff(o.nl.date , "nl") > 0 ? monthDayDiff(o.gl.date, "gl") : monthDayDiff(o.nl.date , "nl")),
+  icon: icon_now(monthDayDiff(o.nl.date , "nl") > 0 ? monthDayDiff(o.gl.date, "gl") : monthDayDiff(o.nl.date , "nl"))[0],
+  "icon-color": icon_now(monthDayDiff(o.nl.date , "nl") > 0 ? monthDayDiff(o.gl.date, "gl") : monthDayDiff(o.nl.date , "nl"))[1],
   content:
     o.gl.name +
     ":" +
