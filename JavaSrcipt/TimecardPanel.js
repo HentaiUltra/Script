@@ -304,9 +304,9 @@ function dateNotice(name, type) {
 //>图标依次切换电池
 function icon_now(num) {
   if (num <= 7 && num > 5) {
-    return ["battery.25", "#f2ce2b"];
+    return ["battery.25", "#de1c31"];
   } else if (num <= 5 && num > 3) {
-    return ["battery.50", "#f3f8f1"];
+    return ["battery.50", "#f2ce2b"];
   } else if (num <= 3 && num > 0) {
     return ["battery.75", "#579572"];
   } else if (num == 0) {
@@ -333,9 +333,13 @@ function title_random(num) {
 }
 
 $done({
-  title: title_random(monthDayDiff(o.nl.date , "nl") > 0 ? monthDayDiff(o.gl.date, "gl") : monthDayDiff(o.nl.date , "nl")),
-  icon: icon_now(monthDayDiff(o.nl.date , "nl") > 0 ? monthDayDiff(o.gl.date, "gl") : monthDayDiff(o.nl.date , "nl"))[0],
-  "icon-color": icon_now(monthDayDiff(o.nl.date , "nl") > 0 ? monthDayDiff(o.gl.date, "gl") : monthDayDiff(o.nl.date , "nl"))[1],
+  title: title_random(
+    monthDayDiff(o.nl.date, "nl") > 0 ? monthDayDiff(o.gl.date, "gl") : monthDayDiff(o.nl.date, "nl")
+  ),
+  icon: icon_now(monthDayDiff(o.nl.date, "nl") > 0 ? monthDayDiff(o.gl.date, "gl") : monthDayDiff(o.nl.date, "nl"))[0],
+  "icon-color": icon_now(
+    monthDayDiff(o.nl.date, "nl") > 0 ? monthDayDiff(o.gl.date, "gl") : monthDayDiff(o.nl.date, "nl")
+  )[1],
   content:
     o.gl.name +
     ":" +
