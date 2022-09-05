@@ -341,9 +341,9 @@ function dayDiff() {
 }
 
 $done({
-  title: title_random(day),
-  icon: icon_now(day)[0],
-  "icon-color": icon_now(day)[1],
+  title: title_random(dayDiff()),
+  icon: icon_now(dayDiff())[0],
+  "icon-color": icon_now(dayDiff())[1],
   content:
     o.gl.name +
     ":" +
