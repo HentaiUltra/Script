@@ -24,9 +24,7 @@ var T = [
   { date: "0505", name: "端午节" },
   { date: "0707", name: "七夕节" },
   { date: "0815", name: "中秋节" },
-  { date: "0909", name: "重阳节" },
   { date: "1001", name: "老婆生日" },
-  { date: "1208", name: "腊八节" },
   { date: "1230", name: "除夕" },
 ];
 
@@ -256,6 +254,7 @@ var o = recently(V, T);
 function insertStr(source, start, newStr) {
   return source.slice(0, start) + newStr + source.slice(start);
 }
+// 获取到下一个节日的剩余时间
 function monthDayDiff(date, type) {
   var now = new Date();
   var year = now.getFullYear().toString(); //得到年份
@@ -301,7 +300,7 @@ function dateNotice(name, type) {
     $notification.post("假日祝福", "", "今天是" + type === "nl" ? "农历节日:" : "" + name + "   🎉🎉🎉!");
   }
 }
-//>图标依次切换电池
+//>图标依次切换电池电量图标,电池颜色
 function icon_now(num) {
   if (num <= 7 && num > 5) {
     return ["battery.25", "#de1c31"];
@@ -315,6 +314,7 @@ function icon_now(num) {
     return ["battery.0", "#ee2746"];
   }
 }
+//非节日情况下,随机返回一条语录,否则返回节日祝福
 function title_random(num) {
   let r = Math.floor(Math.random() * 10 + 1);
   let dic = {
@@ -332,14 +332,18 @@ function title_random(num) {
   return num == 0 ? "𝗛𝗮𝗽𝗽𝘆 𝗵𝗼𝗹𝗶𝗱𝗮𝘆𝘀 𝗮𝗻𝗱 𝗮𝗹𝗹 𝘁𝗵𝗲 𝗯𝗲𝘀𝘁 𖠚ᐝ" : dic[r];
 }
 
+function dayDiff() {
+  // 劳动节,国庆节放假,优先计算剩余时间,否则计算农历节日剩余时间
+  if (o.gl.name === "劳~动节" || o.gl.name === "国庆节") {
+    return monthDayDiff(o.nl.date, "gl");
+  }
+  return monthDayDiff(o.gl.date, "nl");
+}
+
 $done({
-  title: title_random(
-    monthDayDiff(o.nl.date, "nl") > 0 ? monthDayDiff(o.gl.date, "gl") : monthDayDiff(o.nl.date, "nl")
-  ),
-  icon: icon_now(monthDayDiff(o.nl.date, "nl") > 0 ? monthDayDiff(o.gl.date, "gl") : monthDayDiff(o.nl.date, "nl"))[0],
-  "icon-color": icon_now(
-    monthDayDiff(o.nl.date, "nl") > 0 ? monthDayDiff(o.gl.date, "gl") : monthDayDiff(o.nl.date, "nl")
-  )[1],
+  title: title_random(day),
+  icon: icon_now(day)[0],
+  "icon-color": icon_now(day)[1],
   content:
     o.gl.name +
     ":" +
