@@ -302,6 +302,7 @@ function dateNotice(name, type) {
 }
 //>图标依次切换电池电量图标,电池颜色
 function icon_now(num) {
+  console.log(num);
   if (num <= 7 && num > 5) {
     return ["battery.25", "#de1c31"];
   } else if (num <= 5 && num > 3) {
@@ -334,10 +335,10 @@ function title_random(num) {
 
 function dayDiff() {
   // 劳动节,国庆节放假,优先计算剩余时间,否则计算农历节日剩余时间
-  if (o.gl.name === "劳~动节" || o.gl.name === "国庆节") {
-    return monthDayDiff(o.nl.date, "gl");
+  if (o.gl.name === "劳动节" || o.gl.name === "国庆节") {
+    return monthDayDiff(o.gl.date, "gl");
   }
-  return monthDayDiff(o.gl.date, "nl");
+  return monthDayDiff(o.nl.date, "nl");
 }
 
 $done({
