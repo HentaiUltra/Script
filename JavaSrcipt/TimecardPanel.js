@@ -304,11 +304,11 @@ function dateNotice(name, type) {
 function icon_now(num) {
   console.log(num);
   if (num <= 7 && num > 5) {
-    return ["battery.25", "#de1c31"];
+    return ["battery.25", "#ee2746"];
   } else if (num <= 5 && num > 3) {
     return ["battery.50", "#f2ce2b"];
   } else if (num <= 3 && num > 0) {
-    return ["battery.75", "#579572"];
+    return ["battery.75", "#41b349"];
   } else if (num == 0) {
     return ["battery.100.bolt", "#41b349"];
   } else {
