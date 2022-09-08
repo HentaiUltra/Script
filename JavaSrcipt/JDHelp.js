@@ -101,6 +101,7 @@ async function all() {
             <button id="jf" class="sidebar ${rightOrLeft} ${isShowJf ? "" : "hide"}"></button>
             <button id="mmm" class="sidebar ${rightOrLeft} ${isShowMmm ? "" : "hide"}"></button>`;
     lk.log("初始化工具栏完成");
+    let jfConvertorResultUrl = `https://item.jd.com/${sku}.html`;
     //lk.log(JSON.stringify(options))
     lk.log("构建转链请求完成");
     lk.log("开始注入html");
@@ -525,11 +526,6 @@ function ToolKit(t, s, i) {
             let h = {};
             const o = !this.isEmpty(i);
             const r = !this.isEmpty(e);
-            if (this.isQuanX()) {
-              if (o) h["open-url"] = i;
-              if (r) h["media-url"] = e;
-              $notify(this.name, t, s, h);
-            }
             if (this.isSurge()) {
               if (o) h["url"] = i;
               $notification.post(this.name, t, s, h);
