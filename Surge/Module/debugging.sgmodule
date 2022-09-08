@@ -1,5 +1,0 @@
-#!name=调试时,对所有域名 mitm ,排除苹果域名
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 调试结束,记得关闭!,最后更新时间 2022-02-25 13:10
-
-[MITM]
-hostname = %INSERT% -*.apple.com, -*.icloud.com, -*.mzstatic.com, -*.crashlytics.com, -*.facebook.com, -*.instagram.com, *
