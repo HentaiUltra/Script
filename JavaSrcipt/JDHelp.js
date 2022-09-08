@@ -42,6 +42,7 @@ async function all() {
     let isShowSmzdm = !lk.getVal(jdHelperIsShowSmzdm) ? true : JSON.parse(lk.getVal(jdHelperIsShowSmzdm));
     let isShowJf = !lk.getVal(jdHelperIsShowJf) ? true : JSON.parse(lk.getVal(jdHelperIsShowJf));
     let isShowMmm = !lk.getVal(jdHelperIsShowMmm) ? true : JSON.parse(lk.getVal(jdHelperIsShowMmm));
+
     let leftCss = !lk.getVal("lkJdHelperLeftCss") ? "" : lk.getVal("lkJdHelperLeftCss");
     if (leftCss == "") {
       leftCss = `
@@ -180,24 +181,24 @@ async function all() {
                                   console.log('复制成功${jfConvertorResultUrl}')
                               }
                               document.body.removeChild(input)
-                              //window.location.href='com.jingdong.jxj://'
-                              switch (jfConvertorAppType) {
-                                case 'jx':
-                                    var a = document.createElement('a');
-                                    a.setAttribute('href', "${jfConvertorResultUrl}");
-                                    a.setAttribute('target', '_self');
-                                    document.body.appendChild(a);
-                                    a.click();
-                                    document.body.removeChild(input)
-                                    // window.location.href='openapp.jdpingou://virtual?params={"des":"m","url":"${jfConvertorResultUrl}","category":"jump"}'
-                                    break
-                                case 'jsb':
-                                    window.location.href='openjdlite://virtual?params={"category":"jump","des":"m","url":"${jfConvertorResultUrl}"}'
-                                    break
-                                default:
-                                    window.location.href='openApp.jdMobile://virtual?params={"category":"jump","des":"m","sourceValue":"babel-act","sourceType":"babel","url":"${jfConvertorResultUrl}"}'
-                                    break
-                              }
+                              window.location.href='com.jingdong.jxj://'
+                              // switch (jfConvertorAppType) {
+                              //   case 'jx':
+                              //       var a = document.createElement('a');
+                              //       a.setAttribute('href', "${jfConvertorResultUrl}");
+                              //       a.setAttribute('target', '_self');
+                              //       document.body.appendChild(a);
+                              //       a.click();
+                              //       document.body.removeChild(input)
+                              //       window.location.href='openapp.jdpingou://virtual?params={"des":"m","url":"${jfConvertorResultUrl}","category":"jump"}'
+                              //       break
+                              //   case 'jsb':
+                              //       window.location.href='openjdlite://virtual?params={"category":"jump","des":"m","url":"${jfConvertorResultUrl}"}'
+                              //       break
+                              //   default:
+                              //       window.location.href='openApp.jdMobile://virtual?params={"category":"jump","des":"m","sourceValue":"babel-act","sourceType":"babel","url":"${jfConvertorResultUrl}"}'
+                              //       break
+                              // }
                           })
                           const mmmbtn = document.querySelector('#mmm')
                           mmmbtn.addEventListener('click',() => {
