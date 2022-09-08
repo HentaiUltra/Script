@@ -35,16 +35,13 @@ async function all() {
     sku = arr.length != 0 ? arr[1] : "";
 
     lk.log(`解析完成:${sku}`);
-    const sidebarHorizontal = "lkJdHelperSidebarHorizontal";
     const jdHelperIsShowSmzdm = "jdHelperIsShowSmzdm";
     const jdHelperIsShowJf = "jdHelperIsShowJf";
     const jdHelperIsShowMmm = "jdHelperIsShowMmm";
-    let rightOrLeft = !lk.getVal(sidebarHorizontal) ? `left` : lk.getVal(sidebarHorizontal);
-
+    let rightOrLeft = `left`;
     let isShowSmzdm = !lk.getVal(jdHelperIsShowSmzdm) ? true : JSON.parse(lk.getVal(jdHelperIsShowSmzdm));
     let isShowJf = !lk.getVal(jdHelperIsShowJf) ? true : JSON.parse(lk.getVal(jdHelperIsShowJf));
     let isShowMmm = !lk.getVal(jdHelperIsShowMmm) ? true : JSON.parse(lk.getVal(jdHelperIsShowMmm));
-
     let leftCss = !lk.getVal("lkJdHelperLeftCss") ? "" : lk.getVal("lkJdHelperLeftCss");
     if (leftCss == "") {
       leftCss = `
