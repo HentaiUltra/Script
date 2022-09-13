@@ -1,9 +1,23 @@
-var body = JSON.parse($response.body)
-  .replace(/\"is_activated\":\d/g, '"is_activated":1')
-  .replace(/\"remain_days\":\d+/g, '"remain_days":666666')
-  .replace(/\"will_expire\":\d/g, '"will_expire":0')
-  .replace(/\"vip_special\":\d/g, '"vip_special":1')
-  .replace(/\"is_lifetime\":\d/g, '"is_lifetime":1')
-  .replace(/\"expired_at\":\d+/g, '"expired_at":32495475600')
-  .replace(/\"expire_time\":\".*?\"/g, '"expire_time":"2999-09-28"');
+var body = {
+  status: 200,
+  message: "success",
+  data: {
+    expired_at: 4045798296,
+    is_activated: 1,
+    is_lifetime: 1,
+    expire_time: "2099-01-01 00:00:00",
+    device_id: 600150864,
+    period_type: "active",
+    remain_days: 99999,
+    product_id: 369,
+    has_present: 0,
+    allowed_device_count: 1,
+    has_buy_extend: 0,
+    will_expire: 0,
+    license_type: "premium",
+    begin_activated_time: 1645798296,
+    durations: 0,
+    vip_special: 1,
+  },
+};
 $done({ body: JSON.stringify(body) });
