@@ -1,9 +1,11 @@
 var V = [
   //公历
   { date: "0101", name: "元旦节" },
+  { date: "0104", name: "儿子生日" },
   { date: "0214", name: "情人节" },
   { date: "0308", name: "妇女节" },
   { date: "0312", name: "植树节" },
+  { date: "0104", name: "女儿生日" },
   { date: "0401", name: "愚人节" },
   { date: "0501", name: "劳动节" },
   { date: "0504", name: "青年节" },
