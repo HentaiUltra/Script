@@ -4,8 +4,6 @@
 
 # 分割线——————————————————————————
 
-[Header Rewrite]
-https:\/\/api\.revenuecat\.com header-del x-revenuecat-etag
 [General]
 force-http-engine-hosts = %APPEND% boxjs.net, boxjs.com
 
@@ -121,8 +119,6 @@ URL-REGEX,^https?:\/\/(s3plus|flowplus)\.meituan\.net\/v\d\/\w+\/linglong\/\w+\.
 奈飞评分 = type=http-request,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
 奈飞评分 = type=http-response,requires-body=1,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
 单集评分 = type=http-response,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/warmer/.+type=show-ath,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating_season.js
-# > Spark 解锁
-邮箱订阅 = type=http-response,pattern=https:\/\/api\.revenuecat\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/revenuecat.js,script-update-interval=-1
 # > 金山WPS vip
 wps解锁 = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js,type=http-response,pattern=^https?:\/\/[a-z-]*account\.wps\.c(n|om)(:\d+|)\/api\/users
 # > 扫描全能王 pro
