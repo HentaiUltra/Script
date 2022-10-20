@@ -5,36 +5,18 @@
 # 分割线——————————————————————————
 
 [General]
-force-http-engine-hosts = %APPEND% boxjs.net, boxjs.com
 
 # 分割线——————————————————————————
 
 [Rule]
-# > Siri与搜索 代理
-PROCESS-NAME,LookupViewService,𝗣𝗥𝗢𝗫𝗬
-PROCESS-NAME,/System/Library/PrivateFrameworks/Lookup.framework/Versions/A/XPCServices/LookupViewService.xpc/Contents/MacOS/LookupViewService,𝗣𝗥𝗢𝗫𝗬
-DOMAIN,lookup-api.apple.com,𝗣𝗥𝗢𝗫𝗬
-DOMAIN,lookup-api.apple.com.edgekey.net,𝗣𝗥𝗢𝗫𝗬
-DOMAIN,e16991.b.akamaiedge.net,𝗣𝗥𝗢𝗫𝗬
-# > 小豚当家 去开屏
-DOMAIN,advertise.zhiduodev.com,REJECT
-DOMAIN,api.zhiduodev.com,REJECT
 # > VSCO 代理
 DOMAIN,measurement.com,𝗣𝗥𝗢𝗫𝗬
 # > 555电影网
 DOMAIN,www.o8tv.com,𝗗𝗜𝗥𝗘𝗖𝗧
 # > Safari 防跳转
 DOMAIN,app-site-association.cdn-apple.com,REJECT
-# > 机场网站 代理
-DOMAIN-SUFFIX,dlercloud.com,𝗣𝗥𝗢𝗫𝗬
-DOMAIN,zhuan.mlsao.xyz,𝗣𝗥𝗢𝗫𝗬
-# > Passkey
-DOMAIN,ql.lowking.pro,服务器 01
 # > 爱奇艺 去暂停广告
 DOMAIN-SUFFIX,cupid.iqiyi.com,REJECT
-# > 人人视频 去广告
-AND,((USER-AGENT,PUClient*),(NOT,((DOMAIN-SUFFIX,rr.tv)))),REJECT
-URL-REGEX,^https?:\/\/api\.rr\.tv\/(?:ad\/getAll$|storage/business/rootName/app/homePage),REJECT
 # > 优酷 去广告
 DOMAIN, iyes.youku.com,REJECT
 URL-REGEX,^http:\/\/.*\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
