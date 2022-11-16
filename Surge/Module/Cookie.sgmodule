@@ -1,5 +1,5 @@
 #!name=Cookie获取
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-11-09 10:00
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-11-16 15:00
 #!system=ios
 
 [Script]
@@ -24,10 +24,12 @@
 吾爱获取 = type=http-request,pattern=https:\/\/www\.52pojie\.cn\/home\.php\?,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
 # > 顺丰速运 app获取
 顺丰速运 = type=http-request, pattern=^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/user\/universalSign,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js,requires-body=1
+# > 美团买菜
+美团买菜 = type=http-request, pattern=^https?:\/\/mall\.meituan\.com\/api\/c\/mallcoin\/checkIn\/queryTaskListInfoV.\?,script-path=https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.cookie.js
 
 # 分割线——————————————————————————
 
 [MITM]
-hostname = apph5.manmanbuy.com, wapside.189.cn:9001, club.yili.com, www.52pojie.cn, ccsp-egmas.sf-express.com ,mobile.ximalaya.com, app.bilibili.com, m.bilibili.com
+hostname = apph5.manmanbuy.com, wapside.189.cn:9001, club.yili.com, www.52pojie.cn, ccsp-egmas.sf-express.com ,mobile.ximalaya.com, app.bilibili.com, m.bilibili.com, mall.meituan.com
 
 
