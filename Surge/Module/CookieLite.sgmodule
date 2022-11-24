@@ -5,12 +5,10 @@
 [Script]
 # > 伊利乳品 小程序获取
 伊利乳品 = type=http-request, requires-body=1, pattern=https:\/\/club\.yili\.com\/MALLIFChe\/MCSWSIAPI\.asmx\/Call,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.cookie.js
-# > 顺丰速运 app获取
-顺丰速运 = type=http-request, pattern=^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/user\/universalSign,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js,requires-body=1
 
 # 分割线——————————————————————————
 
 [MITM]
-hostname = club.yili.com, ccsp-egmas.sf-express.com
+hostname = club.yili.com
 
 
