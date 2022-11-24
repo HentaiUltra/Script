@@ -1,5 +1,5 @@
 #!name=VSCO解锁
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-11-24 10:20
+#!desc=VSCO 会员解锁
 #!system=ios
 
 
@@ -7,7 +7,7 @@
 https:\/\/api\.revenuecat\.com header-del x-revenuecat-etag
 
 [Script]
-vsco解锁 = type=http-response,pattern=^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/HentaiUltra/Script/main/JavaSrcipt/Revenuecat.js,script-update-interval=0
+VSCO解锁 = type=http-response,pattern=^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/HentaiUltra/Script/main/JavaSrcipt/Revenuecat.js,script-update-interval=0
 
 [MITM]
 hostname = %APPEND% api.revenuecat.com, vsco.co
