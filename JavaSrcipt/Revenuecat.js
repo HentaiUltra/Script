@@ -1,41 +1,36 @@
-let obj = JSON.parse($response.body || "{}");
+const resp = {};
+const obj = JSON.parse((typeof $response != "undefined" && $response.body) || null);
 
-if (obj.user_subscription) {
-  obj.user_subscription["expires_on_sec"] = 4102415999;
-  obj.user_subscription["expired"] = false;
-  obj.user_subscription["payment_type"] = 2;
-  obj.user_subscription["is_trial_period"] = true;
-  obj.user_subscription["starts_on_sec"] = 4102415999;
-  obj.user_subscription["is_active"] = true;
-  obj.user_subscription["auto_renew"] = true;
-  obj.user_subscription["last_verified_sec"] = 4102415999;
-  obj.user_subscription["subscription_code"] = "VSCOANNUAL";
-  obj.user_subscription["user_id"] = 54624336;
-  obj.user_subscription["source"] = 1;
+const ua = $request.headers["User-Agent"] || $request.headers["user-agent"];
+const list = {
+  VSCO: { name: "membership", id: "com.circles.fin.premium.yearly" },
+  "1Blocker": { name: "premium", id: "blocker.ios.subscription.yearly" },
+  Anybox: { name: "pro", id: "cc.anybox.Anybox.annual" },
+  Fileball: { name: "filebox_pro", id: "com.premium.yearly" },
+};
+const data = {
+  expires_date: "2099-02-18T07:52:54Z",
+  original_purchase_date: "2020-02-11T07:52:55Z",
+  purchase_date: "2020-02-11T07:52:54Z",
+};
+
+if (typeof $response == "undefined") {
+  delete $request.headers["x-revenuecat-etag"]; // prevent 304 issues
+  delete $request.headers["X-RevenueCat-ETag"];
+  resp.headers = $request.headers;
+} else if (obj && obj.subscriber) {
+  obj.subscriber.subscriptions = obj.subscriber.subscriptions || {};
+  obj.subscriber.entitlement = obj.subscriber.entitlement || {};
+  for (const i in list) {
+    if (new RegExp(`^${i}`, `i`).test(ua)) {
+      obj.subscriber.subscriptions[list[i].id] = data;
+      obj.subscriber.entitlements[list[i].name] = JSON.parse(JSON.stringify(data));
+      obj.subscriber.entitlements[list[i].name].product_identifier = list[i].id;
+      break;
+    }
+  }
+  resp.body = JSON.stringify(obj)
+    .replace(/\"expires_date\":\"\w{4}/g, '"expires_date":"2099')
+    .replace(/\"period_type\":\"\w+\"/g, '"period_type":"active"');
 }
-
-if (obj.subscriber) {
-  obj.subscriber.subscriptions = {
-    "com.circles.fin.premium.yearly": {
-      billing_issues_detected_at: null,
-      expires_date: "2099-12-31T07:52:54Z",
-      is_sandbox: false,
-      original_purchase_date: "2020-02-11T07:52:55Z",
-      period_type: "normal",
-      purchase_date: "2020-02-11T07:52:54Z",
-      store: "app_store",
-      unsubscribe_detected_at: null,
-    },
-  };
-  obj.subscriber.entitlements = {
-    membership: {
-      expires_date: "2099-12-31T07:52:54Z",
-      product_identifier: "com.circles.fin.premium.yearly",
-      purchase_date: "2020-02-11T07:52:54Z",
-    },
-  };
-}
-
-$done({
-  body: JSON.stringify(obj),
-});
+$done(resp);
