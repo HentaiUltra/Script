@@ -1,5 +1,5 @@
 #!name=定时任务脚本
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-11-30 14:40
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-12-01 10:55
 #!system=ios
 
 [Script]
@@ -15,6 +15,8 @@
 哔哩哔哩 = type=cron,cronexp=30 3 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js,timeout=60
 # > 伊利乳品
 伊利乳品 = type=cron,cronexp=0 4 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.js
+# > 爱奇艺
+iQIYI签到 = type=cron,cronexp=30 4 0 * * *,wake-system=1,timeout=120,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js,script-update-interval=0
 # > 吾爱破解
 吾爱签到 = type=cron,cronexp=0 5 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
 # > 每日一句
