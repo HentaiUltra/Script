@@ -178,7 +178,7 @@ EmbyPro = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/r
 计算器HD = type=http-response, pattern=^https?:\/\/www\.40sishi\.com\/(list|cu
 ency|calculator)\/user\/profile$, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/CalculatorHDProCrack.js
 # > Fimo 解锁
-Fimo = type=http-response, pattern=^https?:\/\/server\.yoyiapp\.com\/fimo-user\/user$, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/fimo.js
+Fimo = type=http-response, pattern=^https?:\/\/server\.yoyiapp\.com\/fimo-user\/user$, requires-body=1, max-size=0, script-path=https://github.com/ddgksf/Scripts/raw/dev/FimoProCrack.js
 # > 搜图神器 解锁
 搜图神器 = type=http-response, pattern=^https?:\/\/wallpaper\.soutushenqi\.com\/api\/v1\/account\/token$ , requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/SearchPictureCrack.js
 
