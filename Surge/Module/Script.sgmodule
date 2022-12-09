@@ -1,5 +1,5 @@
 #!name=脚本解锁
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-12-8 10:45
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-12-9 14:45
 #!system=ios
 
 # 分割线——————————————————————————
@@ -127,8 +127,9 @@ URL-REGEX,^https?:\/\/cube\.elemecdn\.com\/\w\/\w{2}\/\w+mp4\.mp4\?,REJECT
 URL-REGEX,^https?:\/\/elemecdn\.com\/.+?\/sitemap,REJECT
 URL-REGEX,^https?:\/\/www1\.elecfans\.com\/www\/delivery\/,REJECT
 # > 555影视
-URL-REGEX,^https?:\/\/vip7\.fzwdyy\.cn:8083\/api\/getAdvertInfo,REJECT-TINYGIF
-URL-REGEX,^https?:\/\/vip7\.fzwdyy\.cn:8083\/api\/getGooGAdvert,REJECT-TINYGIF
+URL-REGEX,^https:\/\/vip7\.fzwdyy\.cn:8083\/api\/getAdvertInfo,REJECT-DROP
+URL-REGEX,^https:\/\/vip7\.fzwdyy\.cn:8083\/api\/getGooGAdvert,REJECT-DROP
+
 # 分割线——————————————————————————
 
 [URL Rewrite]
