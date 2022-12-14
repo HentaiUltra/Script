@@ -2,7 +2,7 @@
  * @Description: 请输入....
  * @Author: junjie
  * @Date: 2022-12-14 16:24:09
- * @LastEditTime: 2022-12-14 16:24:21
+ * @LastEditTime: 2022-12-14 16:41:09
  * @LastEditors: junjie
  */
 /*
@@ -42,7 +42,7 @@ Sub_info = script-name=Sub_info,update-interval=600
   let used = info.download + info.upload;
   let total = info.total;
   let expire = args.expire || info.expire;
-  let content = [`用量：${bytesToSize(used)} | ${bytesToSize(total)}`];
+  let content = [`已用：${toPercent(used, total)} | 剩余: ${bytesToSize(total)}`];
 
   if (resetDayLeft || expire) {
     if (resetDayLeft && expire) {
@@ -62,7 +62,7 @@ Sub_info = script-name=Sub_info,update-interval=600
   minutes = minutes > 9 ? minutes : "0" + minutes;
 
   $done({
-    title: `${args.title} | ${hour}:${minutes}`,
+    title: `${args.title} | ${bytesToSize(total)} | ${hour}:${minutes}`,
     content: content.join("\n"),
     icon: args.icon || "airplane.circle",
     "icon-color": args.color || "#007aff",
@@ -141,6 +141,10 @@ function bytesToSize(bytes) {
   sizes = ["B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"];
   let i = Math.floor(Math.log(bytes) / Math.log(k));
   return (bytes / Math.pow(k, i)).toFixed(2) + " " + sizes[i];
+}
+
+function toPercent(num, total) {
+  return Math.round((num / total) * 10000) / 100.0 + "%";
 }
 
 function formatTime(time) {
