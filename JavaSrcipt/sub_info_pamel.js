@@ -2,7 +2,7 @@
  * @Description: 请输入....
  * @Author: junjie
  * @Date: 2022-12-14 16:24:09
- * @LastEditTime: 2022-12-14 16:41:09
+ * @LastEditTime: 2022-12-14 16:45:03
  * @LastEditors: junjie
  */
 /*
@@ -45,7 +45,8 @@ Sub_info = script-name=Sub_info,update-interval=600
   let content = [`已用：${toPercent(used, total)} | 剩余: ${bytesToSize(total)}`];
 
   if (resetDayLeft || expire) {
-    if (resetDayLeft && expire) {
+    if (resetDayLeft && expire && expire !== "false") {
+      if (/^[\d.]+$/.test(expire)) expire *= 1000;
       content.push(`重置：剩余${resetDayLeft}天 | 到期：${formatTime(expire)}`);
     } else if (resetDayLeft && !expire) {
       content.push(`重置：剩余${resetDayLeft}天`);
