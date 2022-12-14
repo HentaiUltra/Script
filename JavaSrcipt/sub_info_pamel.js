@@ -2,7 +2,7 @@
  * @Description: 请输入....
  * @Author: junjie
  * @Date: 2022-12-14 16:24:09
- * @LastEditTime: 2022-12-14 17:27:17
+ * @LastEditTime: 2022-12-14 17:30:09
  * @LastEditors: junjie
  */
 /*
@@ -42,7 +42,7 @@ Sub_info = script-name=Sub_info,update-interval=600
   let used = info.download + info.upload;
   let total = info.total;
   let expire = args.expire || info.expire;
-  let content = [`已用：${toPercent(used, total)} | 剩余: ${toMultiply(total, num)}`];
+  let content = [`已用：${toPercent(used, total)} | 剩余: ${toMultiply(total, used)}`];
 
   if (resetDayLeft || expire) {
     if (resetDayLeft && expire && expire !== "false") {
@@ -156,24 +156,20 @@ function toPercent(num, total) {
 }
 
 function toMultiply(total, num) {
-  let aDecimalLen, // a 小数长度
-    bDecimalLen, // b 小数长度
-    maxLen, // 最长的小数长度
-    multiple; // 扩大的倍数
-
+  let totalDecimalLen, numDecimalLen, maxLen, multiple;
   try {
-    aDecimalLen = a.toString().split(".").length;
+    totalDecimalLen = total.toString().split(".").length;
   } catch (e) {
-    aDecimalLen = 0;
+    totalDecimalLen = 0;
   }
   try {
-    bDecimalLen = b.toString().split(".").length;
+    numDecimalLen = num.toString().split(".").length;
   } catch (e) {
-    bDecimalLen = 0;
+    numDecimalLen = 0;
   }
-  maxLen = Math.max(aDecimalLen, bDecimalLen);
+  maxLen = Math.max(totalDecimalLen, numDecimalLen);
   multiple = Math.pow(10, maxLen);
-  const numberSize = ((a * multiple - b * multiple) / multiple).toFixed(maxLen);
+  const numberSize = ((total * multiple - num * multiple) / multiple).toFixed(maxLen);
   return bytesToSize(numberSize);
 }
 
