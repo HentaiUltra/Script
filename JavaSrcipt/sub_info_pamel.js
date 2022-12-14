@@ -2,7 +2,7 @@
  * @Description: 请输入....
  * @Author: junjie
  * @Date: 2022-12-14 16:24:09
- * @LastEditTime: 2022-12-14 16:55:05
+ * @LastEditTime: 2022-12-14 17:00:38
  * @LastEditors: junjie
  */
 /*
@@ -42,7 +42,7 @@ Sub_info = script-name=Sub_info,update-interval=600
   let used = info.download + info.upload;
   let total = info.total;
   let expire = args.expire || info.expire;
-  let content = [`已用：${toPercent(used, total)} | 剩余: ${toMinus(used, total)}`];
+  let content = [`已用：${toPercent(used, total)} | 剩余: ${toMinus(total, used)}`];
 
   if (resetDayLeft || expire) {
     if (resetDayLeft && expire && expire !== "false") {
@@ -148,8 +148,25 @@ function toPercent(num, total) {
   return Math.round((num / total) * 10000) / 100.0 + "%";
 }
 
-function toMinus(num, total) {
-  return Math.round(total - num);
+function toMinus(a, b) {
+  let aDecimalLen, // a 小数长度
+    bDecimalLen, // b 小数长度
+    maxLen, // 最长的小数长度
+    multiple; // 扩大的倍数
+
+  try {
+    aDecimalLen = a.toString().split(".").length;
+  } catch (e) {
+    aDecimalLen = 2;
+  }
+  try {
+    bDecimalLen = b.toString().split(".").length;
+  } catch (e) {
+    bDecimalLen = 2;
+  }
+  maxLen = Math.max(aDecimalLen, bDecimalLen);
+  multiple = Math.pow(10, maxLen);
+  return ((a * multiple - b * multiple) / multiple).toFixed(maxLen);
 }
 
 function formatTime(time) {
