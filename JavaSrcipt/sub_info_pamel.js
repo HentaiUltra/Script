@@ -2,7 +2,7 @@
  * @Description: 请输入....
  * @Author: junjie
  * @Date: 2022-12-14 16:24:09
- * @LastEditTime: 2022-12-14 17:10:09
+ * @LastEditTime: 2022-12-14 17:27:17
  * @LastEditors: junjie
  */
 /*
@@ -42,7 +42,7 @@ Sub_info = script-name=Sub_info,update-interval=600
   let used = info.download + info.upload;
   let total = info.total;
   let expire = args.expire || info.expire;
-  let content = [`已用：${toPercent(used, total)} | 剩余: ${toMultiply(total, Math.round((num / total) * 100))}`];
+  let content = [`已用：${toPercent(used, total)} | 剩余: ${toMultiply(total, num)}`];
 
   if (resetDayLeft || expire) {
     if (resetDayLeft && expire && expire !== "false") {
@@ -144,22 +144,37 @@ function bytesToSize(bytes) {
   return (bytes / Math.pow(k, i)).toFixed(2) + " " + sizes[i];
 }
 
+function bytesToSizeNumber(bytes) {
+  if (bytes === 0) return "0";
+  let k = 1024;
+  let i = Math.floor(Math.log(bytes) / Math.log(k));
+  return (bytes / Math.pow(k, i)).toFixed(2);
+}
+
 function toPercent(num, total) {
   return Math.round((num / total) * 10000) / 100.0 + "%";
 }
 
-function toMultiply(a, b) {
-  function getSecimalsLength(num) {
-    var str = num + "";
-    var end = str.split(".")[1];
-    return end ? end.length : 0;
+function toMultiply(total, num) {
+  let aDecimalLen, // a 小数长度
+    bDecimalLen, // b 小数长度
+    maxLen, // 最长的小数长度
+    multiple; // 扩大的倍数
+
+  try {
+    aDecimalLen = a.toString().split(".").length;
+  } catch (e) {
+    aDecimalLen = 0;
   }
-  // 判断2个参数是否有小数 比较小数长度 获取长的
-  var len = Math.max(getSecimalsLength(a), getSecimalsLength(b));
-  var _multiple = Number(1 + "0".repeat(len));
-  // 防止超出 最大安全整数MAX_SAFE_INTEGER
-  var result = BigInt(a * _multiple) * BigInt(b * _multiple);
-  return Number(result / _multiple / _multiple);
+  try {
+    bDecimalLen = b.toString().split(".").length;
+  } catch (e) {
+    bDecimalLen = 0;
+  }
+  maxLen = Math.max(aDecimalLen, bDecimalLen);
+  multiple = Math.pow(10, maxLen);
+  const numberSize = ((a * multiple - b * multiple) / multiple).toFixed(maxLen);
+  return bytesToSize(numberSize);
 }
 
 function formatTime(time) {
