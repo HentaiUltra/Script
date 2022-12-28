@@ -284,7 +284,7 @@ function monthDayDiff(date, type) {
   var year = now.getFullYear().toString(); //得到年份
   var month = now.getMonth() + 1 > 10 ? now.getMonth() + 1 : "0" + (now.getMonth() + 1); //得到月份
   var day = now.getDate() > 10 ? now.getDate() : "0" + now.getDate(); //得到日期
-  const yearDays = allDays(); // 28
+  const yearDays = allDays();
   if (type === "nl") {
     var nl = solarToLunar(year, month, day);
     n = ("0" + nl.lunarM).slice(-2) + ("0" + nl.lunarD).slice(-2);
