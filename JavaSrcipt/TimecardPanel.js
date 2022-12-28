@@ -256,13 +256,35 @@ var o = recently(V, T);
 function insertStr(source, start, newStr) {
   return source.slice(0, start) + newStr + source.slice(start);
 }
+const allDays = (year) => {
+  let leapYear = false,
+    sum_day = 0,
+    month_arr = [4, 6, 9, 11];
+  if (year % 100 === 0) {
+    // 年份是整百
+    leapYear = year % 400 === 0;
+  } else {
+    leapYear = year % 4 === 0;
+  }
+  // 下面计算每个月的天数
+  for (let i = 1; i < 13; i++) {
+    if (i === 2) {
+      sum_day += leapYear ? 29 : 28;
+    } else if (month_arr.includes(i)) {
+      sum_day += 30;
+    } else {
+      sum_day += 31;
+    }
+  }
+  return sum_day;
+};
 // 获取到下一个节日的剩余时间
 function monthDayDiff(date, type) {
   var now = new Date();
   var year = now.getFullYear().toString(); //得到年份
   var month = now.getMonth() + 1 > 10 ? now.getMonth() + 1 : "0" + (now.getMonth() + 1); //得到月份
   var day = now.getDate() > 10 ? now.getDate() : "0" + now.getDate(); //得到日期
-  const yearDays = new Date(now.getFullYear()).getDate(); // 28
+  const yearDays = allDays(); // 28
   if (type === "nl") {
     var nl = solarToLunar(year, month, day);
     n = ("0" + nl.lunarM).slice(-2) + ("0" + nl.lunarD).slice(-2);
