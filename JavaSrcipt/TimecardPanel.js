@@ -262,6 +262,7 @@ function monthDayDiff(date, type) {
   var year = now.getFullYear().toString(); //得到年份
   var month = now.getMonth() + 1 > 10 ? now.getMonth() + 1 : "0" + (now.getMonth() + 1); //得到月份
   var day = now.getDate() > 10 ? now.getDate() : "0" + now.getDate(); //得到日期
+  const yearDays = new Date(now.getFullYear()).getDate(); // 28
   if (type === "nl") {
     var nl = solarToLunar(year, month, day);
     n = ("0" + nl.lunarM).slice(-2) + ("0" + nl.lunarD).slice(-2);
@@ -269,7 +270,10 @@ function monthDayDiff(date, type) {
     var d2 = insertStr(year, 4, "/") + insertStr(date, 2, "/");
     var s1 = new Date(d1);
     var s2 = new Date(d2);
-    var time = s2.getTime() > s1.getTime() ? s2.getTime() - s1.getTime() : s1.getTime() - s2.getTime();
+    var time =
+      s2.getTime() - s1.getTime() > 0
+        ? s2.getTime() - s1.getTime()
+        : s2.getTime() - s1.getTime() + yearDays * 1000 * 60 * 60 * 24;
     var days = parseInt(time / (1000 * 60 * 60 * 24));
     return days;
   } else {
@@ -277,7 +281,10 @@ function monthDayDiff(date, type) {
     var d2 = insertStr(year, 4, "/") + insertStr(date, 2, "/");
     var s1 = new Date(d1);
     var s2 = new Date(d2);
-    var time = s2.getTime() > s1.getTime() ? s2.getTime() - s1.getTime() : s1.getTime() - s2.getTime();
+    var time =
+      s2.getTime() - s1.getTime() > 0
+        ? s2.getTime() - s1.getTime()
+        : s2.getTime() - s1.getTime() + yearDays * 1000 * 60 * 60 * 24;
     var days = parseInt(time / (1000 * 60 * 60 * 24));
     return days;
   }
