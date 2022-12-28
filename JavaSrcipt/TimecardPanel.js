@@ -269,7 +269,7 @@ function monthDayDiff(date, type) {
     var d2 = insertStr(year, 4, "/") + insertStr(date, 2, "/");
     var s1 = new Date(d1);
     var s2 = new Date(d2);
-    var time = s2.getTime() - s1.getTime();
+    var time = s2.getTime() > s1.getTime() ? s2.getTime() - s1.getTime() : s1.getTime() - s2.getTime();
     var days = parseInt(time / (1000 * 60 * 60 * 24));
     return days;
   } else {
@@ -277,7 +277,7 @@ function monthDayDiff(date, type) {
     var d2 = insertStr(year, 4, "/") + insertStr(date, 2, "/");
     var s1 = new Date(d1);
     var s2 = new Date(d2);
-    var time = s2.getTime() - s1.getTime();
+    var time = s2.getTime() > s1.getTime() ? s2.getTime() - s1.getTime() : s1.getTime() - s2.getTime();
     var days = parseInt(time / (1000 * 60 * 60 * 24));
     return days;
   }
