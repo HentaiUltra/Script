@@ -365,7 +365,7 @@ function title_random(num) {
 
 function dayDiff() {
   //元旦, 劳动节,国庆节放假,优先计算剩余时间,否则计算农历节日剩余时间
-  if (o.gl.name === "元旦" || o.gl.name === "劳动节" || o.gl.name === "国庆节") {
+  if (o.gl.name === "元旦节" || o.gl.name === "劳动节" || o.gl.name === "国庆节") {
     return monthDayDiff(o.gl.date, "gl");
   }
   return monthDayDiff(o.nl.date, "nl");
