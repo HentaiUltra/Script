@@ -15,4 +15,4 @@
 假日提醒 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/HentaiUltra/Script/main/JavaSrcipt/TimecardPanel.js
 解锁检测 = type=generic,timeout=30,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/Stream-All.js,script-update-interval=0,argument=title=𝗨𝗻𝗹𝗼𝗰𝗸𝗗𝗲𝘁𝗲𝗰𝘁𝗶𝗼𝗻&color=#6e8b74&icon=4k.tv.fill
 主力机场 = type=generic,timeout=15,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/sub_info_panel.js,script-update-interval=0,argument=url=XXXXXXXXXXXXXXXX&reset_day=13&title=𝗡𝗧𝗛𝗨&color=#8076s3&icon=aqi.medium
-备用机场 = type=generic,timeout=15,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/sub_info_panel.js,script-update-interval=0,argument=url=XXXXXXXXXXXXXXXX&title=𝗖𝗮𝗶𝗗𝗮𝗼&color=#f9c116&icon=aqi.low
+备用机场 = type=generic,timeout=15,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/sub_info_panel.js,script-update-interval=0,argument=url=XXXXXXXXXXXXXXXX&title=YYJC&color=#f9c116&icon=aqi.low
