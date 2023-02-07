@@ -1,5 +1,5 @@
 #!name=Cookie获取
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-01-28 09:50
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-02-07 15:55
 #!system=ios
 
 [Script]
@@ -27,10 +27,13 @@
 吾爱获取 = type=http-request,pattern=https:\/\/www\.52pojie\.cn\/home\.php\?,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
 # > 美团买菜
 美团买菜 = type=http-request, pattern=^https?:\/\/mall\.meituan\.com\/api\/c\/mallcoin\/checkIn\/queryTaskListInfoV.\?,script-path=https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.cookie.js
+# > 阿里云盘 app获取
+阿里云盘 = requires-body=1,type=http-response,pattern=https:\/\/auth.aliyundrive.com\/v2\/account\/token,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
 
 # 分割线——————————————————————————
 
 [MITM]
-hostname = %APPEND% i.meituan.com, mall.meituan.com, apph5.manmanbuy.com, wapside.189.cn:9001, club.yili.com, passport.iqiyi.com, www.52pojie.cn ,mobile.ximalaya.com, app.bilibili.com, m.bilibili.com
+hostname = %APPEND% i.meituan.com, mall.meituan.com, apph5.manmanbuy.com, wapside.189.cn:9001, club.yili.com, passport.iqiyi.com, www.52pojie.cn ,mobile.ximalaya.com, app.bilibili.com, m.bilibili.com, auth.aliyundrive.com
+
 
 
