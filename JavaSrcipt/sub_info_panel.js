@@ -7,7 +7,7 @@
   let used = info.download + info.upload;
   let total = info.total;
   let expire = args.expire || info.expire;
-  let content = [`已用：${used ?toPercent(used || 0, total) : '0%'} | 剩余: ${toMultiply(total, used)}`];
+  let content = [`已用：${used ? toPercent(used, total) : "0%"} | 剩余: ${toMultiply(total, used)}`];
 
   if (resetDayLeft || expire) {
     if (resetDayLeft && expire && expire !== "false") {
@@ -116,8 +116,8 @@ function bytesToSizeNumber(bytes) {
   return (bytes / Math.pow(k, i)).toFixed(2);
 }
 
-function toPercent(num , total) {
-  return num===0 ? '0%' : Math.round((num / total) * 10000) / 100.0 + "%";
+function toPercent(num, total) {
+  return num === 0 ? "0%" : Math.round((num / total) * 10000) / 100.0 + "%";
 }
 
 function toMultiply(total, num) {
