@@ -11,8 +11,6 @@
 数码之家 = type=http-request,pattern=^https:\/\/my\.ruanmei\.com\/api\/usersign\/getsigninfo?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.cookie.js,debug=true
 # > 慢慢买 app获取
 慢买获取 = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js,type=http-request,requires-body=true,pattern=^https?:\/\/apph5\.manmanbuy\.com\/taolijin\/(login.aspx|logserver.aspx)
-# > 电信签到 app获取（boxJS填写号码）
-电信签到 = type=http-request,pattern=^https:\/\/wapside.189.cn:9001\/jt-sign\/api\/home\/homeInfo,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.cookie.js,requires-body=true
 # > 哔哩哔哩 app
 # > https://www.bilibili.com/
 哔哩哔哩 = type=http-request,pattern=^https:\/\/app\.bilibili\.com\/x\/resource\/domain\?,script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js
@@ -33,7 +31,7 @@
 # 分割线——————————————————————————
 
 [MITM]
-hostname = %APPEND% i.meituan.com, mall.meituan.com, apph5.manmanbuy.com, wapside.189.cn:9001, club.yili.com, passport.iqiyi.com, www.52pojie.cn ,mobile.ximalaya.com, app.bilibili.com, m.bilibili.com, auth.aliyundrive.com
+hostname = %APPEND% i.meituan.com, mall.meituan.com, apph5.manmanbuy.com, club.yili.com, passport.iqiyi.com, www.52pojie.cn ,mobile.ximalaya.com, app.bilibili.com, m.bilibili.com, auth.aliyundrive.com
 
 
 

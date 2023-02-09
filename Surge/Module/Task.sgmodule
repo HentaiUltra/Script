@@ -1,5 +1,5 @@
 #!name=定时任务脚本
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-02-07 15:55
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-02-09 09:55
 #!system=ios
 
 [Script]
@@ -20,7 +20,7 @@ iQIYI签到 = type=cron,cronexp=30 4 0 * * *,wake-system=1,timeout=120,script-pa
 # > 吾爱破解
 吾爱签到 = type=cron,cronexp=0 5 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
 # > 阿里云盘 签到
-阿里云盘 = type=cron,cronexp=30 6 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js,script-update-interval=0
+阿里云盘 = type=cron,cronexp=0 6 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js,script-update-interval=0
 # > 每日一句
 每日一句 = type=cron,cronexp=8 8 8 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/One.js,script-update-interval=0
 # > 彩票开奖
@@ -33,9 +33,3 @@ iQIYI签到 = type=cron,cronexp=30 4 0 * * *,wake-system=1,timeout=120,script-pa
 帐户检测 = type=cron,cronexp="0 36 6,14,23 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/jd/jd_cookie_search.js,script-update-interval=0,timeout=60
 # > SUB 订阅同步
 订阅同步 = type=cron,cronexp="15 0 8,20 * * *",script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js,script-update-interval=0,wake-system=1,timeout=60
-# > 中国电信
-中国电信 = type=cron,cronexp=30 55 9 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/HentaiUltra/Script/main/JavaSrcipt/TelecomSky.js,script-update-interval=0
-# > 电信签到
-电信签到 = type=cron,cronexp=0 5 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.js,script-update-interval=0
-$ > 美团买菜
-美团买菜 = type=cron,cronexp="0 6,8 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.mallcoin.task.js,script-update-interval=0
