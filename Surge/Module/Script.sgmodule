@@ -1,5 +1,5 @@
 #!name=脚本解锁
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-02-08 20:50
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-02-14 17:35
 #!system=ios
 
 # 分割线——————————————————————————
@@ -8,7 +8,7 @@
 
 [General]
 # > Boxjs
-force-http-engine-hosts = %APPEND% boxjs.net, boxjs.comm, aliyun.example.com:0
+force-http-engine-hosts = %APPEND% boxjs.net, boxjs.comm
 
 # 分割线——————————————————————————
 
@@ -184,8 +184,6 @@ ency|calculator)\/user\/profile$, requires-body=1, max-size=0, script-path=https
 Fimo = type=http-response, pattern=^https?:\/\/server\.yoyiapp\.com\/fimo-user\/user$, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/FimoCamVipCrack.js
 # > 搜图神器 解锁
 搜图神器 = type=http-response, pattern=^https?:\/\/wallpaper\.soutushenqi\.com\/api\/v1\/account\/token$ , requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/SearchPictureCrack.js
-# > Fileball挂载阿里云盘
-阿里云盘 = type=http-request,pattern=^http:\/\/aliyun\.example\.com,requires-body=1,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/ali.js,max-size=0,debug=0
 
 # 分割线——————————————————————————
 
