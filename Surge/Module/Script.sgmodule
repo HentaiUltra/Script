@@ -116,6 +116,13 @@ URL-REGEX,^https?:\/\/img\.meituan\.net\/(adunion|display|midas)\/\w+\.(gif|jpg|
 URL-REGEX,^https?:\/\/(s3plus|flowplus)\.meituan\.net\/v\d\/\w+\/linglong\/\w+\.(gif|jpg|mp4),REJECT
 URL-REGEX,^https?:\/\/p\d\.meituan\.net\/(bizad|wmbanner)\/\w+\.jpg,REJECT
 URL-REGEX,^https?:\/\/p\d\.meituan\.net\/movie\/\w+\.jpg\?may_covertWebp,REJECT
+# > 中国联通 去开屏
+DOMAIN-SUFFIX,m1.ad.10010.com,REJECT
+# > 中国电信 去开屏
+DOMAIN,ad.21cn.com,REJECT
+DOMAIN,ad.k.21cn.com,REJECT
+DOMAIN,admarket.21cn.com,REJECT
+DOMAIN,adshows.21cn.com,REJECT
 # > 饿了么 去开屏
 URL-REGEX,^https?:\/\/elemecdn.com\/.+\/sitemap,REJECT
 URL-REGEX,^https?:\/\/fuss10.elemecdn.com\/.+\/w\/640\/h\/\d{3,4},REJECT
