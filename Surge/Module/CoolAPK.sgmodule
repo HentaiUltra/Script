@@ -1,0 +1,25 @@
+
+#!name=酷安去广告
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-02-22 18:00
+#!system=ios
+
+
+[Script]
+# > 推广广告
+酷安推广 = type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/dataList,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js,script-update-interval=0
+
+# > 首页广告
+酷安首页 = type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/main\/indexV8,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js,script-update-interval=0
+
+# > 评论广告
+酷安评论 = type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/feed\/replyList,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js,script-update-interval=0
+
+# > 商品推广
+酷安商品 = type=http-response,pattern=^https?:\/\/api.coolapk.com\/v6\/feed\/detail,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js,script-update-interval=0
+
+[MapLoca]
+# > 屏蔽热词
+^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+[MITM]
+hostname = %APPEND% api.coolapk.com

@@ -1,5 +1,5 @@
 #!name=脚本解锁
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-02-14 17:35
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-02-22 18:00
 #!system=ios
 
 # 分割线——————————————————————————
@@ -13,6 +13,10 @@ force-http-engine-hosts = %APPEND% boxjs.net, boxjs.comm
 # 分割线——————————————————————————
 
 [Rule]
+# > ChatGPT 代理
+DOMAIN-SUFFIX, openai.com,𝗦𝗶𝗻𝗴𝗮𝗽𝗼𝗿𝗲
+DOMAIN, cdn.auth0.com,𝗦𝗶𝗻𝗴𝗮𝗽𝗼𝗿𝗲
+DOMAIN, openaiapi-site.azureedge.net,𝗦𝗶𝗻𝗴𝗮𝗽𝗼𝗿𝗲
 # > Siri与搜索 代理
 PROCESS-NAME,LookupViewService,𝗣𝗥𝗢𝗫𝗬
 PROCESS-NAME,/System/Library/PrivateFrameworks/Lookup.framework/Versions/A/XPCServices/LookupViewService.xpc/Contents/MacOS/LookupViewService,𝗣𝗥𝗢𝗫𝗬
@@ -21,6 +25,8 @@ DOMAIN,lookup-api.apple.com.edgekey.net,𝗣𝗥𝗢𝗫𝗬
 DOMAIN,e16991.b.akamaiedge.net,𝗣𝗥𝗢𝗫𝗬
 # 慧车天下 去广告修正
 URL-REGEX,api-access.pangolin-sdk-toutiao.com,REJECT-NO-DROP
+# > lnfuse 账户验证
+DOMAIN,api.trakt.tv,REJECT
 # > 小豚当家 去开屏
 DOMAIN,advertise.zhiduodev.com,REJECT
 DOMAIN,api.zhiduodev.com,REJECT
@@ -32,11 +38,6 @@ DOMAIN,www.o8tv.com,𝗗𝗜𝗥𝗘𝗖𝗧
 DOMAIN,dsxys.pro,𝗗𝗜𝗥𝗘𝗖𝗧
 # > Safari 防跳转
 DOMAIN,app-site-association.cdn-apple.com,REJECT
-# > 机场网站 代理
-DOMAIN-SUFFIX,dlercloud.com,𝗣𝗥𝗢𝗫𝗬
-DOMAIN,zhuan.mlsao.xyz,𝗣𝗥𝗢𝗫𝗬
-# > Passkey
-DOMAIN,ql.lowking.pro,服务器 01
 # > 爱奇艺 去广告
 DOMAIN-SUFFIX,cupid.iqiyi.com,REJECT
 # > 优酷 去广告
@@ -46,8 +47,6 @@ URL-REGEX,^http:\/\/.*\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
 URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$,REJECT-TINYGIF
 # > Boxjs 代理
 DOMAIN-KEYWORD,jsdelivr.net,𝗣𝗥𝗢𝗫𝗬
-# > Price 代理
-DOMAIN-SUFFIX,coingecko.com,𝗣𝗥𝗢𝗫𝗬
 # > 腾讯视频 修正+去开屏
 DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0/0,no-resolve)))),REJECT-DROP
@@ -171,8 +170,7 @@ MIX解锁 = requires-body=1,script-path=https://raw.githubusercontent.com/github
 # > 美图秀秀
 美图秀秀 = requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/dev/raw/main/MeiTuXiuXiuProCrack.js,type=http-response,pattern=^https?://(api|h5).xiuxiu.meitu.com/(v1/user/show.json|v1/vip/vip_show.json|v1/vip/prompt/query.json|v1/h5/vip/sub_detail.json|v1/h5/user/self_show.json|v1/h5/vip/user_detail.json|v1/vip/prompt/query.json|v1/vip/prompt/query.json)
 # > SUB订阅管理
-订阅管理 = type=http-request,pattern=^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))),script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js,requires-body=true,timeout=120,ability=http-client-policy
-订阅管理 = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-0.min.js,requires-body=true
+订阅管理 = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store.min.js,requires-body=true,timeout=120,max-size=131072
 # > Emby 解锁
 EmbyPro = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/Emby.js
 # > 小红书 去广告
