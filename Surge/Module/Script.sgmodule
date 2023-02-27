@@ -1,5 +1,5 @@
 #!name=脚本解锁
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-02-22 18:00
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-02-27 10:00
 #!system=ios
 
 # 分割线——————————————————————————
@@ -136,6 +136,10 @@ URL-REGEX,^https?:\/\/www1\.elecfans\.com\/www\/delivery\/,REJECT
 # > 555影视
 URL-REGEX,^https:\/\/vip7\.fzwdyy\.cn:8083\/api\/getAdvertInfo,REJECT-DROP
 URL-REGEX,^https:\/\/vip7\.fzwdyy\.cn:8083\/api\/getGooGAdvert,REJECT-DROP
+# > 顺丰速运 去开屏
+URL-REGEX,^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/appVersion\/detectionUpgrade,REJECT
+URL-REGEX,^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/,REJECT
+URL-REGEX,^https?:\/\/shopic\.sf-express\.com\/crm\/mobile\/common\/flashscreen,REJECT
 
 # 分割线——————————————————————————
 
@@ -193,4 +197,5 @@ Fimo = type=http-response, pattern=^https?:\/\/server\.yoyiapp\.com\/fimo-user\/
 # 分割线——————————————————————————
 
 [MITM]
-hostname = %APPEND% -*.amemv.com, -*.snssdk.com, *account.wps.cn, *account.wps.com, ap*.intsig.net, dayone.*, *.lagoapps.com, api.meiyan.com, biz.caiyunapp.com, raw.githubusercontent.com, spclient.wg.spotify.com, ap?.bilibili.com, ap?.biliapi.net, pan.baidu.com, btrace.qq.com, bmall.camera360.com, vsco.co, syh.zybang.com, security.wechat.com, m.douban.com, m.ithome.com, api.ithome.com, api.zuihuimai.com, napi.ithome.com, api.m.jd.com, gab.122.gov.cn, api-mifit-cn2.huami.com, as.xiaojukeji.com, pt-starimg.didistatic.com, security.xiaojukeji.com, guard.sec.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, res.xiaojukeji.com, shop-gw.chengxinyouxuan.com, img-ys011.didistatic.com, wallet.95516.com, api-daoshang.shiqiao.com, api.wfdata.club, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, boxjs.net, boxjs.com, sub.store, mb3admin.com, flowplus.meituan.net, ms.jr.jd.com, *.meituan.net, *.meituan.com, img10.360buyimg.com, edith.xiaohongshu.com, api.aliyundrive.com, a.qiumibao.com, api-access.pangolin-sdk-toutiao.com, *.aoscdn.com, www.40sishi.com, server.yoyiapp.com, wallpaper.soutushenqi.com, vip7.fzwdyy.cn
+hostname = %APPEND% -*.amemv.com, -*.snssdk.com, *account.wps.cn, *account.wps.com, ap*.intsig.net, dayone.*, *.lagoapps.com, api.meiyan.com, biz.caiyunapp.com, raw.githubusercontent.com, spclient.wg.spotify.com, ap?.bilibili.com, ap?.biliapi.net, pan.baidu.com, btrace.qq.com, bmall.camera360.com, vsco.co, syh.zybang.com, security.wechat.com, m.douban.com, m.ithome.com, api.ithome.com, api.zuihuimai.com, napi.ithome.com, api.m.jd.com, gab.122.gov.cn, api-mifit-cn2.huami.com, as.xiaojukeji.com, pt-starimg.didistatic.com, security.xiaojukeji.com, guard.sec.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, res.xiaojukeji.com, shop-gw.chengxinyouxuan.com, img-ys011.didistatic.com, wallet.95516.com, api-daoshang.shiqiao.com, api.wfdata.club, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, boxjs.net, boxjs.com, sub.store, mb3admin.com, flowplus.meituan.net, ms.jr.jd.com, *.meituan.net, *.meituan.com, img10.360buyimg.com, edith.xiaohongshu.com, api.aliyundrive.com, a.qiumibao.com, api-access.pangolin-sdk-toutiao.com, *.aoscdn.com, www.40sishi.com, server.yoyiapp.com, wallpaper.soutushenqi.com, vip7.fzwdyy.cn, *.sf-express.com
+
