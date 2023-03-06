@@ -129,13 +129,12 @@ URL-REGEX,^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/r
 URL-REGEX,^https?:\/\/cube\.elemecdn\.com\/\w\/\w{2}\/\w+mp4\.mp4\?,REJECT
 URL-REGEX,^https?:\/\/elemecdn\.com\/.+?\/sitemap,REJECT
 URL-REGEX,^https?:\/\/www1\.elecfans\.com\/www\/delivery\/,REJECT
-# > 555影视
-URL-REGEX,^https:\/\/vip7\.fzwdyy\.cn:8083\/api\/getAdvertInfo,REJECT-DROP
-URL-REGEX,^https:\/\/vip7\.fzwdyy\.cn:8083\/api\/getGooGAdvert,REJECT-DROP
 # > 顺丰速运 去开屏
 URL-REGEX,^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/appVersion\/detectionUpgrade,REJECT
 URL-REGEX,^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/,REJECT
 URL-REGEX,^https?:\/\/shopic\.sf-express\.com\/crm\/mobile\/common\/flashscreen,REJECT
+# > 拼多多 去开屏
+URL-REGEX,^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash,REJECT
 
 # 分割线——————————————————————————
 
