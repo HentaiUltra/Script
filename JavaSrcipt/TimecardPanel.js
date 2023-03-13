@@ -5,7 +5,6 @@ var V = [
   { date: "0214", name: "情人节" },
   { date: "0308", name: "妇女节" },
   { date: "0312", name: "植树节" },
-  { date: "0313", name: "测试" },
   { date: "0322", name: "女儿生日" },
   { date: "0401", name: "愚人节" },
   { date: "0501", name: "劳动节" },
@@ -281,7 +280,10 @@ const allDays = (year) => {
 };
 // 获取到下一个节日的剩余时间
 function monthDayDiff(date, type) {
-  var now = new Date();
+  let targetTimezone = -8;
+  let dif = new Date().getTimezoneOffset();
+  let east8time = new Date().getTime() + dif * 60 * 1000 - targetTimezone * 60 * 60 * 1000;
+  let now = new Date(east8time);
   var year = now.getFullYear().toString(); //得到年份
   var month = now.getMonth() + 1 > 10 ? now.getMonth() + 1 : "0" + (now.getMonth() + 1); //得到月份
   var day = now.getDate() > 10 ? now.getDate() : "0" + now.getDate(); //得到日期
@@ -323,7 +325,6 @@ function today(day, name, type) {
 }
 //提醒日当天发送通知
 function dateNotice(name, type) {
-  let now = new Date();
   if ($persistentStore.read(type === "nl" ? "lunarCalendarPushed" : "gregorianCalendarPushed") !== name) {
     $persistentStore.write(name, type === "nl" ? "lunarCalendarPushed" : "gregorianCalendarPushed");
     $notification.post("假日祝福", "", "今天是" + type === "nl" ? "农历节日:" : "" + name + "   🎉🎉🎉!");
