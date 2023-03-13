@@ -305,7 +305,7 @@ function monthDayDiff(date, type) {
     var s1 = new Date(d1);
     var s2 = new Date(d2);
     var time =
-      s2.getTime() - s1.getTime() > 0
+      s2.getTime() - s1.getTime() >= 0
         ? s2.getTime() - s1.getTime()
         : s2.getTime() - s1.getTime() + yearDays * 1000 * 60 * 60 * 24;
     var days = parseInt(time / (1000 * 60 * 60 * 24));
@@ -324,10 +324,7 @@ function today(day, name, type) {
 //提醒日当天发送通知
 function dateNotice(name, type) {
   let now = new Date();
-  if (
-    $persistentStore.read(type === "nl" ? "lunarCalendarPushed" : "gregorianCalendarPushed") !== name &&
-    now.getHours() >= 6
-  ) {
+  if ($persistentStore.read(type === "nl" ? "lunarCalendarPushed" : "gregorianCalendarPushed") !== name) {
     $persistentStore.write(name, type === "nl" ? "lunarCalendarPushed" : "gregorianCalendarPushed");
     $notification.post("假日祝福", "", "今天是" + type === "nl" ? "农历节日:" : "" + name + "   🎉🎉🎉!");
   }
@@ -371,6 +368,8 @@ function dayDiff() {
   }
   return monthDayDiff(o.nl.date, "nl");
 }
+
+dayDiff();
 
 $done({
   title: title_random(dayDiff()),
