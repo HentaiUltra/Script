@@ -1,11 +1,4 @@
 /*
- * @Description: 请输入....
- * @Author: junjie
- * @Date: 2022-09-14 18:17:13
- * @LastEditTime: 2022-09-14 18:17:23
- * @LastEditors: junjie
- */
-/*
 签到兑好礼活动Token
 https:\/\/mkt\.21cn\.com\/mkt\/api\/user\/queryActivityInfo\.do\?activityId=\d+ url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/telecomSky.js
 */
