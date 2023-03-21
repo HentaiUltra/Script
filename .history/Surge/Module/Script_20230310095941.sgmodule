@@ -1,12 +1,10 @@
 #!name=脚本解锁
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-03-21 09:50
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-03-01 16:00
 #!system=ios
 
 # 分割线——————————————————————————
 
 [Header Rewrite]
-# > New Bing Ai
-^https:\/\/www\.bing\.com\/(search|new) header-replace-regex User-Agent \w+\/[\d\.]+$ "AppleWebKit/537.36 Chrome/110.0 Safari/537.36 Edg/110.0"
 
 [General]
 # > Boxjs

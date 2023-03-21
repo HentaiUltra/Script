@@ -1,5 +1,5 @@
 #!name=定时任务脚本
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-03-21 09:50
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-03-13 10:00
 #!system=ios
 
 [Script]
@@ -33,7 +33,7 @@ Bing积分 = type=cron,cronexp="0/15 7 0 * * *",wake-system=1,script-path=https:
 数据备份 = type=cron,cronexp=50 23 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js,script-update-interval=0,timeout=60
 //数据恢复 = type=cron,cronexp=55 23 * 1 *,wake-system=1,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/restore.js,script-update-interval=0,timeout=60
 # > 同步检测
-账号同步 = type=cron,cronexp="0 35 5,11,17,23 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/jd/ql_sync_box.js,script-update-interval=0,timeout=60
-帐户检测 = type=cron,cronexp="0 36 5,11,17,23 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/jd/jd_cookie_search.js,script-update-interval=0,timeout=60
+账号同步 = type=cron,cronexp="0 35 6,14,23 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/jd/ql_sync_box.js,script-update-interval=0,timeout=60
+帐户检测 = type=cron,cronexp="0 36 6,14,23 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/jd/jd_cookie_search.js,script-update-interval=0,timeout=60
 # > SUB 订阅同步
-订阅同步 = type=cron,cronexp=15 0 20 * * *,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js,script-update-interval=0,wake-system=1,timeout=60
+订阅同步 = type=cron,cronexp="15 0 8,20 * * *",script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js,script-update-interval=0,wake-system=1,timeout=60
