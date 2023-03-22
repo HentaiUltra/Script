@@ -338,7 +338,7 @@ function icon_now(num) {
     return ["battery.50", "#f2ce2b"];
   } else if (num <= 3 && num > 0) {
     return ["battery.75", "#41b349"];
-  } else if (num === 0) {
+  } else if (num == 0) {
     return ["battery.100.bolt", "#41b349"];
   } else {
     return ["battery.0", "#ee2746"];
