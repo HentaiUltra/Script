@@ -18,4 +18,4 @@ var data = {
     coin: 100,
   },
 };
-$done({ body: JSON.stringify(body) });
+$done({ body: JSON.stringify(data) });
