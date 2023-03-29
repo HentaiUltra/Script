@@ -7,6 +7,7 @@ var V = [
   { date: "0312", name: "植树节" },
   { date: "0322", name: "女儿生日" },
   { date: "0401", name: "愚人节" },
+  { date: "0405", name: "清明节" },
   { date: "0501", name: "劳动节" },
   { date: "0504", name: "青年节" },
   { date: "0601", name: "儿童节" },
@@ -22,7 +23,6 @@ var T = [
   //农历
   { date: "0101", name: "春节" },
   { date: "0115", name: "元宵节" },
-  { date: "0405", name: "清明节" },
   { date: "0505", name: "端午节" },
   { date: "0707", name: "七夕节" },
   { date: "0815", name: "中秋节" },
