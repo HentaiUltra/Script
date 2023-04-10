@@ -1,5 +1,5 @@
 #!name=脚本解锁
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-03-21 09:50
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-04-10 15:50
 #!system=ios
 
 # 分割线——————————————————————————
@@ -44,7 +44,6 @@ URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$,REJECT-
 # > Boxjs 代理
 DOMAIN-KEYWORD,jsdelivr.net,𝗣𝗥𝗢𝗫𝗬
 # > 腾讯视频 修正+去开屏
-DOMAIN,vv.video.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
 OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0/0,no-resolve)))),REJECT-DROP
 # > 掌阅 去广告
 URL-REGEX,^https?:\/\/ih2\.ireader\.com\/zyapi\/bookstore\/ad\/,REJECT-TINYGIF
