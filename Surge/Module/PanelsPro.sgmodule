@@ -3,7 +3,7 @@
 #!system=ios
 
 [Panel]
-策略面板 = script-name=𝗪𝗔𝗥𝗣信息,title="流量统计",content="请刷新面板",style=info,update-interval=1800
+策略面板 = script-name=𝗪𝗔𝗥𝗣信息,title="𝗪𝗔𝗥𝗣信息",content="请刷新面板",style=info,update-interval=1800
 策略面板 = script-name=代理选择,title="代理选择",content="请刷新面板",style=info,update-interval=1800
 策略面板 = script-name=网络状态,title="网络状态",content="请刷新面板",style=info,update-interval=1800
 策略面板 = script-name=流量统计,title="流量统计",content="请刷新面板",style=info,update-interval=1800
