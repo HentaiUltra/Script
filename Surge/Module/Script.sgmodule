@@ -34,7 +34,7 @@ DOMAIN,app-site-association.cdn-apple.com,REJECT
 # > 爱奇艺 去广告
 DOMAIN-SUFFIX,cupid.iqiyi.com,REJECT
 # > 555 去广告
-URL-REGEX,^https?:\/\/run\.api\.qyfxgd\.cn:\d+\/api\/v\d\/advert,REJECT
+URL-REGEX,^https?:\/\/run\.api\.qyfxgd\.cn:\d+\/api\/v\d\/advert,REJECT-TINYGIF
 # > 优酷 去广告
 DOMAIN, iyes.youku.com,REJECT
 URL-REGEX,^http:\/\/.*\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
@@ -173,7 +173,8 @@ Fimo = type=http-response, pattern=^https?:\/\/server\.yoyiapp\.com\/fimo-user\/
 # > 搜图神器 解锁
 搜图神器 = type=http-response, pattern=^https?:\/\/wallpaper\.soutushenqi\.com\/api\/v1\/account\/token$, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/SearchPictureCrack.js
 # > 555 去广告
-搜图神器 = type=http-response, pattern=^https?:\/\/run\.api\.qyfxgd\.cn:\d+\/api\/v\d\/movie\/index_recommend, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/HentaiUltra/Script/main/JavaSrcipt/555Ad.js
+555Ad = type=http-response, pattern=^https?:\/\/run\.api\.qyfxgd\.cn:\d+\/api\/v\d\/movie\/index_recommend,
+requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/HentaiUltra/Script/main/JavaSrcipt/555Ad.js
 
 # 分割线——————————————————————————
 
