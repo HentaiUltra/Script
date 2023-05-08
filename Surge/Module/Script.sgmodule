@@ -1,5 +1,5 @@
 #!name=脚本解锁
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-05-05 10:12
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-05-08 18:00
 #!system=ios
 
 # 分割线——————————————————————————
@@ -15,6 +15,8 @@ force-http-engine-hosts = %APPEND% boxjs.net, boxjs.comm
 # 分割线——————————————————————————
 
 [Rule]
+# > 策略优选（对应策略名）
+AND,((DOMAIN,iosapps.itunes.apple.com), (SCRIPT,策略优选)),𝗔𝗽𝗽𝗹𝗲
 # > Siri与搜索 代理
 PROCESS-NAME,LookupViewService,𝗣𝗥𝗢𝗫𝗬
 PROCESS-NAME,/System/Library/PrivateFrameworks/Lookup.framework/Versions/A/XPCServices/LookupViewService.xpc/Contents/MacOS/LookupViewService,𝗣𝗥𝗢𝗫𝗬
@@ -136,6 +138,8 @@ URL-REGEX,^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash,R
 # 分割线——————————————————————————
 
 [Script]
+# > 苹果策略优选
+策略优选 = type=rule,timeout=60,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/speedLimit.js,argument=Group=𝗔𝗽𝗽𝗹𝗲&policy=𝗣𝗥𝗢𝗫𝗬&time=15&minSpeed=30
 # > 扫描全能王 pro
 全能扫描 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/camscanner.js,type=http-response,pattern=https:\/\/(api|api-cs)*\.intsig\.net\/purchase\/cs\/query_property\?,script-update-interval=0
 # > Dayone vip
