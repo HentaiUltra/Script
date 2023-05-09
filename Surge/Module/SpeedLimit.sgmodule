@@ -1,0 +1,9 @@
+#!name= 苹果策略自动切换脚本
+#!desc= 苹果策略检测下载中直连速度低于个人设定后自动切换为代理，默认 1 小时后再次下载触发回退到直连再次触发选择
+#!author= 小白脸
+
+[Rule]
+AND,((DOMAIN,iosapps.itunes.apple.com), (SCRIPT,speedLimit)),𝗔𝗽𝗽𝗹𝗲
+
+[Script]
+speedLimit = type=rule,timeout=60,script-path=https://raw.githubusercontent.com/HentaiUltra/Script/main/JavaSrcipt/SpeedLimit.js,argument=Group=𝗔𝗽𝗽𝗹𝗲&policy=𝗣𝗥𝗢𝗫𝗬&time=15&minSpeed=15

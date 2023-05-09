@@ -15,8 +15,6 @@ force-http-engine-hosts = %APPEND% boxjs.net, boxjs.comm
 # 分割线——————————————————————————
 
 [Rule]
-# > 策略优选（对应策略名）
-AND,((DOMAIN,iosapps.itunes.apple.com), (SCRIPT,策略优选)),𝗔𝗽𝗽𝗹𝗲
 # > Siri与搜索 代理
 PROCESS-NAME,LookupViewService,𝗣𝗥𝗢𝗫𝗬
 PROCESS-NAME,/System/Library/PrivateFrameworks/Lookup.framework/Versions/A/XPCServices/LookupViewService.xpc/Contents/MacOS/LookupViewService,𝗣𝗥𝗢𝗫𝗬
@@ -138,8 +136,6 @@ URL-REGEX,^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash,R
 # 分割线——————————————————————————
 
 [Script]
-# > 苹果策略优选
-策略优选 = type=rule,timeout=60,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/speedLimit.js,argument=Group=𝗔𝗽𝗽𝗹𝗲&policy=𝗣𝗥𝗢𝗫𝗬&time=15&minSpeed=30
 # > 扫描全能王 pro
 全能扫描 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/camscanner.js,type=http-response,pattern=https:\/\/(api|api-cs)*\.intsig\.net\/purchase\/cs\/query_property\?,script-update-interval=0
 # > Dayone vip
@@ -183,5 +179,5 @@ requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Henta
 # 分割线——————————————————————————
 
 [MITM]
-hostname = %APPEND% -*.amemv.com, -*.snssdk.com, ap*.intsig.net, dayone.*, *.lagoapps.com, api.meiyan.com, biz.caiyunapp.com, raw.githubusercontent.com, pan.baidu.com, btrace.qq.com, bmall.camera360.com, vsco.co, syh.zybang.com, security.wechat.com, m.douban.com, m.ithome.com, api.ithome.com, api.zuihuimai.com, napi.ithome.com, api.m.jd.com, gab.122.gov.cn, api-mifit-cn2.huami.com, as.xiaojukeji.com, pt-starimg.didistatic.com, security.xiaojukeji.com, guard.sec.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, res.xiaojukeji.com, shop-gw.chengxinyouxuan.com, img-ys011.didistatic.com, wallet.95516.com, api-daoshang.shiqiao.com, api.wfdata.club, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, boxjs.net, boxjs.com, sub.store, mb3admin.com, flowplus.meituan.net, s3plus.meituan.net ms.jr.jd.com, img10.360buyimg.com, edith.xiaohongshu.com, a.qiumibao.com, api-access.pangolin-sdk-toutiao.com, awvp.aoscdn.com, www.40sishi.com, server.yoyiapp.com, wallpaper.soutushenqi.com, vip7.fzwdyy.cn, *.sf-express.com, run.api.qyfxgd.cn
+hostname = ap*.intsig.net, dayone.*, biz.caiyunapp.com, pan.baidu.com, bmall.camera360.com, vsco.co, syh.zybang.com, m.douban.com, m.ithome.com, api.ithome.com, api.zuihuimai.com, napi.ithome.com, api.m.jd.com, gab.122.gov.cn, api-mifit-cn2.huami.com, as.xiaojukeji.com, pt-starimg.didistatic.com, security.xiaojukeji.com, guard.sec.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, res.xiaojukeji.com, shop-gw.chengxinyouxuan.com, img-ys011.didistatic.com, wallet.95516.com, api-daoshang.shiqiao.com, api.wfdata.club, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, boxjs.net, boxjs.com, sub.store, mb3admin.com, flowplus.meituan.net, s3plus.meituan.net ms.jr.jd.com, img10.360buyimg.com, edith.xiaohongshu.com, api-access.pangolin-sdk-toutiao.com, awvp.aoscdn.com, www.40sishi.com, server.yoyiapp.com, wallpaper.soutushenqi.com, run.api.qyfxgd.cn
 
