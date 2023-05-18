@@ -1,5 +1,5 @@
 #!name=脚本解锁
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-05-12 16:45
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-05-18 15:15
 #!system=ios
 
 # 分割线——————————————————————————
@@ -173,12 +173,9 @@ EmbyPro = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/r
 Fimo = type=http-response, pattern=^https?:\/\/server\.yoyiapp\.com\/fimo-user\/user$, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/FimoCamVipCrack.js
 # > 搜图神器 解锁
 搜图神器 = type=http-response, pattern=^https?:\/\/wallpaper\.soutushenqi\.com\/api\/v1\/account\/token$, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/SearchPictureCrack.js
-# > 555 去广告
-555Ad = type=http-response, pattern=^https?:\/\/run\.api\.qyfxgd\.cn:\d+\/api\/v\d\/movie\/index_recommend,
-requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/HentaiUltra/Script/main/JavaSrcipt/555Ad.js
 
 # 分割线——————————————————————————
 
 [MITM]
-hostname = ap*.intsig.net, dayone.*, biz.caiyunapp.com, pan.baidu.com, bmall.camera360.com, vsco.co, syh.zybang.com, m.douban.com, m.ithome.com, api.ithome.com, api.zuihuimai.com, napi.ithome.com, api.m.jd.com, gab.122.gov.cn, api-mifit-cn2.huami.com, as.xiaojukeji.com, pt-starimg.didistatic.com, security.xiaojukeji.com, guard.sec.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, res.xiaojukeji.com, shop-gw.chengxinyouxuan.com, img-ys011.didistatic.com, wallet.95516.com, api-daoshang.shiqiao.com, api.wfdata.club, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, boxjs.net, boxjs.com, sub.store, mb3admin.com, flowplus.meituan.net, s3plus.meituan.net ms.jr.jd.com, img10.360buyimg.com, edith.xiaohongshu.com, api-access.pangolin-sdk-toutiao.com, awvp.aoscdn.com, server.yoyiapp.com, wallpaper.soutushenqi.com, run.api.qyfxgd.cn
+hostname = ap*.intsig.net, dayone.*, biz.caiyunapp.com, pan.baidu.com, bmall.camera360.com, vsco.co, syh.zybang.com, m.douban.com, m.ithome.com, api.ithome.com, api.zuihuimai.com, napi.ithome.com, api.m.jd.com, gab.122.gov.cn, api-mifit-cn2.huami.com, as.xiaojukeji.com, pt-starimg.didistatic.com, security.xiaojukeji.com, guard.sec.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, res.xiaojukeji.com, shop-gw.chengxinyouxuan.com, img-ys011.didistatic.com, wallet.95516.com, api-daoshang.shiqiao.com, api.wfdata.club, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, boxjs.net, boxjs.com, sub.store, mb3admin.com, flowplus.meituan.net, s3plus.meituan.net ms.jr.jd.com, img10.360buyimg.com, edith.xiaohongshu.com, api-access.pangolin-sdk-toutiao.com, awvp.aoscdn.com, server.yoyiapp.com, wallpaper.soutushenqi.com
 

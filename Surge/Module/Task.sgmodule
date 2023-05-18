@@ -1,5 +1,5 @@
 #!name=定时任务脚本
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-03-22 19:20
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-05-18 15:15
 #!system=ios
 
 [Script]
@@ -7,8 +7,6 @@
 ＩＴ之家 = type=cron,cronexp=0 0 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.js,script-update-interval=0
 # > 喜马拉雅
 喜马拉雅 = type=cron,cronexp=30 0 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/xmlySign.js,script-update-interval=0,timeout=30
-# > 美团
-美团签到 = type=cron,cronexp=0 1 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js,script-update-interval=0
 # > 慢慢买
 慢买签到 = type=cron,cronexp=0 3 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js,script-update-interval=0
 # > 哔哩哔哩
