@@ -1,9 +1,9 @@
 #!name=策略面板
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-04-11
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-05-30 14:05
 #!system=ios
 
 [Panel]
-策略面板 = script-name=𝗪𝗔𝗥𝗣信息,title="WARP信息",content="请刷新面板",style=info,update-interval=1800
+策略面板 = script-name=WARP信息,title="WARP信息",content="请刷新面板",style=info,update-interval=1800
 策略面板 = script-name=代理选择,title="代理选择",content="请刷新面板",style=info,update-interval=1800
 策略面板 = script-name=网络状态,title="网络状态",content="请刷新面板",style=info,update-interval=1800
 策略面板 = script-name=流量统计,title="流量统计",content="请刷新面板",style=info,update-interval=1800
