@@ -1,5 +1,5 @@
 #!name=脚本解锁
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-05-25 18:20
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-05-30 12:20
 #!system=ios
 
 # 分割线——————————————————————————
@@ -16,34 +16,30 @@ force-http-engine-hosts = %APPEND% boxjs.net, boxjs.comm
 
 [Rule]
 # > 策略优选
-AND,((DOMAIN,iosapps.itunes.apple.com), (SCRIPT,策略优选)),𝗔𝗽𝗽𝗹𝗲
+AND,((DOMAIN,iosapps.itunes.apple.com), (SCRIPT,策略优选)),Apple
 # > Siri与搜索 代理
-PROCESS-NAME,LookupViewService,𝗣𝗥𝗢𝗫𝗬
-PROCESS-NAME,/System/Library/PrivateFrameworks/Lookup.framework/Versions/A/XPCServices/LookupViewService.xpc/Contents/MacOS/LookupViewService,𝗣𝗥𝗢𝗫𝗬
-DOMAIN,lookup-api.apple.com,𝗣𝗥𝗢𝗫𝗬
-DOMAIN,lookup-api.apple.com.edgekey.net,𝗣𝗥𝗢𝗫𝗬
-DOMAIN,e16991.b.akamaiedge.net,𝗣𝗥𝗢𝗫𝗬
+PROCESS-NAME,LookupViewService,Hong Kong
+PROCESS-NAME,/System/Library/PrivateFrameworks/Lookup.framework/Versions/A/XPCServices/LookupViewService.xpc/Contents/MacOS/LookupViewService,Hong Kong
+DOMAIN,lookup-api.apple.com,PROXY
+DOMAIN,lookup-api.apple.com.edgekey.net,Hong Kong
+DOMAIN,e16991.b.akamaiedge.net,Hong Kong
 # 慧车天下 去广告修正
 URL-REGEX,api-access.pangolin-sdk-toutiao.com,REJECT-NO-DROP
-# > VSCO 代理
-DOMAIN,measurement.com,𝗣𝗥𝗢𝗫𝗬
 # > 555电影网
-DOMAIN,www.o8tv.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,www.o8tv.com,DIRECT
 # > 大师兄影视
-DOMAIN,dsxys.pro,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,dsxys.pro,DIRECT
 # > Safari 防跳转
 DOMAIN,app-site-association.cdn-apple.com,REJECT
 # > 爱奇艺 去广告
 DOMAIN-SUFFIX,cupid.iqiyi.com,REJECT
-# > 555 去广告
-URL-REGEX,^https?:\/\/run\.api\.qyfxgd\.cn:\d+\/api\/v\d\/advert,REJECT-TINYGIF
 # > 优酷 去广告
 DOMAIN, iyes.youku.com,REJECT
 URL-REGEX,^http:\/\/.*\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
 # > 京东 去广告
 URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$,REJECT-TINYGIF
 # > Boxjs 代理
-DOMAIN-KEYWORD,jsdelivr.net,𝗣𝗥𝗢𝗫𝗬
+DOMAIN-KEYWORD,jsdelivr.net,Hong Kong
 # > 腾讯视频 修正+去开屏
 OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0/0,no-resolve)))),REJECT-DROP
 # > 掌阅 去广告
@@ -139,13 +135,11 @@ URL-REGEX,^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash,R
 
 [Script]
 # > 苹果策略优选
-策略优选 = type=rule,timeout=60,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/speedLimit.js,argument="Group=𝗔𝗽𝗽𝗹𝗲&policy=𝗗𝗜𝗥𝗘𝗖𝗧,𝗣𝗥𝗢𝗫𝗬&time=15&minSpeed=20"
+策略优选 = type=rule,timeout=60,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/speedLimit.js,argument="Return=10min,Group=Apple&policy=DIRECT,PROXY,Support&time=15&minSpeed=20"
 # > 扫描全能王 pro
 全能扫描 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/camscanner.js,type=http-response,pattern=https:\/\/(api|api-cs)*\.intsig\.net\/purchase\/cs\/query_property\?,script-update-interval=0
 # > Dayone vip
 Day One = type=http-response,pattern=^https:\/\/dayone\.(me|app)\/api\/(users|v2\/users\/(account-status|receipt))$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/dayone.js,script-update-interval=0
-# > 彩云天气 svip
-彩云天气 = type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path=https://raw.githubusercontent.com/githubdulong/Script/master/cytq.js
 # > 京东App 历史价格
 京东比价 = type=http-response,requires-body=1,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js
 # > 百度云盘 解锁
@@ -173,5 +167,5 @@ Fimo = type=http-response, pattern=^https?:\/\/server\.yoyiapp\.com\/fimo-user\/
 # 分割线——————————————————————————
 
 [MITM]
-hostname = ap*.intsig.net, dayone.*, biz.caiyunapp.com, pan.baidu.com, bmall.camera360.com, vsco.co, syh.zybang.com, m.douban.com, m.ithome.com, api.ithome.com, api.zuihuimai.com, napi.ithome.com, api.m.jd.com, gab.122.gov.cn, api-mifit-cn2.huami.com, as.xiaojukeji.com, pt-starimg.didistatic.com, security.xiaojukeji.com, guard.sec.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, res.xiaojukeji.com, shop-gw.chengxinyouxuan.com, img-ys011.didistatic.com, wallet.95516.com, api-daoshang.shiqiao.com, api.wfdata.club, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, mb3admin.com, flowplus.meituan.net, s3plus.meituan.net ms.jr.jd.com, img10.360buyimg.com, edith.xiaohongshu.com, api-access.pangolin-sdk-toutiao.com, awvp.aoscdn.com, server.yoyiapp.com, wallpaper.soutushenqi.com
+hostname = ap*.intsig.net, dayone.*, pan.baidu.com, bmall.camera360.com, vsco.co, syh.zybang.com, m.douban.com, m.ithome.com, api.ithome.com, api.zuihuimai.com, napi.ithome.com, api.m.jd.com, gab.122.gov.cn, api-mifit-cn2.huami.com, as.xiaojukeji.com, pt-starimg.didistatic.com, security.xiaojukeji.com, guard.sec.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, res.xiaojukeji.com, shop-gw.chengxinyouxuan.com, img-ys011.didistatic.com, wallet.95516.com, api-daoshang.shiqiao.com, api.wfdata.club, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, mb3admin.com, flowplus.meituan.net, s3plus.meituan.net ms.jr.jd.com, img10.360buyimg.com, edith.xiaohongshu.com, api-access.pangolin-sdk-toutiao.com, awvp.aoscdn.com, server.yoyiapp.com, wallpaper.soutushenqi.com
 

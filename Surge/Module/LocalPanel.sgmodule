@@ -1,11 +1,11 @@
 #!name=策略面板
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-09-06 10:10
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-05-30 12:10
 #!system=ios
 
 [Panel]
 策略面板 = script-name=开启时长,title="开启时长",content="请刷新面板",style=info,update-interval=10
-策略面板 = script-name=假日提醒,title="假日提醒",content="请刷新面板",style=info,update-interval=3600
-策略面板 = script-name=解锁检测,title="解锁检测",content="请刷新面板",style=info,update-interval=7200
+策略面板 = script-name=假日提醒,title="假日提醒",content="请刷新面板",style=info,update-interval=1800
+策略面板 = script-name=解锁检测,title="解锁检测",content="请刷新面板",style=info,update-interval=1800
 策略面板 = script-name=主力机场,title="主力机场",content="请刷新面板",style=info,update-interval=1800
 策略面板 = script-name=备用机场,title="备用机场",content="请刷新面板",style=info,update-interval=1800
 
