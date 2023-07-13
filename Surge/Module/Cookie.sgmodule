@@ -29,5 +29,4 @@
 # 分割线——————————————————————————
 
 [MITM]
-hostname = %APPEND% apph5.manmanbuy.com, club.yili.com, passport.iqiyi.com, mobile.ximalaya.com,
- app.bilibili.com, m.bilibili.com, auth.aliyundrive.com, ccsp-egmas.sf-express.com, sytgate.jslife.com.cn, jparking.jslife.com.cn
+hostname = %APPEND% apph5.manmanbuy.com, club.yili.com, passport.iqiyi.com, mobile.ximalaya.com, app.bilibili.com, m.bilibili.com, auth.aliyundrive.com, ccsp-egmas.sf-express.com, sytgate.jslife.com.cn, jparking.jslife.com.cn
