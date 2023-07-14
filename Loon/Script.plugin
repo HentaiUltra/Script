@@ -80,12 +80,6 @@ URL-REGEX,https:\/\/mp\.weixin\.qq\.com\/mp\/appmsg_comment\?action=addcomment,�
 # 分割线——————————————————————————
 
 [URL Rewrite]
-# > TikTok 换区
-(更换307前面JP JP=日本 KR=韩国 HK=香港 US=美国）
-(?<=&mcc_mnc=)4 2 307
-(?<=_region=)CN(?=&) JP 307
-(^https?:\/\/*\.\w{4}okv.com\/.+&.+)(\d{2}\.3\.\d)(.+) $118.0$3 302
-^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) $1$3 302
 # > IT之家 去广告
 ^https:\/\/api\.zuihuimai\.com - reject
 
@@ -96,12 +90,6 @@ URL-REGEX,https:\/\/mp\.weixin\.qq\.com\/mp\/appmsg_comment\?action=addcomment,�
 http-response ^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
 http-response ^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js,requires-body=1
 http-response ^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/warmer/.+type=show-ath requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating_season.js
-# > 人人视频 去广告
-http-response ^https?:\/\/api\.rr\.tv\/v\dplus\/index\/channel script-path=https://Choler.github.io/Surge/Script/rrsp.js,requires-body=true
-# > 人人视频 解锁
-http-response ^https:\/\/api\.rr\.tv\/user\/privilege\/list requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/rrtv.js
-http-response ^https:\/\/api\.rr\.tv\/ad\/getAll requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/rrtv.js
-http-response ^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/rrtv.js
 # > 金山WPS vip
 http-response ^https://account.wps.*/api/users/ requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js
 # > 扫描全能王 pro
@@ -148,4 +136,4 @@ http-response https?:\/\/.*\.xmind\..*\/_res\/(devices|user_sub_status|appstore/
 # 分割线——————————————————————————
 
 [MITM]
-hostname =  -*.amemv.com, -*.snssdk.com, *.googlevideo.com, api.rr.tv, account.wps.cn, ap*.intsig.net, dayone.*, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.lagoapps.com, api.meiyan.com, biz.caiyunapp.com, raw.githubusercontent.com, spclient.wg.spotify.com, ap?.bilibili.com, ap?.biliapi.net, pan.baidu.com, btrace.qq.com, bmall.camera360.com, *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com, vsco.co, img.zuoyebang.cc, security.wechat.com, api.polaxiong.com, m.douban.com, m.ithome.com, api.zuihuimai.com, api.ithome.com, api.m.jd.com, gab.122.gov.cn, api-mifit-cn2.huami.com, as.xiaojukeji.com, pt-starimg.didistatic.com, security.xiaojukeji.com, guard.sec.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, res.xiaojukeji.com, shop-gw.chengxinyouxuan.com, img-ys011.didistatic.com, wallet.95516.com, pgdt.gtimg.cn, c.l.qq.com, api.daoshang.online, api.wfdata.club, bkw-legacy.oss-cn-shenzhen.aliyuncs.com, edith.xiaohongshu.com, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, boxjs.net, boxjs.com, *.xmind.*, mp.weixin.qq.com
+hostname =  -*.amemv.com, -*.snssdk.com, *.googlevideo.com, account.wps.cn, ap*.intsig.net, dayone.*, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, *.lagoapps.com, api.meiyan.com, biz.caiyunapp.com, raw.githubusercontent.com, spclient.wg.spotify.com, ap?.bilibili.com, ap?.biliapi.net, pan.baidu.com, btrace.qq.com, bmall.camera360.com, *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com, vsco.co, img.zuoyebang.cc, security.wechat.com, api.polaxiong.com, m.douban.com, m.ithome.com, api.zuihuimai.com, api.ithome.com, api.m.jd.com, gab.122.gov.cn, api-mifit-cn2.huami.com, as.xiaojukeji.com, pt-starimg.didistatic.com, security.xiaojukeji.com, guard.sec.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, res.xiaojukeji.com, shop-gw.chengxinyouxuan.com, img-ys011.didistatic.com, wallet.95516.com, pgdt.gtimg.cn, c.l.qq.com, api.daoshang.online, api.wfdata.club, bkw-legacy.oss-cn-shenzhen.aliyuncs.com, edith.xiaohongshu.com, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, boxjs.net, boxjs.com, *.xmind.*, mp.weixin.qq.com

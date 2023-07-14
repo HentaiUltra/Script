@@ -5,15 +5,6 @@
 # 分割线——————————————————————————
 
 [Script]
-# > 美团
-cron "0 2 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js, enable=true, tag=美团
-# > 百度贴吧
-cron "30 3 0 * * *" script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_checkin.js, enable=true, tag=百度贴吧
-# > 什么值得买(签到+任务)
-cron "0 4 0 * * *" script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_signin.js, enable=true, tag=什么值得买
-cron "30 4 0 1 * *" script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_mission.js, enable=true, tag=什么值得买
-# > 电信签到
-cron "0 5 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.js, enable=true, tag=电信签到
 # > 慢慢买
 cron "0 6 0 * * *" script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js, enable=true, tag=慢慢买
 # > 哔哩哔哩

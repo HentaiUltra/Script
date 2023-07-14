@@ -1,5 +1,5 @@
 #!name=Cookie获取
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-05-18 15:15
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-7-14 10:15
 #!system=ios
 
 [Script]
@@ -29,5 +29,4 @@
 # 分割线——————————————————————————
 
 [MITM]
-hostname = %APPEND% apph5.manmanbuy.com, club.yili.com, passport.iqiyi.com, mobile.ximalaya.com,
- app.bilibili.com, m.bilibili.com, auth.aliyundrive.com, ccsp-egmas.sf-express.com, sytgate.jslife.com.cn, jparking.jslife.com.cn
+hostname = %APPEND% sytgate.jslife.com.cn, club.yili.com, passport.iqiyi.com, mobile.ximalaya.com, app.bilibili.com, m.bilibili.com, auth.aliyundrive.com, ccsp-egmas.sf-express.com
