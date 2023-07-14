@@ -31,4 +31,4 @@ GLaDOS= type=http-request,pattern=https:\/\/glados\.rocks\/api\/user\/status, sc
 # 分割线——————————————————————————
 
 [MITM]
-hostname = %APPEND% sytgate.jslife.com.cn, club.yili.com, passport.iqiyi.com, mobile.ximalaya.com, app.bilibili.com, m.bilibili.com, auth.aliyundrive.com, ccsp-egmas.sf-express.com
+hostname = %APPEND% sytgate.jslife.com.cn, club.yili.com, passport.iqiyi.com, mobile.ximalaya.com, app.bilibili.com, m.bilibili.com, auth.aliyundrive.com, ccsp-egmas.sf-express.com,  glados.rocks,
