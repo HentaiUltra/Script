@@ -25,10 +25,10 @@
 # > 顺丰速运 app获取
 顺丰速运 = type=http-request, pattern=^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/user\/universalSign,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js,requires-body=1
 # > GLaDOS获取Cookie
-GLaDOS= type=http-request,pattern=https:\/\/glados\.rocks\/api\/user\/status, script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/glados.js
+GLaDOS = type=http-request, pattern=https:\/\/glados\.rocks\/api\/user\/checkin, script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/glados.js
 
 
 # 分割线——————————————————————————
 
 [MITM]
-hostname = %APPEND% sytgate.jslife.com.cn, club.yili.com, passport.iqiyi.com, mobile.ximalaya.com, app.bilibili.com, m.bilibili.com, auth.aliyundrive.com, ccsp-egmas.sf-express.com,  glados.rocks,
+hostname = %APPEND% sytgate.jslife.com.cn, club.yili.com, passport.iqiyi.com, mobile.ximalaya.com, app.bilibili.com, m.bilibili.com, auth.aliyundrive.com, ccsp-egmas.sf-express.com, glados.rocks,
