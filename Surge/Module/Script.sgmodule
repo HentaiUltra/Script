@@ -11,8 +11,6 @@
 [General]
 # > Boxjs
 force-http-engine-hosts = %APPEND% boxjs.net, boxjs.comm
-# > 代理检测
-skip-proxy = %APPEND% www.baidu.com,yunbusiness.ccb.com,wxh.wo.cn,gate.lagou.com,www.abchina.com.cn,www.shanbay.com,login-service.mobile-bank.psbc.com,mobile-bank.psbc.com
 
 # 分割线——————————————————————————
 
