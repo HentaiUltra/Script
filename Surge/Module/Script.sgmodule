@@ -1,10 +1,8 @@
 #!name=脚本解锁
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-7-14 10:15
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-7-17 16:30
 #!system=ios
 
 # 分割线——————————————————————————
-[Rule]
-AND,((DOMAIN,iosapps.itunes.apple.com), (SCRIPT,策略优选)),Apple
 
 [Header Rewrite]
 # > New Bing Ai
@@ -13,6 +11,8 @@ AND,((DOMAIN,iosapps.itunes.apple.com), (SCRIPT,策略优选)),Apple
 [General]
 # > Boxjs
 force-http-engine-hosts = %APPEND% boxjs.net, boxjs.comm
+# > 代理检测
+skip-proxy = %APPEND% www.baidu.com,yunbusiness.ccb.com,wxh.wo.cn,gate.lagou.com,www.abchina.com.cn,www.shanbay.com,login-service.mobile-bank.psbc.com,mobile-bank.psbc.com
 
 # 分割线——————————————————————————
 
@@ -136,8 +136,8 @@ URL-REGEX,^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash,R
 # 分割线——————————————————————————
 
 [Script]
-# > 策略优选
-策略优选 = type=rule,timeout=60,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/speedLimit.js,argument="Return=10min,Group=Apple&policy=DIRECT,PROXY,Support&time=15&minSpeed=20"
+# > 彩云天气 解锁
+彩云天气 = type=http-response, pattern=^https:\/\/biz\.cyapi\.cn\/(p\/v1\/vip_info|v2\/user), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js, timeout=60, script-update-interval=86400
 # > 扫描全能王 pro
 全能扫描 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/camscanner.js,type=http-response,pattern=https:\/\/(api|api-cs)*\.intsig\.net\/purchase\/cs\/query_property\?,script-update-interval=0
 # > Dayone vip
@@ -161,9 +161,8 @@ EmbyPro = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/r
 傲软抠图 = type=http-response, pattern=https?:\/\/awvp\.aoscdn\.com\/base\/vip\/v2\/vips, requires-body=1,binary-body-mode=1,max-size=0, script-path=https://raw.githubusercontent.com/HentaiUltra/Script/main/JavaSrcipt/BackgroundEraserProCrack.js
 # > 搜图神器 解锁
 搜图神器 = type=http-response, pattern=^https?:\/\/wallpaper\.soutushenqi\.com\/api\/v1\/account\/token$, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/SearchPictureCrack.js
-
 # 分割线——————————————————————————
 
 [MITM]
-hostname = ap*.intsig.net, dayone.*, pan.baidu.com, vsco.co, syh.zybang.com, m.douban.com, m.ithome.com, api.ithome.com, api.zuihuimai.com, napi.ithome.com, api.m.jd.com, gab.122.gov.cn, api-mifit-cn2.huami.com, as.xiaojukeji.com, pt-starimg.didistatic.com, security.xiaojukeji.com, guard.sec.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, res.xiaojukeji.com, shop-gw.chengxinyouxuan.com, img-ys011.didistatic.com, wallet.95516.com, api-daoshang.shiqiao.com, api.wfdata.club, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, mb3admin.com, flowplus.meituan.net, s3plus.meituan.net ms.jr.jd.com, img10.360buyimg.com, edith.xiaohongshu.com, api-access.pangolin-sdk-toutiao.com, awvp.aoscdn.com, wallpaper.soutushenqi.com
+hostname =  %APPEND% biz.cyapi.cn, ap*.intsig.net, dayone.*, pan.baidu.com, vsco.co, syh.zybang.com, m.douban.com, m.ithome.com, api.ithome.com, api.zuihuimai.com, napi.ithome.com, api.m.jd.com, gab.122.gov.cn, api-mifit-cn2.huami.com, as.xiaojukeji.com, pt-starimg.didistatic.com, security.xiaojukeji.com, guard.sec.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, res.xiaojukeji.com, shop-gw.chengxinyouxuan.com, img-ys011.didistatic.com, wallet.95516.com, api-daoshang.shiqiao.com, api.wfdata.club, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, mb3admin.com, flowplus.meituan.net, s3plus.meituan.net ms.jr.jd.com, img10.360buyimg.com, edith.xiaohongshu.com, api-access.pangolin-sdk-toutiao.com, awvp.aoscdn.com, wallpaper.soutushenqi.com
 
