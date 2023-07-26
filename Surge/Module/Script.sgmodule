@@ -43,6 +43,7 @@ URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$,REJECT-
 # > Boxjs 代理
 DOMAIN-KEYWORD,jsdelivr.net,Hong Kong
 # > 腾讯视频 修正+去开屏
+IP-CIDR,47.110.187.87/32,REJECT
 OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0/0,no-resolve)))),REJECT-DROP
 # > 掌阅 去广告
 URL-REGEX,^https?:\/\/ih2\.ireader\.com\/zyapi\/bookstore\/ad\/,REJECT-TINYGIF
@@ -128,6 +129,11 @@ URL-REGEX,^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/,
 URL-REGEX,^https?:\/\/shopic\.sf-express\.com\/crm\/mobile\/common\/flashscreen,REJECT
 # > 拼多多 去开屏
 URL-REGEX,^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash,REJECT
+# > SOUL 去开屏
+IP-CIDR,47.110.187.87/32,REJECT
+IP-CIDR,47.96.15.52/32,REJECT
+IP-CIDR,116.62.220.39/32,REJECT
+DOMAIN,ssp.soulapp.cn,REJECT
 
 # 分割线——————————————————————————
 
