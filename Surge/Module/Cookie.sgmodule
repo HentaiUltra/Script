@@ -1,5 +1,5 @@
 #!name=Cookie获取
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-7-14 10:15
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-8-1 14:45
 #!system=ios
 
 [Script]
@@ -20,9 +20,10 @@
 顺丰速运 = type=http-request, pattern=^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/user\/universalSign,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js,requires-body=1
 # > 联通组件 app话费获取
 联通组件 = type=http-request,pattern=^https:\/\/m\.client\.10010\.com\/serviceimportantbusiness\/smart\/smartwisdomCommon,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/dompling/Script/master/10010/index.js,script-update-interval=0
-
+# > 建行生活 app获取
+建行生活 = type=http-request,pattern=^https:\/\/yunbusiness\.ccb\.com\/clp_coupon\/txCtrl\?txcode=A3341A040,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js
 
 # 分割线——————————————————————————
 
 [MITM]
-hostname = %APPEND% sytgate.jslife.com.cn, club.yili.com, passport.iqiyi.com, mobile.ximalaya.com, auth.aliyundrive.com, ccsp-egmas.sf-express.com,  m.client.10010.com
+hostname = %APPEND% sytgate.jslife.com.cn, club.yili.com, passport.iqiyi.com, mobile.ximalaya.com, auth.aliyundrive.com, ccsp-egmas.sf-express.com,  m.client.10010.com, yunbusiness.ccb.com
