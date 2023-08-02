@@ -1,5 +1,5 @@
 #!name=Cookie获取
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-8-1 14:45
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-8-2 11:30
 #!system=ios
 
 [Script]
@@ -7,6 +7,8 @@
 喜马拉雅 = script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/xmlySign.js,requires-body=0,type=http-request,pattern=^https?:\/\/mobile\.ximalaya\.com\/app-skin-service\/skin\/
 # > IT之家 app获取
 数码之家 = type=http-request,pattern=^https:\/\/my\.ruanmei\.com\/api\/usersign\/getsigninfo?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.cookie.js,debug=true
+# > 慢慢买 app获取
+慢买获取 = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js,type=http-request,requires-body=true,pattern=^https?:\/\/apph5\.manmanbuy\.com\/taolijin\/(login.aspx|logserver.aspx)
 # > 伊利乳品 小程序获取
 伊利乳品 = type=http-request, requires-body=1, pattern=https:\/\/club\.yili\.com\/MALLIFChe\/MCSWSIAPI\.asmx\/Call,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.cookie.js
 # > 爱奇艺 登陆
@@ -26,4 +28,4 @@
 # 分割线——————————————————————————
 
 [MITM]
-hostname = %APPEND% sytgate.jslife.com.cn, club.yili.com, passport.iqiyi.com, mobile.ximalaya.com, auth.aliyundrive.com, ccsp-egmas.sf-express.com,  m.client.10010.com, yunbusiness.ccb.com
+hostname = %APPEND% sytgate.jslife.com.cn, club.yili.com, apph5.manmanbuy.com, passport.iqiyi.com, mobile.ximalaya.com, auth.aliyundrive.com, ccsp-egmas.sf-express.com,  m.client.10010.com, yunbusiness.ccb.com
