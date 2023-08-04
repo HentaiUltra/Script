@@ -187,9 +187,15 @@ async function all() {
                               // input.setAttribute('value', document.getElementsByTagName('head')[0].innerHTML)
                               document.body.appendChild(input)
                               input.setSelectionRange(0, input.value.length)
-                              if (document.execCommand('copy')) {
-                                  document.execCommand('copy')
+                              const cb = navigator.clipboard;
+                              if (cb) {
+                                cb.writeText(text)
+                                .then(() => {
                                   console.log('复制成功')
+                                })
+                                .catch((err) => {
+                                    console.error(err);
+                                });
                               }
                               document.body.removeChild(input)
                               window.location.href='smzdm://'
@@ -202,9 +208,15 @@ async function all() {
                               // input.setAttribute('value', document.getElementsByTagName('head')[0].innerHTML)
                               document.body.appendChild(input)
                               input.setSelectionRange(0, input.value.length)
-                              if (document.execCommand('copy')) {
-                                  document.execCommand('copy')
-                                  console.log('复制成功${jfConvertorResultUrl}')
+                              const cb = navigator.clipboard;
+                              if (cb) {
+                                cb.writeText(text)
+                                .then(() => {
+                                  console.log('复制成功')
+                                })
+                                .catch((err) => {
+                                    console.error(err);
+                                });
                               }
                               document.body.removeChild(input)
                               //window.location.href='com.jingdong.jxj://'
@@ -234,9 +246,15 @@ async function all() {
                               // input.setAttribute('value', document.getElementsByTagName('head')[0].innerHTML)
                               document.body.appendChild(input)
                               input.setSelectionRange(0, input.value.length)
-                              if (document.execCommand('copy')) {
-                                  document.execCommand('copy')
-                                  console.log('复制成功${jfConvertorResultUrl}')
+                              const cb = navigator.clipboard;
+                              if (cb) {
+                                cb.writeText(text)
+                                .then(() => {
+                                  console.log('复制成功')
+                                })
+                                .catch((err) => {
+                                    console.error(err);
+                                });
                               }
                               document.body.removeChild(input)
                               window.location.href='manmanbuy://'
