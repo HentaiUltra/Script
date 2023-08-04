@@ -124,7 +124,8 @@ async function all() {
             <button id="mmm" class="sidebar ${rightOrLeft} ${isShowMmm ? '' : 'hide'}"></button>`
     lk.log('初始化工具栏完成')
     let jfConvertorResultUrl = `https://item.jd.com/${sku}.html`
-    lk.msg('jfConvertorResultUrl', jfConvertorResultUrl)
+    lk.msg('', sku)
+    lk.msg('', jfConvertorResultUrl)
     lk.log('构建转链请求完成')
     lk.log('开始注入html')
     html =
