@@ -124,6 +124,7 @@ async function all() {
             <button id="mmm" class="sidebar ${rightOrLeft} ${isShowMmm ? '' : 'hide'}"></button>`
     lk.log('初始化工具栏完成')
     let jfConvertorResultUrl = `https://item.jd.com/${sku}.html`
+    lk.msg('jfConvertorResultUrl', jfConvertorResultUrl)
     lk.log('构建转链请求完成')
     lk.log('开始注入html')
     html =
@@ -191,7 +192,7 @@ async function all() {
                               if (cb) {
                                 cb.writeText(jfConvertorResultUrl)
                                 .then(() => {
-                                  console.log('复制成功')
+                                    lk.msg('', '复制成功！')
                                 })
                                 .catch((err) => {
                                     console.error(err);
