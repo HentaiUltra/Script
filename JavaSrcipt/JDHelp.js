@@ -189,7 +189,7 @@ async function all() {
                               input.setSelectionRange(0, input.value.length)
                               const cb = navigator.clipboard;
                               if (cb) {
-                                cb.writeText(text)
+                                cb.writeText(jfConvertorResultUrl)
                                 .then(() => {
                                   console.log('复制成功')
                                 })
@@ -210,7 +210,7 @@ async function all() {
                               input.setSelectionRange(0, input.value.length)
                               const cb = navigator.clipboard;
                               if (cb) {
-                                cb.writeText(text)
+                                cb.writeText(jfConvertorResultUrl)
                                 .then(() => {
                                   console.log('复制成功')
                                 })
@@ -248,7 +248,7 @@ async function all() {
                               input.setSelectionRange(0, input.value.length)
                               const cb = navigator.clipboard;
                               if (cb) {
-                                cb.writeText(text)
+                                cb.writeText(jfConvertorResultUrl)
                                 .then(() => {
                                   console.log('复制成功')
                                 })
