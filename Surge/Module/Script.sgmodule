@@ -163,12 +163,12 @@ EmbyPro = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/r
 # > 小红书 去广告
 开屏广告 = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/xiaohongshu/xiaohongshu.ad.js,script-update-interval=0
 推荐广告 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/xiaohongshu/xiaohongshu.ad.js,script-update-interval=0
-# > 傲软抠图 解锁
-傲软抠图 = type=http-response, pattern=https?:\/\/awvp\.aoscdn\.com\/base\/vip\/v2\/vips, requires-body=1,binary-body-mode=1,max-size=0, script-path=https://raw.githubusercontent.com/HentaiUltra/Script/main/JavaSrcipt/BackgroundEraserProCrack.js
+# >  傲软抠图，傲软扫描，傲软PDF转换，傲软PDF编辑，傲软投屏，咖映，轻闪PDF，乃糖小组件，佐糖，佐糖照片修复 解锁
+傲软全家桶 = type=http-response,pattern= ^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/arqjt.js
 # > 搜图神器 解锁
 搜图神器 = type=http-response, pattern=^https?:\/\/wallpaper\.soutushenqi\.com\/api\/v1\/account\/token$, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/SearchPictureCrack.js
 # 分割线——————————————————————————
 
 [MITM]
-hostname =  %APPEND% biz.cyapi.cn, ap*.intsig.net, dayone.*, pan.baidu.com, vsco.co, syh.zybang.com, m.douban.com, m.ithome.com, api.ithome.com, api.zuihuimai.com, napi.ithome.com, api.m.jd.com, gab.122.gov.cn, api-mifit-cn2.huami.com, as.xiaojukeji.com, pt-starimg.didistatic.com, security.xiaojukeji.com, guard.sec.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, res.xiaojukeji.com, shop-gw.chengxinyouxuan.com, img-ys011.didistatic.com, wallet.95516.com, api-daoshang.shiqiao.com, api.wfdata.club, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, mb3admin.com, flowplus.meituan.net, s3plus.meituan.net ms.jr.jd.com, img10.360buyimg.com, edith.xiaohongshu.com, api-access.pangolin-sdk-toutiao.com, awvp.aoscdn.com, wallpaper.soutushenqi.com
+hostname =  %APPEND% biz.cyapi.cn, ap*.intsig.net, dayone.*, pan.baidu.com, vsco.co, syh.zybang.com, m.douban.com, m.ithome.com, api.ithome.com, api.zuihuimai.com, napi.ithome.com, api.m.jd.com, gab.122.gov.cn, api-mifit-cn2.huami.com, as.xiaojukeji.com, pt-starimg.didistatic.com, security.xiaojukeji.com, guard.sec.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, res.xiaojukeji.com, shop-gw.chengxinyouxuan.com, img-ys011.didistatic.com, wallet.95516.com, api-daoshang.shiqiao.com, api.wfdata.club, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, mb3admin.com, flowplus.meituan.net, s3plus.meituan.net ms.jr.jd.com, img10.360buyimg.com, edith.xiaohongshu.com, api-access.pangolin-sdk-toutiao.com, *.aoscdn.com, *.apsapp.cn, wallpaper.soutushenqi.com
 
