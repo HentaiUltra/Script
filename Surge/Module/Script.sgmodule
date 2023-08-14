@@ -1,5 +1,5 @@
 #!name=脚本解锁
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-8-2 11:30
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-8-14 16:10
 #!system=ios
 
 # 分割线——————————————————————————
@@ -9,8 +9,6 @@
 ^https:\/\/www\.bing\.com\/(search|new) header-replace-regex User-Agent \w+\/[\d\.]+$ "AppleWebKit/537.36 Chrome/110.0 Safari/537.36 Edg/110.0"
 
 [General]
-# > Boxjs
-force-http-engine-hosts = %APPEND% boxjs.net, boxjs.comm
 # > 代理检测
 skip-proxy = %APPEND% www.baidu.com,yunbusiness.ccb.com,wxh.wo.cn,gate.lagou.com,www.abchina.com.cn,www.shanbay.com,login-service.mobile-bank.psbc.com,mobile-bank.psbc.com
 
