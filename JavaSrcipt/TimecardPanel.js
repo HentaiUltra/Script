@@ -85,25 +85,9 @@ const ChinaDay = [
 // ['初','十','廿','卅','闰']
 const ChinaElement = ["\u521d", "\u5341", "\u5eff", "\u5345", "\u95f0"];
 
-// 农历日中文显示，参数日期day
-const toChinaDay = function (day) {
-  let str = "";
-  switch (day) {
-    case 10:
-      str = "\u521d\u5341";
-      break; // "初十"
-    case 20:
-      str = "\u5eff\u5341";
-      break; // "廿十"
-    case 30:
-      str = "\u5345\u5341";
-      break; // "卅十"
-    default:
-      str = ChinaElement[Math.floor(day / 10)] + ChinaDay[day % 10];
-  }
-  return str;
-};
 
+
+// 农历月初一中文月显示（如农历二月初一 -> 二月，农历闰四月初一 ->闰四月）
 const nowInfo = function () {
   let now = new Date();
   return {
@@ -215,6 +199,49 @@ const solarToLunar = (y, m, d) => {
   };
 };
 
+let firstMoonDay = solarToLunar(new Date().getFullYear(), new Date().getMonth() + 1, new Date().getDate());
+
+const toChinaYear = function () {
+  let str = new Date().getFullYear();
+  let chinese=['〇','一','二','三','四','五','六','七','八','九','十'];
+  let numStr=str.replace(/[^0-9]+/g, '');
+  return chinese[numStr[0]] + chinese[numStr[1]] + chinese[numStr[2]] + chinese[numStr[3]]
+}
+
+const toChinaMonth = function() {
+  let curY = firstMoonDay.lunarY;
+  let curM = firstMoonDay.lunarM;
+  // 判断当前是否为闰年闰月
+  let leap_m = leapMonth(curY);
+  let isLeap = false;
+  if(leap_m === curM) {
+    isLeap = true;
+  }
+  return isLeap ? (ChinaElement[4] + ChinaMonths[new Date().getMonth()] + ChinaMonths[0]) : (ChinaMonths[new Date().getMonth()] + ChinaMonths[0]);
+}
+
+
+// 农历日中文显示，参数日期day
+const toChinaDay = function () {
+  let day = firstMoonDay.lunarD;
+  let str = "";
+  switch (day) {
+    case 10:
+      str = "\u521d\u5341";
+      break; // "初十"
+    case 20:
+      str = "\u5eff\u5341";
+      break; // "廿十"
+    case 30:
+      str = "\u5345\u5341";
+      break; // "卅十"
+    default:
+      str = ChinaElement[Math.floor(day / 10)] + ChinaDay[day % 10];
+  }
+  return str;
+};
+
+
 function recently(V, T) {
   (V = V || []), (T = T || []), (result = {});
   V.sort(function (a, b) {
@@ -293,10 +320,8 @@ function monthDayDiff(date, type) {
     n = ("0" + nl.lunarM).slice(-2) + ("0" + nl.lunarD).slice(-2);
     let d1 = insertStr(year, 4, "/") + insertStr(n, 2, "/");
     let d2 = insertStr(year, 4, "/") + insertStr(date, 2, "/");
-    console.log(d1, d2);
     let s1 = new Date(d1);
     let s2 = new Date(d2);
-    console.log(s1.getTime(), s2.getTime());
     return extracted(s2, s1);
   } else {
     let d1 = year + "/" + month + "/" + day;
@@ -319,7 +344,16 @@ function today(day, name, type) {
 function dateNotice(name, type) {
   if ($persistentStore.read(type === "nl" ? "lunarCalendarPushed" : "gregorianCalendarPushed") !== name) {
     $persistentStore.write(name, type === "nl" ? "lunarCalendarPushed" : "gregorianCalendarPushed");
-    $notification.post("假日祝福", "", "今天是" + type === "nl" ? "农历节日:" : "" + name + "   🎉🎉🎉!");
+    let time='';
+    if (type === "nl") {
+      time = "农历:" + toChinaYear() + "年" + toChinaMonth()  + toChinaDay() ;
+    } else {
+      let year = new Date().getFullYear().toString();
+      let month = new Date().getMonth() + 1 > 10 ? new Date().getMonth() + 1 : "0" + (new Date().getMonth() + 1); //得到月份
+      let day = new Date().getDate() > 10 ? new Date().getDate() : "0" + new Date().getDate(); //得到日期
+      time = `${year}年${month}月${day}日`;
+    }
+    $notification.post("假日祝福", "", "今天是" + time + name + "   🎉🎉🎉!");
   }
 }
 //>图标依次切换电池电量图标,电池颜色
@@ -363,16 +397,16 @@ function dayDiff() {
 
 dayDiff();
 
-$done({
-  title: title_random(dayDiff()),
-  icon: icon_now(dayDiff())[0],
-  "icon-color": icon_now(dayDiff())[1],
-  content:
-    o.gl.name +
-    ":" +
-    today(monthDayDiff(o.gl.date, "gl"), o.gl.name, "gl") +
-    "|" +
-    o.nl.name +
-    ":" +
-    today(monthDayDiff(o.nl.date, "nl"), o.nl.name, "nl"),
-});
+// $done({
+//   title: title_random(dayDiff()),
+//   icon: icon_now(dayDiff())[0],
+//   "icon-color": icon_now(dayDiff())[1],
+//   content:
+//     o.gl.name +
+//     ":" +
+//     today(monthDayDiff(o.gl.date, "gl"), o.gl.name, "gl") +
+//     "|" +
+//     o.nl.name +
+//     ":" +
+//     today(monthDayDiff(o.nl.date, "nl"), o.nl.name, "nl"),
+// });
