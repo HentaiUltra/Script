@@ -1,5 +1,5 @@
 #!name=脚本解锁
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-8-21 10:00
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-08-22 14:50
 #!system=ios
 
 # 分割线——————————————————————————
@@ -37,9 +37,11 @@ DOMAIN-SUFFIX,cupid.iqiyi.com,REJECT
 DOMAIN, iyes.youku.com,REJECT
 URL-REGEX,^http:\/\/.*\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
 # > 京东 去广告
-URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$,REJECT-TINYGIF
+URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMaterialAdverts),REJECT
 # > Boxjs 代理
-DOMAIN-KEYWORD,jsdelivr.net,Hong Kong
+DOMAIN-KEYWORD,jsdelivr.net,PROXY
+# > Sub-Store 代理
+DOMAIN-KEYWORD,vercel.app,PROXY
 # > 腾讯视频 修正+去开屏
 IP-CIDR,47.110.187.87/32,REJECT
 OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0/0,no-resolve)))),REJECT-DROP
@@ -127,11 +129,6 @@ URL-REGEX,^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/,
 URL-REGEX,^https?:\/\/shopic\.sf-express\.com\/crm\/mobile\/common\/flashscreen,REJECT
 # > 拼多多 去开屏
 URL-REGEX,^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash,REJECT
-# > SOUL 去开屏
-IP-CIDR,47.110.187.87/32,REJECT
-IP-CIDR,47.96.15.52/32,REJECT
-IP-CIDR,116.62.220.39/32,REJECT
-DOMAIN,ssp.soulapp.cn,REJECT
 
 # 分割线——————————————————————————
 

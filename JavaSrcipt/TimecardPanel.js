@@ -397,16 +397,16 @@ function dayDiff() {
 
 dayDiff();
 
-// $done({
-//   title: title_random(dayDiff()),
-//   icon: icon_now(dayDiff())[0],
-//   "icon-color": icon_now(dayDiff())[1],
-//   content:
-//     o.gl.name +
-//     ":" +
-//     today(monthDayDiff(o.gl.date, "gl"), o.gl.name, "gl") +
-//     "|" +
-//     o.nl.name +
-//     ":" +
-//     today(monthDayDiff(o.nl.date, "nl"), o.nl.name, "nl"),
-// });
+$done({
+  title: title_random(dayDiff()),
+  icon: icon_now(dayDiff())[0],
+  "icon-color": icon_now(dayDiff())[1],
+  content:
+    o.gl.name +
+    ":" +
+    today(monthDayDiff(o.gl.date, "gl"), o.gl.name, "gl") +
+    "|" +
+    o.nl.name +
+    ":" +
+    today(monthDayDiff(o.nl.date, "nl"), o.nl.name, "nl"),
+});
