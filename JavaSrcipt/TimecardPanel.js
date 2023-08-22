@@ -1,4 +1,4 @@
-var V = [
+let V = [
   //公历
   { date: "0101", name: "元旦节" },
   { date: "0104", name: "儿子生日" },
@@ -19,7 +19,7 @@ var V = [
   { date: "1224", name: "平安夜" },
   { date: "1225", name: "圣诞节" },
 ];
-var T = [
+let T = [
   //农历
   { date: "0101", name: "春节" },
   { date: "0115", name: "元宵节" },
@@ -103,11 +103,6 @@ const toChinaDay = function (day) {
   }
   return str;
 };
-// 农历月初一中文月显示（如农历二月初一 -> 二月，农历闰四月初一 ->闰四月）
-const toChinaMonth = function (month, isLeap) {
-  isLeap = isLeap || false;
-  return isLeap ? ChinaElement[4] + ChinaMonths[month] + ChinaMonths[0] : ChinaMonths[month] + ChinaMonths[0];
-};
 
 const nowInfo = function () {
   let now = new Date();
@@ -154,8 +149,7 @@ const lunarYearDays = function (year) {
   });
   return num;
 };
-
-const solarToLunar = function (y, m, d) {
+const solarToLunar = (y, m, d) => {
   if (y < 1901 || y > 2100) return -1;
   let date;
   if (!y) {
@@ -163,7 +157,6 @@ const solarToLunar = function (y, m, d) {
   } else {
     date = new Date(y, m - 1, d);
   }
-
   // 参照日期 1901-02-19 正月初一
   let offset = (Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - Date.UTC(1901, 1, 19)) / 86400000;
   let temp = 0,
@@ -176,19 +169,17 @@ const solarToLunar = function (y, m, d) {
     offset += temp;
     i--;
   }
-
   // 农历年、月、日
   let isLeap = false,
     j;
   let monthDays = lunarMonthDays(i);
   let leapM = leapMonth(i);
-
   if (offset > 0) {
     for (j = 0; j < monthDays.length && offset > 0; j++) {
       temp = monthDays[j];
       offset -= temp;
     }
-    if (offset == 0) {
+    if (offset === 0) {
       j++;
     }
     if (offset < 0) {
@@ -196,7 +187,7 @@ const solarToLunar = function (y, m, d) {
     }
   } else {
     // 补偿公历1901年2月的农历信息
-    if (offset == -23) {
+    if (offset === -23) {
       return {
         lunarY: i,
         lunarM: 12,
@@ -208,7 +199,7 @@ const solarToLunar = function (y, m, d) {
 
   // 矫正闰年月
   if (leapM) {
-    if (j == leapM + 1) {
+    if (j === leapM + 1) {
       isLeap = true;
     }
     if (j >= leapM + 1) {
@@ -232,27 +223,27 @@ function recently(V, T) {
   T.sort(function (a, b) {
     return a.date < b.date ? -1 : 1;
   }); //按date大小升序排列
-  var D = new Date(),
+  let D = new Date(),
     y = D.getFullYear(),
     m = D.getMonth() + 1,
     d = D.getDate();
 
   //获取最近的公历节日
-  var n = ("0" + m).slice(-2) + ("0" + d).slice(-2),
+  let n = ("0" + m).slice(-2) + ("0" + d).slice(-2),
     k = 0;
-  for (var i in V) n * 1 > V[i].date * 1 && k++;
+  for (let i in V) n * 1 > V[i].date * 1 && k++;
   k = k >= V.length ? 0 : k;
   result.gl = V.slice(k).shift();
 
   //获取最近的农历节日
-  var nl = solarToLunar(y, m, d);
+  let nl = solarToLunar(y, m, d);
   (n = ("0" + nl.lunarM).slice(-2) + ("0" + nl.lunarD).slice(-2)), (k = 0);
-  for (var i in T) n * 1 > T[i].date * 1 && k++;
+  for (let i in T) n * 1 > T[i].date * 1 && k++;
   k = k >= V.length ? 0 : k;
   result.nl = T.slice(k).shift();
   return result;
 }
-var o = recently(V, T);
+let o = recently(V, T);
 function insertStr(source, start, newStr) {
   return source.slice(0, start) + newStr + source.slice(start);
 }
@@ -284,34 +275,35 @@ function monthDayDiff(date, type) {
   let dif = new Date().getTimezoneOffset();
   let east8time = new Date().getTime() + dif * 60 * 1000 - targetTimezone * 60 * 60 * 1000;
   let now = new Date(east8time);
-  var year = now.getFullYear().toString(); //得到年份
-  var month = now.getMonth() + 1 > 10 ? now.getMonth() + 1 : "0" + (now.getMonth() + 1); //得到月份
-  var day = now.getDate() > 10 ? now.getDate() : "0" + now.getDate(); //得到日期
+  let year = now.getFullYear().toString(); //得到年份
+  let month = now.getMonth() + 1 > 10 ? now.getMonth() + 1 : "0" + (now.getMonth() + 1); //得到月份
+  let day = now.getDate() > 10 ? now.getDate() : "0" + now.getDate(); //得到日期
   const yearDays = allDays();
+
+  function extracted(s2, s1) {
+    let time =
+        s2.getTime() - s1.getTime() >= 0
+            ? s2.getTime() - s1.getTime()
+            : s2.getTime() - s1.getTime() + yearDays * 1000 * 60 * 60 * 24;
+    return time / (1000 * 60 * 60 * 24);
+  }
+
   if (type === "nl") {
-    var nl = solarToLunar(year, month, day);
+    let nl = solarToLunar(year, month, day);
     n = ("0" + nl.lunarM).slice(-2) + ("0" + nl.lunarD).slice(-2);
-    var d1 = insertStr(year, 4, "/") + insertStr(n, 2, "/");
-    var d2 = insertStr(year, 4, "/") + insertStr(date, 2, "/");
-    var s1 = new Date(d1);
-    var s2 = new Date(d2);
-    var time =
-      s2.getTime() - s1.getTime() > 0
-        ? s2.getTime() - s1.getTime()
-        : s2.getTime() - s1.getTime() + yearDays * 1000 * 60 * 60 * 24;
-    var days = parseInt(time / (1000 * 60 * 60 * 24));
-    return days;
+    let d1 = insertStr(year, 4, "/") + insertStr(n, 2, "/");
+    let d2 = insertStr(year, 4, "/") + insertStr(date, 2, "/");
+    console.log(d1, d2);
+    let s1 = new Date(d1);
+    let s2 = new Date(d2);
+    console.log(s1.getTime(), s2.getTime());
+    return extracted(s2, s1);
   } else {
-    var d1 = year + "/" + month + "/" + day;
-    var d2 = insertStr(year, 4, "/") + insertStr(date, 2, "/");
-    var s1 = new Date(d1);
-    var s2 = new Date(d2);
-    var time =
-      s2.getTime() - s1.getTime() >= 0
-        ? s2.getTime() - s1.getTime()
-        : s2.getTime() - s1.getTime() + yearDays * 1000 * 60 * 60 * 24;
-    var days = parseInt(time / (1000 * 60 * 60 * 24));
-    return days;
+    let d1 = year + "/" + month + "/" + day;
+    let d2 = insertStr(year, 4, "/") + insertStr(date, 2, "/");
+    let s1 = new Date(d1);
+    let s2 = new Date(d2);
+    return extracted(s2, s1);
   }
 }
 //如果是0天，发送emoji;
@@ -359,7 +351,7 @@ function title_random(num) {
     9: "(ノへ￣、)",
     10: "(✪ω✪)",
   };
-  return num == 0 ? "𝗛𝗮𝗽𝗽𝘆 𝗵𝗼𝗹𝗶𝗱𝗮𝘆𝘀 𝗮𝗻𝗱 𝗮𝗹𝗹 𝘁𝗵𝗲 𝗯𝗲𝘀𝘁 𖠚ᐝ" : dic[r];
+  return num === 0 ? "𝗛𝗮𝗽𝗽𝘆 𝗵𝗼𝗹𝗶𝗱𝗮𝘆𝘀 𝗮𝗻𝗱 𝗮𝗹𝗹 𝘁𝗵𝗲 𝗯𝗲𝘀𝘁 𖠚ᐝ" : dic[r];
 }
 
 function dayDiff() {
