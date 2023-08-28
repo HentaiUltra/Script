@@ -11,8 +11,6 @@
 什么值买 = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_daily.js,type=http-request,requires-body=false,pattern=^https?:\/\/user-api\.smzdm\.com\/checkin$
 # > IT之家 app获取
 数码之家 = type=http-request,pattern=^https:\/\/my\.ruanmei\.com\/api\/usersign\/getsigninfo?,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.cookie.js,debug=true
-# > 慢慢买 app获取
-慢买获取 = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js,type=http-request,requires-body=true,pattern=^https?:\/\/apph5\.manmanbuy\.com\/taolijin\/(login.aspx|logserver.aspx)
 # > 伊利乳品 小程序获取
 伊利乳品 = type=http-request, requires-body=1, pattern=https:\/\/club\.yili\.com\/MALLIFChe\/MCSWSIAPI\.asmx\/Call,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.cookie.js
 # > 爱奇艺
@@ -38,4 +36,4 @@
 # 分割线——————————————————————————
 
 [MITM]
-hostname = %APPEND% *.m.163.com, *.xxjjappss.com,*.*.mob.com,*.huaerdadi.com, user-api.smzdm.com, my.ruanmei.com, apph5.manmanbuy.com, account.huami.com, club.yili.com, passport.iqiyi.com, mobile.ximalaya.com, 180.153.255.*, 180.153.255.10*, 180.153.250.*, 114.80.99.*, 1.62.62.64, auth.alipan.com, ccsp-egmas.sf-express.com, m.client.10010.com, yunbusiness.ccb.com, ms.jr.jd.com, me-api.jd.com, *.amap.com, api.tuhu.cn, sytgate.jslife.com.cn
+hostname = %APPEND% *.m.163.com, *.xxjjappss.com,*.*.mob.com,*.huaerdadi.com, user-api.smzdm.com, my.ruanmei.com, account.huami.com, club.yili.com, passport.iqiyi.com, mobile.ximalaya.com, 180.153.255.*, 180.153.255.10*, 180.153.250.*, 114.80.99.*, 1.62.62.64, auth.alipan.com, ccsp-egmas.sf-express.com, m.client.10010.com, yunbusiness.ccb.com, ms.jr.jd.com, me-api.jd.com, *.amap.com, api.tuhu.cn, sytgate.jslife.com.cn
