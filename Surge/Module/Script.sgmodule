@@ -21,8 +21,6 @@ PROCESS-NAME,/System/Library/PrivateFrameworks/Lookup.framework/Versions/A/XPCSe
 DOMAIN,lookup-api.apple.com,PROXY
 DOMAIN,lookup-api.apple.com.edgekey.net,Hong Kong
 DOMAIN,e16991.b.akamaiedge.net,Hong Kong
-# 慧车天下 去广告修正
-URL-REGEX,api-access.pangolin-sdk-toutiao.com,REJECT-NO-DROP
 # > VSCO 代理
 DOMAIN,measurement.com,PROXY
 # > 555电影网
@@ -38,22 +36,10 @@ DOMAIN, iyes.youku.com,REJECT
 URL-REGEX,^http:\/\/.*\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
 # > 京东 去广告
 URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMaterialAdverts),REJECT
-# > Boxjs 代理
-DOMAIN-KEYWORD,jsdelivr.net,PROXY
-# > Sub-Store 代理
-DOMAIN-KEYWORD,vercel.app,PROXY
+URL-REGEX,^https:\/\/m\.360buyimg\.com\/mobilecms\/s\d{4}x\d{4},REJECT
 # > 腾讯视频 修正+去开屏
 IP-CIDR,47.110.187.87/32,REJECT
 OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0/0,no-resolve)))),REJECT-DROP
-# > 掌阅 去广告
-URL-REGEX,^https?:\/\/ih2\.ireader\.com\/zyapi\/bookstore\/ad\/,REJECT-TINYGIF
-URL-REGEX,^https?:\/\/ih2\.ireader\.com\/zyapi\/self\/screen\/ad,REJECT-TINYGIF
-URL-REGEX,^https?:\/\/ih2\.ireader\.com\/zycl\/api\/ad\/,REJECT-TINYGIF
-# > 作业帮 去广告
-URL-REGEX,^https:\/\/syh\.zybang\.com\/com\/adx\/impress$,REJECT-TINYGIF
-# > HDOBOX 去广告
-DOMAIN-SUFFIX,applovin.com,REJECT
-DOMAIN-SUFFIX,applvn.com,REJECT
 # > 交管12123 去广告
 URL-REGEX,^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$,REJECT
 # > 小米运动 去广告
@@ -89,8 +75,6 @@ URL-REGEX,^https:\/\/pt-starimg\.didistatic\.com\/static,REJECT
 URL-REGEX,^https:\/\/wallet\.95516\.com\/s\/wl\/icon\/long,REJECT
 # > 狮桥司机 去广告
 URL-REGEX,^https:\/\/api-daoshang\.shiqiao\.com\/cloud-common\/(startupPageNew|versionManger)\/(query$|isUpdate$),REJECT
-# > 威锋 去广告
-URL-REGEX,^https:\/\/api\.wfdata\.club\/v2\/yesfeng\/(infoCenterAd|yesList),REJECT
 # > 向日葵 去广告
 DOMAIN,dm.toutiao.com,REJECT
 DOMAIN-KEYWORD,upload-cdn.orayimg.com,REJECT
