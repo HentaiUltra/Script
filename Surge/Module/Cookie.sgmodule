@@ -1,5 +1,5 @@
 #!name=Cookie获取
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-8-24 10:00
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-08-31 10:00
 #!system=ios
 
 [Script]
@@ -36,4 +36,4 @@
 # 分割线——————————————————————————
 
 [MITM]
-hostname = %APPEND% *.m.163.com, *.xxjjappss.com,*.*.mob.com,*.huaerdadi.com, user-api.smzdm.com, my.ruanmei.com, account.huami.com, club.yili.com, passport.iqiyi.com, mobile.ximalaya.com, 180.153.255.*, 180.153.255.10*, 180.153.250.*, 114.80.99.*, 1.62.62.64, auth.alipan.com, ccsp-egmas.sf-express.com, m.client.10010.com, yunbusiness.ccb.com, ms.jr.jd.com, me-api.jd.com, *.amap.com, api.tuhu.cn, sytgate.jslife.com.cn
+hostname = %APPEND% *.m.163.com, *.xxjjappss.com,*.*.mob.com,*.huaerdadi.com, user-api.smzdm.com, my.ruanmei.com, club.yili.com, passport.iqiyi.com, mobile.ximalaya.com, 180.153.255.*, 180.153.255.10*, 180.153.250.*, 114.80.99.*, 1.62.62.64, auth.alipan.com, ccsp-egmas.sf-express.com, m.client.10010.com, yunbusiness.ccb.com, ms.jr.jd.com, me-api.jd.com, *.amap.com, api.tuhu.cn, sytgate.jslife.com.cn
