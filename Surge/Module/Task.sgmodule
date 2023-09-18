@@ -13,6 +13,8 @@
 网易新闻 = type=cron,cronexp=30 1 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasenews/neteasenews.js,script-update-interval=0
 # > 什么值得买
 值买签到 = type=cron,cronexp=30 2 0 * * *,wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_daily.js,script-update-interval=0
+# > 慢慢买
+慢买签到 = type=cron,cronexp=0 3 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js,script-update-interval=0
 # > 伊利乳品
 伊利乳品 = type=cron,cronexp=0 4 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/yiLi.js
 # > 爱奇艺
@@ -24,7 +26,8 @@ iQIYI签到 = type=cron,cronexp=30 4 0 * * *,wake-system=1,timeout=120,script-pa
 # > 高德打车
 高德打车 = type=cron,cronexp=0 7 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js,script-update-interval=0,timeout=30
 # > 途虎养车
-途虎养车 = type=cron,cronexp=30 7 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/Crazy-Z7/Task/main/Tuhyche.js,script-update-interval=0,timeout=60# > 今日黄历
+途虎养车 = type=cron,cronexp=30 7 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/Crazy-Z7/Task/main/Tuhyche.js,script-update-interval=0,timeout=60
+# > 今日黄历
 今日黄历 = type=cron,cronexp=8 8 8 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/JavaScript/Surge/wnCalendar.js,script-update-interval=0,timeout=30
 # > 彩票开奖
 彩票查询 = type=cron,cronexp=0 20 21 * * * ,script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/ssq/ssq.js,script-update-interval=0

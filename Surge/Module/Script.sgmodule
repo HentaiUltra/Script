@@ -37,6 +37,10 @@ URL-REGEX,^http:\/\/.*\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
 # > 京东 去广告
 URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMaterialAdverts),REJECT
 URL-REGEX,^https:\/\/m\.360buyimg\.com\/mobilecms\/s\d{4}x\d{4},REJECT
+# > Boxjs 代理
+DOMAIN-KEYWORD,jsdelivr.net,PROXY
+# > Sub-Store 代理
+DOMAIN-KEYWORD,vercel.app,PROXY
 # > 腾讯视频 修正+去开屏
 IP-CIDR,47.110.187.87/32,REJECT
 OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0/0,no-resolve)))),REJECT-DROP
