@@ -15,12 +15,6 @@ skip-proxy = %APPEND% www.baidu.com,yunbusiness.ccb.com,wxh.wo.cn,gate.lagou.com
 # 分割线——————————————————————————
 
 [Rule]
-# > Siri与搜索 代理
-PROCESS-NAME,LookupViewService,Hong Kong
-PROCESS-NAME,/System/Library/PrivateFrameworks/Lookup.framework/Versions/A/XPCServices/LookupViewService.xpc/Contents/MacOS/LookupViewService,Hong Kong
-DOMAIN,lookup-api.apple.com,PROXY
-DOMAIN,lookup-api.apple.com.edgekey.net,Hong Kong
-DOMAIN,e16991.b.akamaiedge.net,Hong Kong
 # > VSCO 代理
 DOMAIN,measurement.com,PROXY
 # > 555电影网
@@ -44,15 +38,10 @@ DOMAIN-KEYWORD,vercel.app,PROXY
 # > 腾讯视频 修正+去开屏
 IP-CIDR,47.110.187.87/32,REJECT
 OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0/0,no-resolve)))),REJECT-DROP
-# > 交管12123 去广告
-URL-REGEX,^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$,REJECT
 # > 小米运动 去广告
 URL-REGEX,^https:\/\/api-mifit-cn2\.huami\.com\/discovery\/mi\/cards\/startpage_ad,REJECT
 # > 京东极速版 去广告
 URL-REGEX,https://api.m.jd.com/client.action\?functionId=lite_advertising,REJECT
-# > 京喜 去开屏
-URL-REGEX,^https:\/\/api\.m\.jd\.com\/api\?functionId=delivery_show$,REJECT
-URL-REGEX,^https:\/\/img10\.360buyimg\.com\/deliveryadmin\/jfs,REJECT
 # > 京东金融 去广告
 URL-REGEX,^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/(new)?na\/m\/getLoadingPicture,REJECT
 # > 滴滴出行 去广告
