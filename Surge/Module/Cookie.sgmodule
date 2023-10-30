@@ -1,5 +1,5 @@
 #!name=Cookie获取
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-10-30 17:20
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-10-30 18:10
 #!system=ios
 
 [Script]
@@ -22,8 +22,8 @@ iQIYI获取 = type=http-request,pattern=^https:\/\/passport\.iqiyi\.com\/apis\/u
 阿里云盘 = type=http-response,pattern=https:\/\/auth.alipan.com\/v2\/account\/token,requires-body=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
 # > 顺丰速运 app获取
 顺丰速运 = type=http-request,pattern=^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/user\/universalSign,requires-body=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
-# > 美团买菜 app获取
-美团买菜 = type=http-request, pattern=^https?:\/\/mall\.meituan\.com\/api\/c\/mallcoin\/checkIn\/queryTaskListInfoV.\?,script-path=https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.cookie.js
+# > 建行生活 app获取
+建行生活 = type=http-request,pattern=^https:\/\/yunbusiness\.ccb\.com\/(clp_coupon|clp_service)\/txCtrl\?txcode=(A3341A038|autoLogin),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js
 # > 京东CK Web获取
 京东商城 = type=http-request,requires-body=1,pattern=^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?|gw\/generic\/hy\/h5\/m\/appSign\?),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 # > 高德打车 微信小程序获取
@@ -32,4 +32,4 @@ iQIYI获取 = type=http-request,pattern=^https:\/\/passport\.iqiyi\.com\/apis\/u
 # 分割线——————————————————————————
 
 [MITM]
-hostname = %APPEND% *.m.163.com, *.xxjjappss.com,*.*.mob.com,*.huaerdadi.com, user-api.smzdm.com, my.ruanmei.com, apph5.manmanbuy.com, account.huami.com, club.yili.com, passport.iqiyi.com, mobile.ximalaya.com, 180.153.255.*, 180.153.255.10*, 180.153.250.*, 114.80.99.*, 1.62.62.64, auth.alipan.com, ccsp-egmas.sf-express.com, mall.meituan.com, ms.jr.jd.com, me-api.jd.com, *.amap.com
+hostname = %APPEND% *.m.163.com, *.xxjjappss.com,*.*.mob.com,*.huaerdadi.com, user-api.smzdm.com, my.ruanmei.com, apph5.manmanbuy.com, account.huami.com, club.yili.com, passport.iqiyi.com, mobile.ximalaya.com, 180.153.255.*, 180.153.255.10*, 180.153.250.*, 114.80.99.*, 1.62.62.64, auth.alipan.com, ccsp-egmas.sf-express.com, yunbusiness.ccb.com, ms.jr.jd.com, me-api.jd.com, *.amap.com
