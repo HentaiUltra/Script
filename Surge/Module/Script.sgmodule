@@ -115,8 +115,6 @@ URL-REGEX,^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash,R
 全能扫描 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/camscanner.js,type=http-response,pattern=https:\/\/(api|api-cs)*\.intsig\.net\/purchase\/cs\/query_property\?,script-update-interval=0
 # > 京东App 历史价格
 京东比价 = type=http-response,requires-body=1,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js
-# > 百度云盘 解锁
-百度云盘 = type=http-response,pattern=https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/bdcloud.js
 # > 豆瓣电影 搜索
 豆瓣电影 = type=http-response,pattern=^https://m.douban.com/movie/subject/.+,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/Douban.js
 # > IT之家 去广告
@@ -141,5 +139,5 @@ EmbyPro = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/r
 # 分割线——————————————————————————
 
 [MITM]
-hostname =  %APPEND% ap*.intsig.net, pan.baidu.com, vsco.co, m.douban.com, m.ithome.com, api.ithome.com, api.zuihuimai.com, napi.ithome.com, api.m.jd.com, api-mifit-cn2.huami.com, as.xiaojukeji.com, pt-starimg.didistatic.com, security.xiaojukeji.com, guard.sec.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, res.xiaojukeji.com, shop-gw.chengxinyouxuan.com, img-ys011.didistatic.com, wallet.95516.com, api-daoshang.shiqiao.com, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, mb3admin.com, flowplus.meituan.net, s3plus.meituan.net, api.m.jd.com, img10.360buyimg.com, edith.xiaohongshu.com, api-access.pangolin-sdk-toutiao.com, *.aoscdn.com, *.apsapp.cn, wallpaper.soutushenqi.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, spclient.wg.spotify.com, ossgw.alicdn.com
+hostname =  %APPEND% ap*.intsig.net, vsco.co, m.douban.com, m.ithome.com, api.ithome.com, api.zuihuimai.com, napi.ithome.com, api.m.jd.com, api-mifit-cn2.huami.com, as.xiaojukeji.com, pt-starimg.didistatic.com, security.xiaojukeji.com, guard.sec.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, res.xiaojukeji.com, shop-gw.chengxinyouxuan.com, img-ys011.didistatic.com, wallet.95516.com, api-daoshang.shiqiao.com, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, mb3admin.com, flowplus.meituan.net, s3plus.meituan.net, api.m.jd.com, img10.360buyimg.com, edith.xiaohongshu.com, api-access.pangolin-sdk-toutiao.com, *.aoscdn.com, *.apsapp.cn, wallpaper.soutushenqi.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, spclient.wg.spotify.com, ossgw.alicdn.com
 

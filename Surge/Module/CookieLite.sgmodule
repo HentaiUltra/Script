@@ -1,12 +1,12 @@
 #!name=Cookie获取
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-02-27 10:00
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-10-30 17:20
 #!system=ios
 
 [Script]
 # > 伊利乳品 小程序获取
-伊利乳品 = type=http-request, requires-body=1, pattern=https:\/\/club\.yili\.com\/MALLIFChe\/MCSWSIAPI\.asmx\/Call,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.cookie.js
+伊利乳品 = type=http-request,pattern=https:\/\/club\.yili\.com\/MALLIFChe\/MCSWSIAPI\.asmx\/Call,requires-body=1,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.cookie.js
 # > 顺丰速运 app获取
-顺丰速运 = type=http-request, pattern=^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/user\/universalSign,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js,requires-body=1
+顺丰速运 = type=http-request,pattern=^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/user\/universalSign,requires-body=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
 
 # 分割线——————————————————————————
 

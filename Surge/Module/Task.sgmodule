@@ -1,26 +1,26 @@
 #!name=定时任务脚本
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-10-16 10:00
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2022-10-30 17:20
 #!system=ios
 
 [Script]
 # > IT之家
-ＩＴ之家 = type=cron,cronexp=0 0 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.js,script-update-interval=0
+软媒之家 = type=cron,cronexp=0 0 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.js,script-update-interval=0,timeout=30
 # > 喜马拉雅
 喜马拉雅 = type=cron,cronexp=30 0 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/xmlySign.js,script-update-interval=0,timeout=30
-# > 建行生活
-建行生活 = type=cron,cronexp=0 1 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/jhsh_checkIn.js,script-update-interval=0,timeout=30
+# > 美团买菜
+美团买菜 = type=cron,cronexp="0 1 0,1 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.mallcoin.task.js,script-update-interval=0,timeout=30
 # > 网易新闻
-网易新闻 = type=cron,cronexp=30 1 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasenews/neteasenews.js,script-update-interval=0
+网易新闻 = type=cron,cronexp=30 1 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasenews/neteasenews.js,script-update-interval=0,timeout=30
 # > 什么值得买
-值买签到 = type=cron,cronexp=30 2 0 * * *,wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_daily.js,script-update-interval=0
+值买签到 = type=cron,cronexp=30 2 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_daily.js,script-update-interval=0,timeout=60
 # > 慢慢买
-慢买签到 = type=cron,cronexp=0 3 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js,script-update-interval=0
+慢买签到 = type=cron,cronexp=0 3 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js,script-update-interval=0,timeout=30
 # > 伊利乳品
-伊利乳品 = type=cron,cronexp=0 4 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/yiLi.js
+伊利乳品 = type=cron,cronexp=0 4 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/yiLi.js,script-update-interval=0,timeout=30
 # > 爱奇艺
-iQIYI签到 = type=cron,cronexp=30 4 0 * * *,wake-system=1,timeout=120,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js,script-update-interval=0
+iQIYI签到 = type=cron,cronexp=30 4 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js,script-update-interval=0,timeout=120
 # > 阿里云盘
-阿里云盘 = type=cron,cronexp=0 6 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js,script-update-interval=0
+阿里云盘 = type=cron,cronexp=0 6 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js,script-update-interval=0,timeout=60
 # > 顺丰速运
 顺丰速运 = type=cron,cronexp=30 6 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js,script-update-interval=0,timeout=30
 # > 高德打车
