@@ -25,11 +25,13 @@ iQIYI签到 = type=cron,cronexp=30 4 0 * * *,wake-system=1,script-path=https://r
 顺丰速运 = type=cron,cronexp=30 6 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js,script-update-interval=0,timeout=30
 # > 高德打车
 高德打车 = type=cron,cronexp=0 7 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js,script-update-interval=0,timeout=30
-# > i 茅台
-i 茅台 = type=cron,cronexp=17 9 * * *,timeout=60,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/i-maotai.js,script-update-interval=0
+# > 托迈酷客
+托迈酷客 = type=cron,cronexp=30 7 0 * * *,timeout=60,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/ThomasCook.js,script-update-interval=0,timeout=30
 # > 今日黄历
 今日黄历 = type=cron,cronexp=8 8 8 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/JavaScript/Surge/wnCalendar.js,script-update-interval=0,timeout=30
 # > 彩票开奖
 彩票查询 = type=cron,cronexp=0 20 21 * * * ,script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/ssq/ssq.js,script-update-interval=0
-# > SUB 订阅同步
-订阅同步 = type=cron,cronexp=15 0 20 * * *,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js,script-update-interval=0,wake-system=1,timeout=60
+# > Boxjs备份
+数据备份 = type=cron,cronexp=0 50 23 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js,script-update-interval=0,,script-update-interval=0,timeout=60
+# > SUB订阅同步
+订阅同步 = type=cron,cronexp=30 50 23 * * *,wake-system=1,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js,script-update-interval=0,timeout=60
