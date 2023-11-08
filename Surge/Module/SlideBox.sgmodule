@@ -1,0 +1,12 @@
+#!name=SlideBox
+#!desc=SlideBox解锁
+#!system=ios
+
+[Script]
+# > SlideBox
+SlideBox解锁 = type=http-response, pattern=^https?:\/\/.*-slidebox-ios-prod\.cloudfunctions\.net\/api_v1, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/slidebox.js, timeout=60, script-update-interval=0
+
+# 分割线——————————————————————————
+
+[MITM]
+hostname = %APPEND% *-slidebox-ios-prod.cloudfunctions.net
