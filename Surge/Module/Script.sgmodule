@@ -1,5 +1,5 @@
 #!name=脚本解锁
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-11-08 10:14
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-11-24 10:40
 #!system=ios
 
 # 分割线——————————————————————————
@@ -15,12 +15,8 @@ skip-proxy = %APPEND% www.baidu.com,yunbusiness.ccb.com,wxh.wo.cn,gate.lagou.com
 # 分割线——————————————————————————
 
 [Rule]
-# > VSCO 代理
-DOMAIN,measurement.com,PROXY
-# > 555电影网
-DOMAIN,www.o8tv.com,DIRECT
-# > 大师兄影视
-DOMAIN,dsxys.pro,DIRECT
+# > Jsbox Erots 商店代理
+DOMAIN,lc.liuguogy.com,Hong Kong
 # > Safari 防跳转
 DOMAIN,app-site-association.cdn-apple.com,REJECT
 # > 爱奇艺 去广告
@@ -39,8 +35,6 @@ OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0
 URL-REGEX,^https:\/\/api-mifit-cn2\.huami\.com\/discovery\/mi\/cards\/startpage_ad,REJECT
 # > 京东极速版 去广告
 URL-REGEX,https://api.m.jd.com/client.action\?functionId=lite_advertising,REJECT
-# > 京东金融 去广告
-URL-REGEX,^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/(new)?na\/m\/getLoadingPicture,REJECT
 # > 滴滴出行 去广告
 //01 安全提示横幅
 URL-REGEX,^https:\/\/guard\.sec\.xiaojukeji\.com\/api\/guard\/psg\/v2\/getShieldStatus,REJECT
@@ -63,8 +57,6 @@ URL-REGEX,^https:\/\/img-ys011\.didistatic\.com\/static,REJECT
 URL-REGEX,^https:\/\/pt-starimg\.didistatic\.com\/static,REJECT
 # > 云闪付 去广告
 URL-REGEX,^https:\/\/wallet\.95516\.com\/s\/wl\/icon\/long,REJECT
-# > 狮桥司机 去广告
-URL-REGEX,^https:\/\/api-daoshang\.shiqiao\.com\/cloud-common\/(startupPageNew|versionManger)\/(query$|isUpdate$),REJECT
 # > 向日葵 去广告
 DOMAIN,dm.toutiao.com,REJECT
 DOMAIN-KEYWORD,upload-cdn.orayimg.com,REJECT
@@ -135,8 +127,6 @@ EmbyPro = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/r
 声田歌词 = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/dompling/Script/master/spotify/spotify-lyric.ios.js
 # > 搜图神器 解锁
 搜图神器 = type=http-response,pattern=^http:\/\/wallpaper\.soutushenqi\.com\/api\/.+\/account\/token,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/soutu.js
-# > 薄荷健康 解锁超级会员
-薄荷健康 = type=http-response,pattern=^https?:\/\/api\.boohee\.com\/app-interface\/.+\/user\/user_info,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/bohejiankang.js
 # > WallCraft 动态壁纸
 WallCraft壁纸 = type=http-response,pattern=^https?:\/\/billing-ios\.wallpaperscraft\.com\/verify_receipt\/remove_ads$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Wall.js
 # > TopWidget万能小组件
@@ -149,5 +139,5 @@ WallCraft壁纸 = type=http-response,pattern=^https?:\/\/billing-ios\.wallpapers
 # 分割线——————————————————————————
 
 [MITM]
-hostname =  %APPEND% ap*.intsig.net,  restore-access.indream.app, vsco.co, m.douban.com, m.ithome.com, api.ithome.com,api.zuihuimai.com, napi.ithome.com, api.m.jd.com, api-mifit-cn2.huami.com, as.xiaojukeji.com, pt-starimg.didistatic.com,security.xiaojukeji.com,guard.sec.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, res.xiaojukeji.com, shop-gw.chengxinyouxuan.com,img-ys011.didistatic.com, wallet.95516.com, api-daoshang.shiqiao.com, mb3admin.com, flowplus.meituan.net, s3plus.meituan.net, api.m.jd.com, img10.360buyimg.com, edith.xiaohongshu.com,api-access.pangolin-sdk-toutiao.com, *.aoscdn.com, *.apsapp.cn, wallpaper.soutushenqi.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, spclient.wg.spotify.com, ossgw.alicdn.com, api.boohee.com, *.wallpaperscraft.com,top-widgets-api.xiaozujian.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, *.meiyan.com
+hostname =  %APPEND% ap*.intsig.net,  restore-access.indream.app, vsco.co, m.douban.com, m.ithome.com, api.ithome.com,api.zuihuimai.com, napi.ithome.com, api.m.jd.com, api-mifit-cn2.huami.com, as.xiaojukeji.com, pt-starimg.didistatic.com,security.xiaojukeji.com,guard.sec.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, res.xiaojukeji.com, shop-gw.chengxinyouxuan.com,img-ys011.didistatic.com, wallet.95516.com, api-daoshang.shiqiao.com, mb3admin.com, flowplus.meituan.net, s3plus.meituan.net, api.m.jd.com, img10.360buyimg.com, edith.xiaohongshu.com,api-access.pangolin-sdk-toutiao.com, *.aoscdn.com, *.apsapp.cn, wallpaper.soutushenqi.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, spclient.wg.spotify.com, ossgw.alicdn.com, *.wallpaperscraft.com,top-widgets-api.xiaozujian.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, *.meiyan.com
 
