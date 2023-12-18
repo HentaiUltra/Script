@@ -1,5 +1,5 @@
 #!name=脚本解锁
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-11-29 17:20
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-12-18 11:00
 #!system=ios
 
 # 分割线——————————————————————————
@@ -10,7 +10,16 @@
 
 [General]
 # > 代理检测
-skip-proxy = %APPEND% www.baidu.com,yunbusiness.ccb.com,wxh.wo.cn,gate.lagou.com,www.abchina.com.cn,www.shanbay.com,login-service.mobile-bank.psbc.com,mobile-bank.psbc.com
+skip-proxy = %APPEND% www.baidu.com,yunbusiness.ccb.com,wxh.wo.cn,gate.lagou.com,www.abchina.com.cn,www.shanbay.com,login-service.mobile-bank.psbc.com,mobile-bank.psbc.com,iosapps.itunes.apple.com
+
+# 分割线——————————————————————————
+
+[URL Rewrite]
+# TikTok区域解锁 JP=日本 US=美国 SG=新加坡
+(?<=_region=)CN(?=&) JP 307
+(^h.+v5\/)(.+) $1 302
+(?<=&mcc_mnc=)4 2 307
+(?<=eme\/v)2(?=\/f\w{2}d\/\?.*) 1 302
 
 # 分割线——————————————————————————
 
@@ -69,13 +78,6 @@ URL-REGEX,^https:\/\/api\.zuihuimai\.com,REJECT
 # > 美团 去广告
 URL-REGEX,^https:\/\/flowplus\.meituan\.net\/v1\/mss_\w+\/linglong\/\d+\.jpg$,REJECT
 URL-REGEX,^https:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$,REJECT
-# > 中国联通 去开屏
-DOMAIN-SUFFIX,m1.ad.10010.com,REJECT
-# > 中国电信 去开屏
-DOMAIN,ad.21cn.com,REJECT
-DOMAIN,ad.k.21cn.com,REJECT
-DOMAIN,admarket.21cn.com,REJECT
-DOMAIN,adshows.21cn.com,REJECT
 # > 饿了么 去开屏
 URL-REGEX,^https?:\/\/elemecdn.com\/.+\/sitemap,REJECT
 URL-REGEX,^https?:\/\/fuss10.elemecdn.com\/.+\/w\/640\/h\/\d{3,4},REJECT
@@ -87,12 +89,21 @@ URL-REGEX,^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/r
 URL-REGEX,^https?:\/\/cube\.elemecdn\.com\/\w\/\w{2}\/\w+mp4\.mp4\?,REJECT
 URL-REGEX,^https?:\/\/elemecdn\.com\/.+?\/sitemap,REJECT
 URL-REGEX,^https?:\/\/www1\.elecfans\.com\/www\/delivery\/,REJECT
+# > 中国联通 去开屏
+DOMAIN-SUFFIX,m1.ad.10010.com,REJECT
+# > 中国电信 去开屏
+DOMAIN,ad.21cn.com,REJECT
+DOMAIN,ad.k.21cn.com,REJECT
+DOMAIN,admarket.21cn.com,REJECT
+DOMAIN,adshows.21cn.com,REJECT
 # > 顺丰速运 去开屏
 URL-REGEX,^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/appVersion\/detectionUpgrade,REJECT
 URL-REGEX,^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/,REJECT
 URL-REGEX,^https?:\/\/shopic\.sf-express\.com\/crm\/mobile\/common\/flashscreen,REJECT
 # > 拼多多 去开屏
 URL-REGEX,^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash,REJECT
+# > MyBlockAds分流（Script-Hub）
+RULE-SET,http://script.hub/file/_start_/https://raw.githubusercontent.com/RuCu6/QuanX/main/Rules/MyBlockAds.list/_end_/MyBlockAds.list?type=rule-set&target=surge-rule-set&del=true&nore=true,REJECT
 
 # 分割线——————————————————————————
 
@@ -103,8 +114,6 @@ URL-REGEX,^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash,R
 [Script]
 # > iTunes
 iTunes = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js
-# Nicegram
-Nicegram = type=http-response,pattern=^https?:\/\/restore-access\.indream\.app\/restoreAccess,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/nicegram.js
 # > 扫描全能王 pro
 全能扫描 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/camscanner.js,type=http-response,pattern=https:\/\/(api|api-cs)*\.intsig\.net\/purchase\/cs\/query_property\?,script-update-interval=0
 # > 京东App 历史价格
@@ -115,30 +124,27 @@ Nicegram = type=http-response,pattern=^https?:\/\/restore-access\.indream\.app\/
 ＩＴ之家 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/(napi|api|m)\.ithome\.com\/(api|json)\/(news|topmenu|listpage|newslist|slide)\/(getfeeds|index|slide),script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/ithome/ithome.ad.js,script-update-interval=0
 # > Emby 解锁
 EmbyPro = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/Emby.js
-# > 小红书 去广告
-开屏广告 = type=http-response,pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/xiaohongshu/xiaohongshu.ad.js,script-update-interval=0
-推荐广告 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/xiaohongshu/xiaohongshu.ad.js,script-update-interval=0
-小红书去水印 = type=http-response,pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(v2\/note\/feed|v3\/note\/videofeed)\?,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js
 # > 奈飞评分
 奈飞评分 = type=http-request,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
 奈飞评分 = type=http-response,requires-body=1,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
-# > 傲软抠图，傲软扫描，傲软PDF转换，傲软PDF编辑，傲软投屏，咖映，轻闪PDF，乃糖小组件，佐糖，佐糖照片修复 解锁
-傲软全家桶 = type=http-response,pattern= ^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/arqjt.js
 # > 声田音乐 歌词翻译
 声田歌词 = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/dompling/Script/master/spotify/spotify-lyric.ios.js
+# > 傲软抠图，傲软扫描，傲软PDF转换，傲软PDF编辑，傲软投屏，咖映，轻闪PDF，乃糖小组件，佐糖，佐糖照片修复 解锁
+傲软全家桶 = type=http-response,pattern= ^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/arqjt.js
 # > 搜图神器 解锁
 搜图神器 = type=http-response,pattern=^http:\/\/wallpaper\.soutushenqi\.com\/api\/.+\/account\/token,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/soutu.js
 # > WallCraft 动态壁纸
 WallCraft壁纸 = type=http-response,pattern=^https?:\/\/billing-ios\.wallpaperscraft\.com\/verify_receipt\/remove_ads$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Wall.js
-# > TopWidget万能小组件
-万能小组件 = type=http-response,pattern=^https?:\/\/top-widgets-api\.xiaozujian\.com\/api\/app\/config\/userConfig,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/widgets.js
 # > 美图秀秀
 美图秀秀 = type=http-response,pattern=^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxx.js
 # 美颜相机
 美颜相机 = type=http-response,pattern=^https?:\/\/(api|community)\.meiyan\.com\/(vip|v\d)\/(user_center|user_info|user\/(.*?)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/myxj.js
+# > VVebo 用户主页修复
+微博主页 = type=http-request, pattern=^https:\/\/api\.weibo\.cn\/2\/(users\/show\?|statuses\/user_timeline\?), requires-body=0, timeout=5, script-path=https://raw.githubusercontent.com/suiyuran/stash/main/scripts/fix-vvebo-user-timeline.js
+微博主页 = type=http-response, pattern=^https:\/\/api\.weibo\.cn\/2\/profile\/statuses\/tab\?, requires-body=1, timeout=5, script-path=https://raw.githubusercontent.com/suiyuran/stash/main/scripts/fix-vvebo-user-timeline.js
 
 # 分割线——————————————————————————
 
 [MITM]
-hostname =  %APPEND% ap*.intsig.net, buy.itunes.apple.com,  restore-access.indream.app, m.douban.com, m.ithome.com, api.ithome.com,api.zuihuimai.com, napi.ithome.com, api.m.jd.com, api-mifit-cn2.huami.com, as.xiaojukeji.com, pt-starimg.didistatic.com,security.xiaojukeji.com,guard.sec.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, res.xiaojukeji.com, shop-gw.chengxinyouxuan.com,img-ys011.didistatic.com, wallet.95516.com, api-daoshang.shiqiao.com, mb3admin.com, flowplus.meituan.net, s3plus.meituan.net, api.m.jd.com, img10.360buyimg.com, edith.xiaohongshu.com,api-access.pangolin-sdk-toutiao.com, *.aoscdn.com, *.apsapp.cn, wallpaper.soutushenqi.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, spclient.wg.spotify.com, ossgw.alicdn.com, *.wallpaperscraft.com,top-widgets-api.xiaozujian.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, *.meiyan.com
+hostname =  %APPEND% ap*.intsig.net, buy.itunes.apple.com, m.douban.com, m.ithome.com, api.ithome.com,api.zuihuimai.com, napi.ithome.com, api.m.jd.com, api-mifit-cn2.huami.com, as.xiaojukeji.com, pt-starimg.didistatic.com,security.xiaojukeji.com,guard.sec.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, res.xiaojukeji.com, shop-gw.chengxinyouxuan.com,img-ys011.didistatic.com, wallet.95516.com, mb3admin.com, flowplus.meituan.net, s3plus.meituan.net, img10.360buyimg.com, edith.xiaohongshu.com,api-access.pangolin-sdk-toutiao.com, *.aoscdn.com, *.apsapp.cn, wallpaper.soutushenqi.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, spclient.wg.spotify.com, ossgw.alicdn.com, *.wallpaperscraft.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, *.meiyan.com, api.weibo.cn
 
