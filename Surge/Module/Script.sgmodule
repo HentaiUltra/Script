@@ -1,5 +1,5 @@
 #!name=脚本解锁
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-12-18 11:00
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-12-19 14:50
 #!system=ios
 
 # 分割线——————————————————————————
@@ -102,8 +102,6 @@ URL-REGEX,^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/,
 URL-REGEX,^https?:\/\/shopic\.sf-express\.com\/crm\/mobile\/common\/flashscreen,REJECT
 # > 拼多多 去开屏
 URL-REGEX,^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash,REJECT
-# > MyBlockAds分流（Script-Hub）
-RULE-SET,http://script.hub/file/_start_/https://raw.githubusercontent.com/RuCu6/QuanX/main/Rules/MyBlockAds.list/_end_/MyBlockAds.list?type=rule-set&target=surge-rule-set&del=true&nore=true,REJECT
 
 # 分割线——————————————————————————
 
