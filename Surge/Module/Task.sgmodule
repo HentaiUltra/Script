@@ -1,5 +1,5 @@
 #!name=定时任务脚本
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-12-18 11:00
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-12-21 11:00
 #!system=ios
 
 [Script]
@@ -27,6 +27,8 @@ iQIYI签到 = type=cron,cronexp=30 4 0 * * *,wake-system=1,script-path=https://r
 银联闪付 = type=cron,cronexp=30 7 0 * * *,timeout=60,script-path=https://gist.githubusercontent.com/githubdulong/eedb88b4dcc39cc674c19efa68377a16/raw/ysfV2.js,script-update-interval=0,timeout=30
 # > 托迈酷客
 托迈酷客 = type=cron,cronexp=30 7 0 * * *,timeout=60,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/ThomasCook.js,script-update-interval=0,timeout=30
+# > 捷停车签到
+捷停车签到 = type=cron, cronexp=15 9 * * *, timeout=60, script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jparking_sign.js, script-update-interval=0
 # > 今日黄历
 今日黄历 = type=cron,cronexp=8 8 8 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/JavaScript/Surge/wnCalendar.js,script-update-interval=0,timeout=30
 # > 彩票开奖

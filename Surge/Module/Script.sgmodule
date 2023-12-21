@@ -1,5 +1,5 @@
 #!name=脚本解锁
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-12-19 14:50
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-12-21 11:00
 #!system=ios
 
 # 分割线——————————————————————————
@@ -140,9 +140,12 @@ WallCraft壁纸 = type=http-response,pattern=^https?:\/\/billing-ios\.wallpapers
 # > VVebo 用户主页修复
 微博主页 = type=http-request, pattern=^https:\/\/api\.weibo\.cn\/2\/(users\/show\?|statuses\/user_timeline\?), requires-body=0, timeout=5, script-path=https://raw.githubusercontent.com/suiyuran/stash/main/scripts/fix-vvebo-user-timeline.js
 微博主页 = type=http-response, pattern=^https:\/\/api\.weibo\.cn\/2\/profile\/statuses\/tab\?, requires-body=1, timeout=5, script-path=https://raw.githubusercontent.com/suiyuran/stash/main/scripts/fix-vvebo-user-timeline.js
+# > 取捷停车
+获取捷停车userId = type=http-request, pattern=^https:\/\/sytgate\.jslife\.com\.cn\/core-gateway\/order\/carno\/pay\/info, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jparking_sign.js
 
 # 分割线——————————————————————————
 
 [MITM]
-hostname =  %APPEND% ap*.intsig.net, buy.itunes.apple.com, m.douban.com, m.ithome.com, api.ithome.com,api.zuihuimai.com, napi.ithome.com, api.m.jd.com, api-mifit-cn2.huami.com, as.xiaojukeji.com, pt-starimg.didistatic.com,security.xiaojukeji.com,guard.sec.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, res.xiaojukeji.com, shop-gw.chengxinyouxuan.com,img-ys011.didistatic.com, wallet.95516.com, mb3admin.com, flowplus.meituan.net, s3plus.meituan.net, img10.360buyimg.com, edith.xiaohongshu.com,api-access.pangolin-sdk-toutiao.com, *.aoscdn.com, *.apsapp.cn, wallpaper.soutushenqi.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, spclient.wg.spotify.com, ossgw.alicdn.com, *.wallpaperscraft.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, *.meiyan.com, api.weibo.cn
+hostname =  %APPEND% ap*.intsig.net, buy.itunes.apple.com, m.douban.com, m.ithome.com, api.ithome.com,api.zuihuimai.com, napi.ithome.com, api.m.jd.com, api-mifit-cn2.huami.com, as.xiaojukeji.com, pt-starimg.didistatic.com,security.xiaojukeji.com,guard.sec.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, res.xiaojukeji.com, shop-gw.chengxinyouxuan.com,img-ys011.didistatic.com, wallet.95516.com, mb3admin.com, flowplus.meituan.net, s3plus.meituan.net, img10.360buyimg.com, edith.xiaohongshu.com,api-access.pangolin-sdk-toutiao.com, *.aoscdn.com, *.apsapp.cn, wallpaper.soutushenqi.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, spclient.wg.spotify.com, ossgw.alicdn.com, *.wallpaperscraft.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, *.meiyan.com, api.weibo.cn,  %APPEND% sytgate.jslife.com.cn
+
 
