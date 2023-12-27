@@ -1,5 +1,5 @@
 #!name=脚本解锁
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-12-21 11:00
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-12-27 16:10
 #!system=ios
 
 # 分割线——————————————————————————
@@ -24,12 +24,12 @@ skip-proxy = %APPEND% www.baidu.com,yunbusiness.ccb.com,wxh.wo.cn,gate.lagou.com
 # 分割线——————————————————————————
 
 [Rule]
-# > Jsbox Erots 商店代理
-DOMAIN,lc.liuguogy.com,Hong Kong
 # > Safari 防跳转
 DOMAIN,app-site-association.cdn-apple.com,REJECT
 # > 爱奇艺 去广告
 DOMAIN-SUFFIX,cupid.iqiyi.com,REJECT
+# > 锦毛鼠Emby
+DOMAIN-SUFFIX,jmsooo.com,DIRECT
 # > 优酷 去广告
 DOMAIN, iyes.youku.com,REJECT
 URL-REGEX,^http:\/\/.*\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
