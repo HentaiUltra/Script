@@ -14,21 +14,19 @@
 # > 百度贴吧
 百度贴吧 = type=cron,cronexp=0 2 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js,script-update-interval=0,timeout=60
 # > 伊利乳品
-伊利乳品 = type=cron,cronexp=0 4 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/yiLi.js,script-update-interval=0,timeout=30
+伊利乳品 = type=cron,cronexp=30 2 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/yiLi.js,script-update-interval=0,timeout=30
 # > 爱奇艺
-iQIYI签到 = type=cron,cronexp=30 4 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js,script-update-interval=0,timeout=120
+iQIYI签到 = type=cron,cronexp=0 3 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js,script-update-interval=0,timeout=120
 # > 阿里云盘
-阿里云盘 = type=cron,cronexp=0 6 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js,script-update-interval=0,timeout=60
+阿里云盘 = type=cron,cronexp=30 3 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js,script-update-interval=0,timeout=60
 # > 顺丰速运
-顺丰速运 = type=cron,cronexp=30 6 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js,script-update-interval=0,timeout=30
-# > 高德打车
-高德打车 = type=cron,cronexp=0 7 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js,script-update-interval=0,timeout=30
+顺丰速运 = type=cron,cronexp=0 4 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js,script-update-interval=0,timeout=30
 # > 云闪付
-银联闪付 = type=cron,cronexp=30 7 0 * * *,timeout=60,script-path=https://gist.githubusercontent.com/githubdulong/eedb88b4dcc39cc674c19efa68377a16/raw/ysfV2.js,script-update-interval=0,timeout=30
+银联闪付 = type=cron,cronexp=30 4 0 * * *,timeout=60,script-path=https://gist.githubusercontent.com/githubdulong/eedb88b4dcc39cc674c19efa68377a16/raw/ysfV2.js,script-update-interval=0,timeout=30
 # > 托迈酷客
-托迈酷客 = type=cron,cronexp=30 7 0 * * *,timeout=60,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/ThomasCook.js,script-update-interval=0,timeout=30
+托迈酷客 = type=cron,cronexp=0 5 0 * * *,timeout=60,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/ThomasCook.js,script-update-interval=0,timeout=30
 # > 捷停车签到
-捷停车签到 = type=cron, cronexp=15 9 * * *, timeout=60, script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jparking_sign.js, script-update-interval=0
+捷停车签到 = type=cron, cronexp=30 5 * * *, timeout=60, script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jparking_sign.js, script-update-interval=0
 # > 今日黄历
 今日黄历 = type=cron,cronexp=8 8 8 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/JavaScript/Surge/wnCalendar.js,script-update-interval=0,timeout=30
 # > 彩票开奖
