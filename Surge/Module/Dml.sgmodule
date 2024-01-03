@@ -1,0 +1,12 @@
+#!name=达乐美披萨
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2024-01-03 09:50
+#!system=ios
+
+[Script]
+达乐美披萨 = type=cron, cronexp="30 10 * * *", script-path=https://gist.githubusercontent.com/Sliverkiss/6b4da0d367d13790a9fd1d928c82bdf8/raw/100269fc92d8ed607fd5f105c2c5b32876101ff1/dlm.js, timeout=300
+达乐美披萨获取token = type=http-request, pattern=^https:\/\/game\.dominos\.com\.cn\/gold\/game\/gameDone, script-path=https://gist.githubusercontent.com/Sliverkiss/6b4da0d367d13790a9fd1d928c82bdf8/raw/100269fc92d8ed607fd5f105c2c5b32876101ff1/dlm.js, requires-body=true, timeout=10
+
+# 分割线——————————————————————————
+
+[MITM]
+hostname = %APPEND% game.dominos.com.cn
