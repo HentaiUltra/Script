@@ -1,5 +1,5 @@
 #!name=脚本解锁
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-12-27 16:10
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2024-01-04 09:50
 #!system=ios
 
 # 分割线——————————————————————————
@@ -7,6 +7,11 @@
 [Header Rewrite]
 # > New Bing Ai
 ^https:\/\/www\.bing\.com\/(search|new) header-replace-regex User-Agent \w+\/[\d\.]+$ "AppleWebKit/537.36 Chrome/110.0 Safari/537.36 Edg/110.0"
+
+[Map Local]
+# 彩云天气 去广告
+^https:\/\/biz\.cyapi\.cn\/p\/v1\/entries\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
 
 [General]
 # > 代理检测
