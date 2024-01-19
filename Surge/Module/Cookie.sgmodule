@@ -1,5 +1,5 @@
 #!name=Cookie获取
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2024-01-02 17:45
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2024-01-19 10:00
 #!system=ios
 
 [Script]
@@ -17,9 +17,7 @@
 伊利乳品 = type=http-request,pattern=https:\/\/club\.yili\.com\/MALLIFChe\/MCSWSIAPI\.asmx\/Call,requires-body=1,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.cookie.js
 # > 爱奇艺
 # > https://m.iqiyi.com/user.html
-iQIYI获取 = type=http-request,pattern=^https:\/\/passport\.iqiyi\.com\/apis\/user\/,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
-# > 阿里云盘 app获取
-阿里云盘 = type=http-response,pattern=https:\/\/auth.alipan.com\/v2\/account\/token,requires-body=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
+爱奇艺 = type=http-request,pattern=^https:\/\/passport\.iqiyi\.com\/apis\/user\/,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
 # > 建行生活 app获取
 建行生活 = type=http-request,pattern=^https:\/\/yunbusiness\.ccb\.com\/(clp_coupon|clp_service)\/txCtrl\?txcode=(A3341A038|autoLogin),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js
 # > 京东CK Web获取
@@ -32,4 +30,4 @@ iQIYI获取 = type=http-request,pattern=^https:\/\/passport\.iqiyi\.com\/apis\/u
 # 分割线——————————————————————————
 
 [MITM]
-hostname = %APPEND% *.m.163.com, c.tieba.baidu.com, tiebac.baidu.com, *.xxjjappss.com,*.*.mob.com,*.huaerdadi.com, my.ruanmei.com, account.huami.com, club.yili.com, passport.iqiyi.com, mobile.ximalaya.com, 180.153.255.*, 180.153.255.10*, 180.153.250.*, 114.80.99.*, 1.62.62.64, auth.alipan.com, yunbusiness.ccb.com, ms.jr.jd.com, me-api.jd.com, apis.folidaymall.com,  youhui.95516.com
+hostname = %APPEND% *.m.163.com, c.tieba.baidu.com, tiebac.baidu.com, *.xxjjappss.com,*.*.mob.com,*.huaerdadi.com, my.ruanmei.com, account.huami.com, club.yili.com, passport.iqiyi.com, mobile.ximalaya.com, 180.153.255.*, 180.153.255.10*, 180.153.250.*, 114.80.99.*, 1.62.62.64, yunbusiness.ccb.com, ms.jr.jd.com, me-api.jd.com, apis.folidaymall.com,  youhui.95516.com
