@@ -1,5 +1,5 @@
 #!name=脚本解锁
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2024-01-04 09:50
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2024-02-01 12:00
 #!system=ios
 
 # 分割线——————————————————————————
@@ -11,20 +11,12 @@
 [Map Local]
 # 彩云天气 去广告
 ^https:\/\/biz\.cyapi\.cn\/p\/v1\/entries\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-
+# 向日葵 去广告
+^https:\/\/client-api-v2\.oray\.com\/materials\/SUNLOGIN_CLIENT_IOS_PROMOTION data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
 [General]
 # > 代理检测
 skip-proxy = %APPEND% www.baidu.com,yunbusiness.ccb.com,wxh.wo.cn,gate.lagou.com,www.abchina.com.cn,www.shanbay.com,login-service.mobile-bank.psbc.com,mobile-bank.psbc.com,iosapps.itunes.apple.com
-
-# 分割线——————————————————————————
-
-[URL Rewrite]
-# TikTok区域解锁 JP=日本 US=美国 SG=新加坡
-(?<=_region=)CN(?=&) JP 307
-(^h.+v5\/)(.+) $1 302
-(?<=&mcc_mnc=)4 2 307
-(?<=eme\/v)2(?=\/f\w{2}d\/\?.*) 1 302
 
 # 分割线——————————————————————————
 
@@ -77,7 +69,6 @@ DOMAIN,sl-tk.oray.com,REJECT
 DOMAIN,client-api.oray.com,REJECT
 DOMAIN,push.oray.com,REJECT
 DOMAIN-SUFFIX,offline-adv.oray.com,REJECT
-DOMAIN-KEYWORD,upload-cdn.orayimg.com-upload-activity,REJECT
 # > IT之家 去广告
 URL-REGEX,^https:\/\/api\.zuihuimai\.com,REJECT
 # > 美团 去广告
@@ -107,7 +98,8 @@ URL-REGEX,^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/,
 URL-REGEX,^https?:\/\/shopic\.sf-express\.com\/crm\/mobile\/common\/flashscreen,REJECT
 # > 拼多多 去开屏
 URL-REGEX,^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash,REJECT
-
+# > 建行生活 去开屏
+URL-REGEX,^https?:\/\/yunbusiness\.ccb\.com\/clp_service\/txCtrl\?txcode=A3341A00(6|9),REJECT
 # 分割线——————————————————————————
 
 [URL Rewrite]
@@ -149,6 +141,6 @@ WallCraft壁纸 = type=http-response,pattern=^https?:\/\/billing-ios\.wallpapers
 # 分割线——————————————————————————
 
 [MITM]
-hostname =  %APPEND% ap*.intsig.net, buy.itunes.apple.com, m.douban.com, m.ithome.com, api.ithome.com,api.zuihuimai.com, napi.ithome.com, api.m.jd.com, api-mifit-cn2.huami.com, as.xiaojukeji.com, pt-starimg.didistatic.com,security.xiaojukeji.com,guard.sec.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, res.xiaojukeji.com, shop-gw.chengxinyouxuan.com,img-ys011.didistatic.com, wallet.95516.com, mb3admin.com, flowplus.meituan.net, s3plus.meituan.net, img10.360buyimg.com, edith.xiaohongshu.com,api-access.pangolin-sdk-toutiao.com, *.aoscdn.com, *.apsapp.cn, wallpaper.soutushenqi.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, ossgw.alicdn.com, *.wallpaperscraft.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, *.meiyan.com, api.weibo.cn,  %APPEND% sytgate.jslife.com.cn
+hostname =  %APPEND% ap*.intsig.net, buy.itunes.apple.com, m.douban.com, m.ithome.com, api.ithome.com,api.zuihuimai.com, napi.ithome.com, api.m.jd.com, api-mifit-cn2.huami.com, as.xiaojukeji.com, pt-starimg.didistatic.com,security.xiaojukeji.com,guard.sec.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, res.xiaojukeji.com, shop-gw.chengxinyouxuan.com,img-ys011.didistatic.com, wallet.95516.com, mb3admin.com, flowplus.meituan.net, s3plus.meituan.net, img10.360buyimg.com, edith.xiaohongshu.com,api-access.pangolin-sdk-toutiao.com, *.aoscdn.com, *.apsapp.cn, wallpaper.soutushenqi.com, ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com, ossgw.alicdn.com, *.wallpaperscraft.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, *.meiyan.com, api.weibo.cn,  %APPEND% sytgate.jslife.com.cn ,yunbusiness.ccb.com
 
 
