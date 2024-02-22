@@ -23,8 +23,6 @@ iQIYI签到 = type=cron,cronexp=0 3 0 * * *,wake-system=1,script-path=https://ra
 托迈酷客 = type=cron,cronexp=0 4 0 * * *,timeout=60,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/ThomasCook.js,script-update-interval=0,timeout=30
 # > 捷停车签到
 捷停车签到 = type=cron, cronexp=30 4 * * *, timeout=60, script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jparking_sign.js, script-update-interval=0
-# > 超燃汇签到
-超燃汇签到 = type=cron, cronexp=0 5 * * *, script-path=https://raw.githubusercontent.com/WowYiJiu/Personal/main/Script/burning.js, timeout=60, wake-system=1
 # > 今日黄历
 今日黄历 = type=cron,cronexp=8 8 8 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/JavaScript/Surge/wnCalendar.js,script-update-interval=0,timeout=30
 # > 彩票开奖
