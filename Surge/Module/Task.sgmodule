@@ -1,28 +1,30 @@
 #!name=定时任务脚本
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2023-12-21 11:00
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2024-03-20 18:10
 #!system=ios
 
 [Script]
-# > IT之家
-软媒之家 = type=cron,cronexp=0 0 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.js,script-update-interval=0,timeout=30
 # > 喜马拉雅
-喜马拉雅 = type=cron,cronexp=30 0 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/xmlySign.js,script-update-interval=0,timeout=30
-# > 建行生活
-建行生活 = type=cron,cronexp=0 1 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js,script-update-interval=0,timeout=30
+喜马拉雅 = type=cron,cronexp=0 0 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/xmlySign.js,script-update-interval=0,timeout=30
 # > 网易新闻
-网易新闻 = type=cron,cronexp=30 1 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasenews/neteasenews.js,script-update-interval=0,timeout=30
+网易新闻 = type=cron,cronexp=30 0 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasenews/neteasenews.js,script-update-interval=0,timeout=30
 # > 百度贴吧
-百度贴吧 = type=cron,cronexp=0 2 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js,script-update-interval=0,timeout=60
+百度贴吧 = type=cron,cronexp=0 1 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js,script-update-interval=0,timeout=60
+# > IT之家
+软媒之家 = type=cron,cronexp=30 1 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.js,script-update-interval=0,timeout=30
 # > 伊利乳品
-伊利乳品 = type=cron,cronexp=30 2 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/yiLi.js,script-update-interval=0,timeout=30
+伊利乳品 = type=cron,cronexp=0 2 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/yiLi.js,script-update-interval=0,timeout=30
 # > 爱奇艺
-iQIYI签到 = type=cron,cronexp=0 3 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js,script-update-interval=0,timeout=120
-# > 云闪付
-银联闪付 = type=cron,cronexp=30 3 0 * * *,timeout=60,script-path=https://gist.githubusercontent.com/githubdulong/eedb88b4dcc39cc674c19efa68377a16/raw/ysfV2.js,script-update-interval=0,timeout=30
+iQIYI签到 = type=cron,cronexp=30 2 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js,script-update-interval=0,timeout=120
+# > 建行生活
+建行生活 = type=cron,cronexp=0 3 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js,script-update-interval=0,timeout=30
 # > 托迈酷客
-托迈酷客 = type=cron,cronexp=0 4 0 * * *,timeout=60,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/ThomasCook.js,script-update-interval=0,timeout=30
+托迈酷客 = type=cron,cronexp=30 3 0 * * *,timeout=60,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/ThomasCook.js,script-update-interval=0,timeout=30
+# > 云闪付
+银联闪付 = type=cron,cronexp=0 4 0 * * *,timeout=60,script-path=https://gist.githubusercontent.com/githubdulong/eedb88b4dcc39cc674c19efa68377a16/raw/ysfV2.js,script-update-interval=0,timeout=30
 # > 捷停车签到
 捷停车签到 = type=cron, cronexp=30 4 * * *, timeout=60, script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jparking_sign.js, script-update-interval=0
+# > 顺丰速运
+顺丰速运 = type=cron,cronexp=0 5 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js,script-update-interval=0,timeout=30
 # > 今日黄历
 今日黄历 = type=cron,cronexp=8 8 8 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/JavaScript/Surge/wnCalendar.js,script-update-interval=0,timeout=30
 # > 彩票开奖

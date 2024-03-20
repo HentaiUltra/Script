@@ -1,5 +1,5 @@
 #!name=Cookie获取
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2024-02-22 10:35
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2024-03-20 18:10
 #!system=ios
 
 [Script]
@@ -28,8 +28,10 @@
 银联获取 = type=http-response, pattern=^https:\/\/youhui.95516.com\/newsign\/api\/sharing_power\/showUserTask, requires-body=1, script-path=https://gist.githubusercontent.com/githubdulong/eedb88b4dcc39cc674c19efa68377a16/raw/ysfV2.js
 # > 捷停车 小程序获取
 获取捷停车userId = type=http-request, pattern=^https:\/\/sytgate\.jslife\.com\.cn\/core-gateway\/order\/carno\/pay\/info, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jparking_sign.js
+# > 顺丰速运 app获取
+顺丰速运 = type=http-request,pattern=^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/user\/universalSign,requires-body=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
 
 # 分割线——————————————————————————
 
 [MITM]
-hostname = %APPEND% *.m.163.com, c.tieba.baidu.com, tiebac.baidu.com, *.xxjjappss.com,*.*.mob.com,*.huaerdadi.com, my.ruanmei.com, account.huami.com, club.yili.com, passport.iqiyi.com, mobile.ximalaya.com, 180.153.255.*, 180.153.255.10*, 180.153.250.*, 114.80.99.*, 1.62.62.64, yunbusiness.ccb.com, ms.jr.jd.com, me-api.jd.com, apis.folidaymall.com, youhui.95516.com, %APPEND% sytgate.jslife.com.cn
+hostname = %APPEND% mobile.ximalaya.com, *.m.163.com, c.tieba.baidu.com, tiebac.baidu.com, my.ruanmei.com, account.huami.com, club.yili.com, passport.iqiyi.com, yunbusiness.ccb.com, ms.jr.jd.com, me-api.jd.com, apis.folidaymall.com, youhui.95516.com, sytgate.jslife.com.cn, ccsp-egmas.sf-express.com
