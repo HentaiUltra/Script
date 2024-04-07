@@ -1,6 +1,5 @@
 #!name=抖音国际
 #!desc=Surge版 TikTok解锁区域限制,下载去水印,App需抓包旧版本或在线安装 https://itiktok.best
-#!category=Third-party module
 
 [Rule]
 # > TikTok 分流
