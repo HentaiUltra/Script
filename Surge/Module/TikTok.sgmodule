@@ -1,0 +1,21 @@
+#!name=抖音国际
+#!desc=Surge版 TikTok解锁区域限制,下载去水印,App需抓包旧版本或在线安装 https://itiktok.best
+#!category=Third-party module
+
+[Rule]
+# > TikTok 分流
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TikTok/TikTok.list,𝗝𝗮𝗽𝗮𝗻
+
+[URL Rewrite]
+# > 区域解锁
+(?<=_region=)CN(?=&) JP 307
+(^h.+v5\/)(.+) $1 302
+(?<=&mcc_mnc=)4 2 307
+(?<=eme\/v)2(?=\/f\w{2}d\/\?.*) 1 302
+
+[Script]
+# > TikTok 去水印
+下载水印 = type=http-response,pattern=https?:\/\/.*\.tiktokv\.com\/aweme\/v\d\/(feed|mix\/aweme|aweme\/post|(multi\/)?aweme\/detail|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list|aweme\/favorite),max-size=0,script-update-interval=0,script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/Tiktok.js,requires-body=true,timeout=30,max-size=0
+
+[MITM]
+hostname = %APPEND% *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com
