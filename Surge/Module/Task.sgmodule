@@ -25,7 +25,5 @@ iQIYI签到 = type=cron,cronexp=30 2 0 * * *,wake-system=1,script-path=https://r
 顺丰速运 = type=cron,cronexp=0 5 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js,script-update-interval=0,timeout=30
 # > 网易云音乐热评
 网易云音乐热评 = type=cron,cronexp=0 30 9 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/ranzhigg/ranzhigg/main/wyyrp.js,script-update-interval=0,timeout=30
-# > JAVDsy 每日推荐
-每日推荐 = type=cron,cronexp=0 30 22 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/javday.js,script-update-interval=0,timeout=60
 # > 彩票开奖
 彩票查询 = type=cron,cronexp=0 20 21 * * * ,script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/ssq/ssq.js,script-update-interval=0
