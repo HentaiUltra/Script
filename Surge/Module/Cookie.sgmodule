@@ -1,5 +1,5 @@
 #!name=Cookie获取
-#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2024-04-16 11:20
+#!desc=𝗷𝘂𝗻𝗷𝗶𝗲 最后更新时间 2024-05-07 16:20
 #!system=ios
 
 [Script]
@@ -7,17 +7,10 @@
 喜马拉雅 = type=http-request,pattern=^https?:\/\/xmc\.ximalaya\.com\/xmlymain-login-web\/login\/,requires-body=0,script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/xmlySign.js
 # > 网易新闻 app获取
 网易新闻 = type=http-request,pattern=^https:\/\/(.*?)c\.m\.163\.com\/uc\/api\/sign\/v3\/commit,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasenews/neteasenews.cookie.js
-# > 百度贴吧 app获取
-贴吧获取 = type=http-request,pattern=^https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
-贴吧获取 = type=http-request,pattern=^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/channelIconConfig,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
-贴吧获取 = type=http-request,pattern=^https?:\/\/tiebac\.baidu\.com\/c\/u\/follow\/getFoldedMessageUserInfo,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
 # > IT之家 app获取
 软媒之家 = type=http-request,pattern=^https:\/\/my\.ruanmei\.com\/api\/usersign\/getsigninfo?,debug=true,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.cookie.js
 # > 伊利乳品 小程序获取
 伊利乳品 = type=http-request,pattern=https:\/\/club\.yili\.com\/MALLIFChe\/MCSWSIAPI\.asmx\/Call,requires-body=1,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.cookie.js
-# > 爱奇艺
-# > https://m.iqiyi.com/user.html
-爱奇艺 = type=http-request,pattern=^https:\/\/passport\.iqiyi\.com\/apis\/user\/,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
 # > 建行生活 app获取
 建行生活 = type=http-request,pattern=^https:\/\/yunbusiness\.ccb\.com\/(clp_coupon|clp_service)\/txCtrl\?txcode=(A3341A038|autoLogin),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js
 # > 京东CK Web获取
@@ -32,4 +25,4 @@
 # 分割线——————————————————————————
 
 [MITM]
-hostname = %APPEND% mobile.ximalaya.com, *.m.163.com, c.tieba.baidu.com, tiebac.baidu.com, my.ruanmei.com, account.huami.com, club.yili.com, passport.iqiyi.com, yunbusiness.ccb.com, ms.jr.jd.com, me-api.jd.com, apis.folidaymall.com, sytgate.jslife.com.cn, ccsp-egmas.sf-express.com
+hostname = %APPEND% mobile.ximalaya.com, *.m.163.com, my.ruanmei.com, account.huami.com, club.yili.com, yunbusiness.ccb.com, ms.jr.jd.com, me-api.jd.com, apis.folidaymall.com, sytgate.jslife.com.cn, ccsp-egmas.sf-express.com
