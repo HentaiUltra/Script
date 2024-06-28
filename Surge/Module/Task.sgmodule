@@ -17,8 +17,6 @@
 托迈酷客 = type=cron,cronexp=0 25 0 * * *,timeout=60,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/ThomasCook.js,script-update-interval=0,timeout=30
 # > 捷停车签到
 捷停车签到 = type=cron, cronexp=0 30 0 * * *, timeout=60, script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jparking_sign.js, script-update-interval=0
-# > 顺丰速运
-顺丰速运 = type=cron,cronexp=0 35 0 * * *,wake-system=1,script-path=https://gist.githubusercontent.com/Sliverkiss/1fb1cf9cd7486d30752b1ba29b871e37/raw/sfsy.js,script-update-interval=0,timeout=30
 # > 网易云音乐热评
 网易云音乐热评 = type=cron,cronexp=0 0/30 9-18 * * ?,wake-system=1,script-path=https://raw.githubusercontent.com/ranzhigg/ranzhigg/main/wyyrp.js,script-update-interval=0,timeout=30
 # > 彩票开奖
